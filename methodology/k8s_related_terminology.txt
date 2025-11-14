@@ -1,0 +1,126 @@
+K8S_KEYWORDS = {
+
+    "k8s_terms": [
+        r'k8s', r'kubernetes', r'kube', 
+        r'cluster', r'node', r'pod', r'deployment',
+        r'container', r'docker', r'orchestrat',
+        r'namespace', r'service', r'configmap', r'secret',
+        r'statefulset', r'daemonset', r'job', r'cronjob',
+        r'ingress', r'networkpolicy', r'kubelet', r'kubectl',
+        r'kubeadm', r'kubeconfig', r'kustomize', r'manifest',
+        r'helm', r'chart', r'operator', r'workload',
+        r'init.?container', r'sidecar', r'volume', r'pv',
+        r'pvc', r'storageclass', r'replica', r'replicaset',
+        r'autoscal', r'hpa', r'vpa', r'crd'
+    ],
+    
+    
+    "controllers": [
+        r'controller', r'operator', r'scheduler', r'kubelet',
+        r'kube-proxy', r'kube-apiserver', r'kube-controller-manager',
+        r'etcd', r'control.?plane', r'controller.?manager',
+        r'controller.?runtime', r'client-go', r'kubebuilder',
+        r'operator.?sdk', r'operator.?framework', r'reconcile',
+        r'informer', r'lister', r'watcher', r'workqueue',
+        r'handler', r'resource.?controller', r'k8s\.io/api',
+        r'k8s\.io/apimachinery', r'sigs\.k8s\.io/controller',
+        r'SharedInformer', r'reflector', r'deploymentconfig',
+        r'replicationcontroller', r'endpoint.?controller',
+        r'kubelet', r'control.?loop', r'leader.?election',
+        r'cluster.?api', r'cluster.?operator'
+    ],
+    
+   
+    "admission_controllers": [
+        r'admission.?controller', r'validating.?webhook',
+        r'mutating.?webhook', r'admission.?webhook', r'validating',
+        r'mutating', r'webhook.?configuration', r'admission\.k8s\.io',
+        r'admissionregistration\.k8s\.io', r'ValidatingWebhookConfiguration',
+        r'MutatingWebhookConfiguration', r'AdmissionReview',
+        r'AdmissionRequest', r'AdmissionResponse',
+        r'JSONPatch', r'patchType', r'caBundle',
+        r'PodSecurityPolicy', r'LimitRanger', r'OPA',
+        r'gatekeeper', r'kyverno', r'policy.?controller',
+        r'webhook.?handler', r'webhook.?server',
+        r'SecurityContext', r'PodSecurityContext',
+        r'admission.?review', r'admission.?chain'
+    ],
+    
+   
+    "api_auth": [
+        r'apiserver', r'api.?server', r'kube.?apiserver',
+        r'api.?resources', r'rbac', r'authorization',
+        r'authentication', r'ServiceAccount', r'ClusterRole',
+        r'Role', r'RoleBinding', r'ClusterRoleBinding',
+        r'authorization\.k8s\.io', r'authentication\.k8s\.io',
+        r'x509', r'certificate', r'TokenReview',
+        r'SubjectAccessReview', r'SelfSubjectAccessReview',
+        r'bearer.?token', r'client.?certificate', r'oauth',
+        r'oidc', r'cert.?manager', r'kubeconfig', r'auth',
+        r'privileged', r'impersonation', r'cert.?rotation',
+        r'csr', r'certificates\.k8s\.io', r'CertificateSigningRequest',
+        r'extension api server', r'extension apiserver', r'ext api server',
+        r'ext apiserver', r'extensible api', r'apiserver extension',
+        r'api server extension', r'aggregation layer', r'aggregated api',
+        r'api aggregation', r'kube aggregator', r'apiservice',
+        r'api service', r'apiextensions', r'custom resource definition',
+        r'service catalog', r'controller extension', r'scheduler extension',
+        r'webhook', r'authentication provider', r'authorization provider',
+        r'custom authenticator', r'custom authorizer', r'metrics-server',
+        r'metrics server', r'prometheus adapter', r'custom metrics',
+        r'external metrics'
+    ],
+  
+    "interfaces": [
+        r'csi', r'container.?storage.?interface',
+        r'cri', r'container.?runtime.?interface',
+        r'cni', r'container.?network.?interface',
+        r'cri-o', r'containerd', r'runc', r'docker',
+        r'storage.?driver', r'volume.?plugin', r'flex.?volume',
+        r'calico', r'flannel', r'cilium', r'weave',
+        r'network.?plugin', r'network.?policy', r'overlay.?network',
+        r'storage\.k8s\.io', r'VolumeAttachment', r'csi.?driver',
+        r'csi.?node', r'csi.?controller', r'storage.?provisioner',
+        r'persistent.?volume', r'ephemeral.?volume'
+    ],
+    
+   
+    "deployment_service": [
+        r'deployment', r'rolling.?update', r'rollout',
+        r'rollback', r'blue.?green', r'canary', r'service.?mesh',
+        r'istio', r'linkerd', r'envoy', r'proxy', r'sidecar',
+        r'service.?discovery', r'dns', r'coreDNS', r'kube-dns',
+        r'endpoint', r'selector', r'label', r'annotation',
+        r'readiness.?probe', r'liveness.?probe', r'startup.?probe',
+        r'healthcheck', r'service\.spec', r'loadbalancer',
+        r'nodeport', r'clusterip', r'externalname', r'ingress',
+        r'ingress.?controller', r'gateway', r'route', r'mesh'
+    ],
+    
+
+    "resource_isolation": [
+        r'namespace', r'multi.?tenancy', r'resource.?quota',
+        r'limit.?range', r'cpu.?limit', r'memory.?limit',
+        r'pod.?priority', r'qos', r'guaranteed', r'burstable',
+        r'besteffort', r'cgroup', r'seccomp', r'apparmor',
+        r'selinux', r'sysctl', r'capabilities', r'sandbox',
+        r'isolation', r'privileged', r'hostpid', r'hostnetwork',
+        r'hostipc', r'node.?affinity', r'pod.?affinity',
+        r'taint', r'toleration', r'topology.?spread',
+        r'descheduler', r'eviction', r'preemption',
+        r'ResourceQuota', r'LimitRange'
+    ]
+}
+
+# PRIMARY_KEYWORDS
+PRIMARY_KEYWORDS = [
+    "kubernetes", 
+    "k8s",
+    "kube",
+    "pod"
+]
+
+# SECONDARY_KEYWORDS
+SECONDARY_KEYWORDS = []
+for category, keywords in K8S_KEYWORDS.items():
+    SECONDARY_KEYWORDS.extend(keywords)

@@ -1,0 +1,27 @@
+Prompt = f"""
+As a Kubernetes security expert, analyze the following CVE vulnerability and determine its relevance to Kubernetes:
+
+CVE ID: {cve_id}
+CVE Link: https://cve.mitre.org/cgi-bin/cvename.cgi?name={cve_id}
+Description: {description}
+{matched_info}
+
+CVE Patch Information: {patch_info if 'patch_info' in locals() else 'Please check official vendor advisories and patch repositories'}
+
+Provide:
+1. Kubernetes relevance (Yes/No)
+2. Affected components/resources
+3. Attack surface and impact scope
+4. Exploitation methods
+5. Security implications for clusters
+6. Risk level (Low/Medium/High/Critical) with rationale
+7. Mitigation strategies
+8. Patch availability and remediation steps
+9. Additional security resources:
+   - NVD Link: https://nvd.nist.gov/vuln/detail/{cve_id}
+   - Vendor advisories (if applicable)
+
+Keep responses concise, under 350 words, using numbered format.
+"""
+
+system_prompt = "You are a Kubernetes security expert specializing in container orchestration and cloud-native security. Provide accurate, professional security analysis focused on Kubernetes ecosystem vulnerabilities. Include official CVE references and patch information when available."

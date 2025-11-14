@@ -1,0 +1,3349 @@
+# CVE漏洞报告
+
+CVE数量: 125
+
+## 统计信息
+
+- 有GitHub仓库信息的CVE: 120/125
+- 涉及的GitHub仓库总数: 147
+
+## 编程语言分布
+
+- Go: 139
+- TypeScript: 3
+- Java: 1
+- Rust: 1
+- HTML: 1
+- Python: 1
+- Makefile: 1
+
+## CVE详细信息
+
+### CVE-2016-1905
+
+**描述**: The API server in Kubernetes does not properly check admission control, which allows remote authenticated users to access additional resources via a crafted patched object.
+
+**相关GitHub仓库**:
+
+- [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes)
+  - 语言: Go
+  - Stars: 115932
+  - 描述: Production-Grade Container Scheduling and Management
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/kubernetes/kubernetes/pull/19481](https://github.com/kubernetes/kubernetes/pull/19481)
+
+**相关Commits**:
+- [https://github.com/kubernetes/kubernetes/commit/e90c2bd7dcf506dee91f30ea35b3c72f83a38fba](https://github.com/kubernetes/kubernetes/commit/e90c2bd7dcf506dee91f30ea35b3c72f83a38fba)
+
+**参考链接**:
+- [https://access.redhat.com/errata/RHSA-2016:0070](https://access.redhat.com/errata/RHSA-2016:0070)
+- [https://github.com/kubernetes/kubernetes/issues/19479](https://github.com/kubernetes/kubernetes/issues/19479)
+
+---
+
+### CVE-2017-1000056
+
+**描述**: Kubernetes version 1.5.0-1.5.4 is vulnerable to a privilege escalation in the PodSecurityPolicy admission plugin resulting in the ability to make use of any existing PodSecurityPolicy object.
+
+**相关GitHub仓库**:
+
+- [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes)
+  - 语言: Go
+  - Stars: 115932
+  - 描述: Production-Grade Container Scheduling and Management
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/kubernetes/kubernetes/pull/43489](https://github.com/kubernetes/kubernetes/pull/43489)
+
+**相关Commits**:
+- [https://github.com/kubernetes/kubernetes/commit/dd7561801aa7b7f00f1556d38a14488246821d91](https://github.com/kubernetes/kubernetes/commit/dd7561801aa7b7f00f1556d38a14488246821d91)
+
+**参考链接**:
+- [https://github.com/kubernetes/kubernetes/issues/43459](https://github.com/kubernetes/kubernetes/issues/43459)
+
+---
+
+### CVE-2017-1002101
+
+**描述**: In Kubernetes versions 1.3.x, 1.4.x, 1.5.x, 1.6.x and prior to versions 1.7.14, 1.8.9 and 1.9.4 containers using subpath volume mounts with any volume type (including non-privileged pods, subject to file permissions) can access files/directories outside of the volume, including the host's filesystem.
+
+**相关GitHub仓库**:
+
+- [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes)
+  - 语言: Go
+  - Stars: 115932
+  - 描述: Production-Grade Container Scheduling and Management
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/kubernetes/kubernetes/pull/47605](https://github.com/kubernetes/kubernetes/pull/47605)
+
+**相关Commits**:
+- [https://github.com/kubernetes/kubernetes/commit/f07ac3efc6b33a465a637cd3b5c11f006d9d34d8](https://github.com/kubernetes/kubernetes/commit/f07ac3efc6b33a465a637cd3b5c11f006d9d34d8)
+
+**参考链接**:
+- [http://lists.opensuse.org/opensuse-security-announce/2020-04/msg00041.html](http://lists.opensuse.org/opensuse-security-announce/2020-04/msg00041.html)
+- [https://access.redhat.com/errata/RHSA-2018:0475](https://access.redhat.com/errata/RHSA-2018:0475)
+- [https://github.com/bgeesaman/subpath-exploit/](https://github.com/bgeesaman/subpath-exploit/)
+- [https://github.com/kubernetes/kubernetes/issues/60813](https://github.com/kubernetes/kubernetes/issues/60813)
+
+---
+
+### CVE-2018-1002101
+
+**描述**: In Kubernetes versions 1.9.0-1.9.9, 1.10.0-1.10.5, and 1.11.0-1.11.1, user input was handled insecurely while setting up volume mounts on Windows nodes, which could lead to command line argument injection.
+
+**相关GitHub仓库**:
+
+- [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes)
+  - 语言: Go
+  - Stars: 115932
+  - 描述: Production-Grade Container Scheduling and Management
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/kubernetes/kubernetes/pull/65751](https://github.com/kubernetes/kubernetes/pull/65751)
+
+**相关Commits**:
+- [https://github.com/kubernetes/kubernetes/commit/27bc865cc1bffb97d4dff38492aa9f830f859e45](https://github.com/kubernetes/kubernetes/commit/27bc865cc1bffb97d4dff38492aa9f830f859e45)
+
+**参考链接**:
+- [http://www.securityfocus.com/bid/106238](http://www.securityfocus.com/bid/106238)
+- [https://github.com/kubernetes/kubernetes/issues/65750](https://github.com/kubernetes/kubernetes/issues/65750)
+- [https://security.netapp.com/advisory/ntap-20190416-0008/](https://security.netapp.com/advisory/ntap-20190416-0008/)
+
+---
+
+### CVE-2019-11254
+
+**描述**: The Kubernetes API Server component in versions 1.1-1.14, and versions prior to 1.15.10, 1.16.7 and 1.17.3 allows an authorized user who sends malicious YAML payloads to cause the kube-apiserver to consume excessive CPU cycles while parsing YAML.
+
+**相关GitHub仓库**:
+
+- [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes)
+  - 语言: Go
+  - Stars: 115932
+  - 描述: Production-Grade Container Scheduling and Management
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/kubernetes/kubernetes/pull/87467](https://github.com/kubernetes/kubernetes/pull/87467)
+
+**相关Commits**:
+- [https://github.com/kubernetes/kubernetes/commit/b86df2bec4f377afc0ca03482ffad2f0a49a83b8](https://github.com/kubernetes/kubernetes/commit/b86df2bec4f377afc0ca03482ffad2f0a49a83b8)
+
+**参考链接**:
+- [https://github.com/kubernetes/kubernetes/issues/89535](https://github.com/kubernetes/kubernetes/issues/89535)
+- [https://groups.google.com/d/msg/kubernetes-announce/ALL9s73E5ck/4yHe8J-PBAAJ](https://groups.google.com/d/msg/kubernetes-announce/ALL9s73E5ck/4yHe8J-PBAAJ)
+- [https://security.netapp.com/advisory/ntap-20200413-0003/](https://security.netapp.com/advisory/ntap-20200413-0003/)
+
+---
+
+### CVE-2019-11255
+
+**描述**: Improper input validation in Kubernetes CSI sidecar containers for external-provisioner (<v0.4.3, <v1.0.2, v1.1, <v1.2.2, <v1.3.1), external-snapshotter (<v0.4.2, <v1.0.2, v1.1, <1.2.2), and external-resizer (v0.1, v0.2) could result in unauthorized PersistentVolume data access or volume mutation during snapshot, restore from snapshot, cloning and resizing operations.
+
+**相关GitHub仓库**:
+
+- [kubernetes-csi/external-provisioner](https://github.com/kubernetes-csi/external-provisioner)
+  - 语言: Go
+  - Stars: 387
+  - 描述: Sidecar container that watches Kubernetes PersistentVolumeClaim objects and triggers CreateVolume/DeleteVolume against a CSI endpoint
+  - 许可证: Apache License 2.0
+- [kubernetes-csi/external-resizer](https://github.com/kubernetes-csi/external-resizer)
+  - 语言: Go
+  - Stars: 134
+  - 描述: Sidecar container that watches Kubernetes PersistentVolumeClaims objects and triggers controller side expansion operation against a CSI endpoint
+  - 许可证: Apache License 2.0
+- [kubernetes-csi/external-snapshotter](https://github.com/kubernetes-csi/external-snapshotter)
+  - 语言: Go
+  - Stars: 558
+  - 描述: Sidecar container that watches Kubernetes Snapshot CRD objects and triggers CreateSnapshot/DeleteSnapshot against a CSI endpoint.
+  - 许可证: Apache License 2.0
+- [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes)
+  - 语言: Go
+  - Stars: 115932
+  - 描述: Production-Grade Container Scheduling and Management
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/kubernetes-csi/external-provisioner/pull/352](https://github.com/kubernetes-csi/external-provisioner/pull/352)
+- [https://github.com/kubernetes-csi/external-resizer/pull/57](https://github.com/kubernetes-csi/external-resizer/pull/57)
+- [https://github.com/kubernetes-csi/external-snapshotter/pull/172](https://github.com/kubernetes-csi/external-snapshotter/pull/172)
+
+**相关Commits**:
+- [https://github.com/kubernetes-csi/external-provisioner/commit/8bdf98af13e5f61e15789dbf953cb8e1ddea6266](https://github.com/kubernetes-csi/external-provisioner/commit/8bdf98af13e5f61e15789dbf953cb8e1ddea6266)
+- [https://github.com/kubernetes-csi/external-provisioner/commit/94522c24b46f354f412e02c18d36ea6abf162f8e](https://github.com/kubernetes-csi/external-provisioner/commit/94522c24b46f354f412e02c18d36ea6abf162f8e)
+- [https://github.com/kubernetes-csi/external-provisioner/commit/a1abad28c1d4dfb3e3aee595e0b2d18b8d3f5625](https://github.com/kubernetes-csi/external-provisioner/commit/a1abad28c1d4dfb3e3aee595e0b2d18b8d3f5625)
+- [https://github.com/kubernetes-csi/external-resizer/commit/70a38b269a5692f76d4ee1bb7bd49733f2652008](https://github.com/kubernetes-csi/external-resizer/commit/70a38b269a5692f76d4ee1bb7bd49733f2652008)
+- [https://github.com/kubernetes-csi/external-snapshotter/commit/712a3341d909c9f273b172bd9f47359441a5aa70](https://github.com/kubernetes-csi/external-snapshotter/commit/712a3341d909c9f273b172bd9f47359441a5aa70)
+
+**参考链接**:
+- [https://access.redhat.com/errata/RHSA-2019:4054](https://access.redhat.com/errata/RHSA-2019:4054)
+- [https://access.redhat.com/errata/RHSA-2019:4096](https://access.redhat.com/errata/RHSA-2019:4096)
+- [https://access.redhat.com/errata/RHSA-2019:4099](https://access.redhat.com/errata/RHSA-2019:4099)
+- [https://access.redhat.com/errata/RHSA-2019:4225](https://access.redhat.com/errata/RHSA-2019:4225)
+- [https://github.com/kubernetes/kubernetes/issues/85233](https://github.com/kubernetes/kubernetes/issues/85233)
+- [https://groups.google.com/forum/#%21topic/kubernetes-security-announce/aXiYN0q4uIw](https://groups.google.com/forum/#%21topic/kubernetes-security-announce/aXiYN0q4uIw)
+- [https://security.netapp.com/advisory/ntap-20200810-0003/](https://security.netapp.com/advisory/ntap-20200810-0003/)
+
+---
+
+### CVE-2019-19921
+
+**描述**: runc through 1.0.0-rc9 has Incorrect Access Control leading to Escalation of Privileges, related to libcontainer/rootfs_linux.go. To exploit this, an attacker must be able to spawn two containers with custom volume-mount configurations, and be able to run custom images. (This vulnerability does not affect Docker due to an implementation detail that happens to block the attack.)
+
+**相关GitHub仓库**:
+
+- [opencontainers/runc](https://github.com/opencontainers/runc)
+  - 语言: Go
+  - Stars: 12467
+  - 描述: CLI tool for spawning and running containers according to the OCI specification
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/opencontainers/runc/pull/2190](https://github.com/opencontainers/runc/pull/2190)
+
+**参考链接**:
+- [http://lists.opensuse.org/opensuse-security-announce/2020-02/msg00018.html](http://lists.opensuse.org/opensuse-security-announce/2020-02/msg00018.html)
+- [https://access.redhat.com/errata/RHSA-2020:0688](https://access.redhat.com/errata/RHSA-2020:0688)
+- [https://access.redhat.com/errata/RHSA-2020:0695](https://access.redhat.com/errata/RHSA-2020:0695)
+- [https://github.com/opencontainers/runc/issues/2197](https://github.com/opencontainers/runc/issues/2197)
+- [https://github.com/opencontainers/runc/pull/2190](https://github.com/opencontainers/runc/pull/2190)
+- [https://github.com/opencontainers/runc/releases](https://github.com/opencontainers/runc/releases)
+- [https://lists.debian.org/debian-lts-announce/2023/03/msg00023.html](https://lists.debian.org/debian-lts-announce/2023/03/msg00023.html)
+- [https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/ANUGDBJ7NBUMSUFZUSKU3ZMQYZ2Z3STN/](https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/ANUGDBJ7NBUMSUFZUSKU3ZMQYZ2Z3STN/)
+- [https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/DHGVGGMKGZSJ7YO67TGGPFEHBYMS63VF/](https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/DHGVGGMKGZSJ7YO67TGGPFEHBYMS63VF/)
+- [https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/FNB2UEDIIJCRQW4WJLZOPQJZXCVSXMLD/](https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/FNB2UEDIIJCRQW4WJLZOPQJZXCVSXMLD/)
+- [https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/FYVE3GB4OG3BNT5DLQHYO4M5SXX33AQ5/](https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/FYVE3GB4OG3BNT5DLQHYO4M5SXX33AQ5/)
+- [https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/I6BF24VCZRFTYBTT3T7HDZUOTKOTNPLZ/](https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/I6BF24VCZRFTYBTT3T7HDZUOTKOTNPLZ/)
+- [https://security-tracker.debian.org/tracker/CVE-2019-19921](https://security-tracker.debian.org/tracker/CVE-2019-19921)
+- [https://security.gentoo.org/glsa/202003-21](https://security.gentoo.org/glsa/202003-21)
+- [https://usn.ubuntu.com/4297-1/](https://usn.ubuntu.com/4297-1/)
+
+---
+
+### CVE-2019-3841
+
+**描述**: Kubevirt/virt-cdi-importer, versions 1.4.0 to 1.5.3 inclusive, were reported to disable TLS certificate validation when importing data into PVCs from container registries. This could enable man-in-the-middle attacks between a container registry and the virt-cdi-component, leading to possible undetected tampering of trusted container image content.
+
+**相关GitHub仓库**:
+
+- [kubevirt/containerized-data-importer](https://github.com/kubevirt/containerized-data-importer)
+  - 语言: Go
+  - Stars: 476
+  - 描述: Data Import Service for kubernetes, designed with kubevirt in mind.
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/kubevirt/containerized-data-importer/pull/661](https://github.com/kubevirt/containerized-data-importer/pull/661)
+- [https://github.com/kubevirt/containerized-data-importer/pull/662](https://github.com/kubevirt/containerized-data-importer/pull/662)
+
+**相关Commits**:
+- [https://github.com/kubevirt/containerized-data-importer/commit/717ceaa919dba72a47997993930a301b5f89f28f](https://github.com/kubevirt/containerized-data-importer/commit/717ceaa919dba72a47997993930a301b5f89f28f)
+- [https://github.com/kubevirt/containerized-data-importer/commit/906c7e7044ad51a432caed791c69a50ac998423e](https://github.com/kubevirt/containerized-data-importer/commit/906c7e7044ad51a432caed791c69a50ac998423e)
+
+**参考链接**:
+- [https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2019-3841](https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2019-3841)
+- [https://github.com/kubevirt/containerized-data-importer/issues/678](https://github.com/kubevirt/containerized-data-importer/issues/678)
+
+---
+
+### CVE-2019-9946
+
+**描述**: Cloud Native Computing Foundation (CNCF) CNI (Container Networking Interface) 0.7.4 has a network firewall misconfiguration which affects Kubernetes. The CNI 'portmap' plugin, used to setup HostPorts for CNI, inserts rules at the front of the iptables nat chains; which take precedence over the KUBE- SERVICES chain. Because of this, the HostPort/portmap rule could match incoming traffic even if there were better fitting, more specific service definition rules like NodePorts later in the chain. The issue is fixed in CNI 0.7.5 and Kubernetes 1.11.9, 1.12.7, 1.13.5, and 1.14.0.
+
+**相关GitHub仓库**:
+
+- [containernetworking/plugins](https://github.com/containernetworking/plugins)
+  - 语言: Go
+  - Stars: 2368
+  - 描述: Some reference and example networking plugins, maintained by the CNI team.
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/containernetworking/plugins/pull/269#issuecomment-477683272](https://github.com/containernetworking/plugins/pull/269#issuecomment-477683272)
+
+**参考链接**:
+- [https://access.redhat.com/errata/RHBA-2019:0862](https://access.redhat.com/errata/RHBA-2019:0862)
+- [https://github.com/containernetworking/plugins/pull/269#issuecomment-477683272](https://github.com/containernetworking/plugins/pull/269#issuecomment-477683272)
+- [https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/FCN66VYB3XS76SYH567SO7N3I254JOCT/](https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/FCN66VYB3XS76SYH567SO7N3I254JOCT/)
+- [https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/SGOOWAELGH3F7OXRBPH3HCNZELNLXYTW/](https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/SGOOWAELGH3F7OXRBPH3HCNZELNLXYTW/)
+- [https://security.netapp.com/advisory/ntap-20190416-0002/](https://security.netapp.com/advisory/ntap-20190416-0002/)
+
+---
+
+### CVE-2020-14316
+
+**描述**: A flaw was found in kubevirt 0.29 and earlier. Virtual Machine Instances (VMIs) can be used to gain access to the host's filesystem. Successful exploitation allows an attacker to assume the privileges of the VM process on the host system. In worst-case scenarios an attacker can read and modify any file on the system where the VMI is running. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.
+
+
+**相关Pull Requests**:
+- [https://github.com/kubevirt/kubevirt/pull/3686](https://github.com/kubevirt/kubevirt/pull/3686)
+
+**相关Commits**:
+- [https://github.com/kubevirt/kubevirt/commit/423165120229bf9df34b0b86de221efdaf8c9a4f](https://github.com/kubevirt/kubevirt/commit/423165120229bf9df34b0b86de221efdaf8c9a4f)
+
+**参考链接**:
+- [https://bugzilla.redhat.com/show_bug.cgi?id=1848951](https://bugzilla.redhat.com/show_bug.cgi?id=1848951)
+
+---
+
+### CVE-2020-2026
+
+**描述**: A malicious guest compromised before a container creation (e.g. a malicious guest image or a guest running multiple containers) can trick the kata runtime into mounting the untrusted container filesystem on any host path, potentially allowing for code execution on the host. This issue affects: Kata Containers 1.11 versions earlier than 1.11.1; Kata Containers 1.10 versions earlier than 1.10.5; Kata Containers 1.9 and earlier versions.
+
+**相关GitHub仓库**:
+
+- [kata-containers/runtime](https://github.com/kata-containers/runtime)
+  - 语言: Go
+  - Stars: 2099
+  - 描述: Kata Containers version 1.x runtime (for version 2.x see https://github.com/kata-containers/kata-containers).
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/kata-containers/runtime/pull/2713](https://github.com/kata-containers/runtime/pull/2713)
+
+**参考链接**:
+- [https://github.com/kata-containers/runtime/issues/2712](https://github.com/kata-containers/runtime/issues/2712)
+- [https://github.com/kata-containers/runtime/pull/2713](https://github.com/kata-containers/runtime/pull/2713)
+- [https://github.com/kata-containers/runtime/releases/tag/1.10.5](https://github.com/kata-containers/runtime/releases/tag/1.10.5)
+- [https://github.com/kata-containers/runtime/releases/tag/1.11.1](https://github.com/kata-containers/runtime/releases/tag/1.11.1)
+- [https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/2P7FHA4AF6Y6PAVJBTTQPUEHXZQUOF3P/](https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/2P7FHA4AF6Y6PAVJBTTQPUEHXZQUOF3P/)
+- [https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/6JPBKAQBF3OR72N55GWM2TDYQP2OHK6H/](https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/6JPBKAQBF3OR72N55GWM2TDYQP2OHK6H/)
+- [https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/6W5MKF7HSAIL2AX2BX6RV4WWVGUIKVLS/](https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/6W5MKF7HSAIL2AX2BX6RV4WWVGUIKVLS/)
+- [https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/NJAMOVB7DSOGX7J26QH5HZKU7GSSX2VU/](https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/NJAMOVB7DSOGX7J26QH5HZKU7GSSX2VU/)
+- [https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/QNJHSSPCKUGJDVXXIXK2JUWCRJDQX7CE/](https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/QNJHSSPCKUGJDVXXIXK2JUWCRJDQX7CE/)
+- [https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/XWACJQSMY5BVDMVTF3FBN7HZSOSFOG3Q/](https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/XWACJQSMY5BVDMVTF3FBN7HZSOSFOG3Q/)
+
+---
+
+### CVE-2020-2121
+
+**描述**: Jenkins Google Kubernetes Engine Plugin 0.8.0 and earlier does not configure its YAML parser to prevent the instantiation of arbitrary types, resulting in a remote code execution vulnerability.
+
+**相关GitHub仓库**:
+
+- [jenkinsci/google-kubernetes-engine-plugin](https://github.com/jenkinsci/google-kubernetes-engine-plugin)
+  - 语言: Java
+  - Stars: 37
+  - 描述: The Google Kubernetes Engine (GKE) Plugin allows you to deploy build artifacts to Kubernetes clusters running in GKE with Jenkins.
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/jenkinsci/google-kubernetes-engine-plugin/pull/114](https://github.com/jenkinsci/google-kubernetes-engine-plugin/pull/114)
+
+**相关Commits**:
+- [https://github.com/jenkinsci/google-kubernetes-engine-plugin/commit/365cfdd8b7b724ff871fba6239146f25024e96ae](https://github.com/jenkinsci/google-kubernetes-engine-plugin/commit/365cfdd8b7b724ff871fba6239146f25024e96ae)
+
+**参考链接**:
+- [http://www.openwall.com/lists/oss-security/2020/02/12/3](http://www.openwall.com/lists/oss-security/2020/02/12/3)
+- [https://jenkins.io/security/advisory/2020-02-12/#SECURITY-1731](https://jenkins.io/security/advisory/2020-02-12/#SECURITY-1731)
+
+---
+
+### CVE-2020-27151
+
+**描述**: An issue was discovered in Kata Containers through 1.11.3 and 2.x through 2.0-rc1. The runtime will execute binaries given using annotations without any kind of validation. Someone who is granted access rights to a cluster will be able to have kata-runtime execute arbitrary binaries as root on the worker nodes.
+
+**相关GitHub仓库**:
+
+- [kata-containers/runtime](https://github.com/kata-containers/runtime)
+  - 语言: Go
+  - Stars: 2099
+  - 描述: Kata Containers version 1.x runtime (for version 2.x see https://github.com/kata-containers/kata-containers).
+  - 许可证: Apache License 2.0
+- [kata-containers/kata-containers](https://github.com/kata-containers/kata-containers)
+  - 语言: Rust
+  - Stars: 6397
+  - 描述: Kata Containers is an open source project and community working to build a standard implementation of lightweight Virtual Machines (VMs) that feel and perform like containers, but provide the workload isolation and security advantages of VMs. https://katacontainers.io/
+  - 许可证: Apache License 2.0
+
+**相关Commits**:
+- [https://github.com/kata-containers/runtime/commit/228e6eb4b9c000fb105e3bf1401ac3938588fae2](https://github.com/kata-containers/runtime/commit/228e6eb4b9c000fb105e3bf1401ac3938588fae2)
+- [https://github.com/kata-containers/runtime/commit/3f0e61c010556846e2f96811059d86cb10309748](https://github.com/kata-containers/runtime/commit/3f0e61c010556846e2f96811059d86cb10309748)
+
+**参考链接**:
+- [https://bugs.launchpad.net/katacontainers.io/+bug/1878234](https://bugs.launchpad.net/katacontainers.io/+bug/1878234)
+- [https://github.com/kata-containers/kata-containers/releases/tag/2.0.0](https://github.com/kata-containers/kata-containers/releases/tag/2.0.0)
+- [https://github.com/kata-containers/runtime/releases/tag/1.11.5](https://github.com/kata-containers/runtime/releases/tag/1.11.5)
+- [https://github.com/kata-containers/runtime/releases/tag/1.12.0](https://github.com/kata-containers/runtime/releases/tag/1.12.0)
+
+---
+
+### CVE-2020-8553
+
+**描述**: The Kubernetes ingress-nginx component prior to version 0.28.0 allows a user with the ability to create namespaces and to read and create ingress objects to overwrite the password file of another ingress which uses nginx.ingress.kubernetes.io/auth-type: basic and which has a hyphenated namespace or secret name.
+
+**相关GitHub仓库**:
+
+- [kubernetes/ingress-nginx](https://github.com/kubernetes/ingress-nginx)
+  - 语言: Go
+  - Stars: 18663
+  - 描述: Ingress NGINX Controller for Kubernetes
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/kubernetes/ingress-nginx/pull/4960](https://github.com/kubernetes/ingress-nginx/pull/4960)
+
+**相关Commits**:
+- [https://github.com/kubernetes/ingress-nginx/commit/27a8b7827f89859a60c0df2f4749e6a7d352410f](https://github.com/kubernetes/ingress-nginx/commit/27a8b7827f89859a60c0df2f4749e6a7d352410f)
+- [https://github.com/kubernetes/ingress-nginx/commit/605e34578d31e20e83f5c5b950baacd222e49bdd](https://github.com/kubernetes/ingress-nginx/commit/605e34578d31e20e83f5c5b950baacd222e49bdd)
+
+**参考链接**:
+- [https://github.com/kubernetes/ingress-nginx/issues/5126](https://github.com/kubernetes/ingress-nginx/issues/5126)
+
+---
+
+### CVE-2020-8554
+
+**描述**: Kubernetes API server in all versions allow an attacker who is able to create a ClusterIP service and set the spec.externalIPs field, to intercept traffic to that IP address. Additionally, an attacker who is able to patch the status (which is considered a privileged operation and should not typically be granted to users) of a LoadBalancer service can set the status.loadBalancer.ingress.ip to similar effect.
+
+**相关GitHub仓库**:
+
+- [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes)
+  - 语言: Go
+  - Stars: 115932
+  - 描述: Production-Grade Container Scheduling and Management
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/kubernetes/kubernetes/pull/119150](https://github.com/kubernetes/kubernetes/pull/119150)
+
+**相关Commits**:
+- [https://github.com/kubernetes/kubernetes/commit/16a7b5360229bb423267ed7dca196b981fb3b18f](https://github.com/kubernetes/kubernetes/commit/16a7b5360229bb423267ed7dca196b981fb3b18f)
+- [https://github.com/kubernetes/kubernetes/commit/2b69daa960ccea9a19f58e73a9079db94bc0819d](https://github.com/kubernetes/kubernetes/commit/2b69daa960ccea9a19f58e73a9079db94bc0819d)
+
+**参考链接**:
+- [https://github.com/kubernetes/kubernetes/issues/97076](https://github.com/kubernetes/kubernetes/issues/97076)
+- [https://groups.google.com/g/kubernetes-security-announce/c/iZWsF9nbKE8](https://groups.google.com/g/kubernetes-security-announce/c/iZWsF9nbKE8)
+- [https://lists.apache.org/thread.html/r0c76b3d0be348f788cd947054141de0229af00c540564711e828fd40%40%3Ccommits.druid.apache.org%3E](https://lists.apache.org/thread.html/r0c76b3d0be348f788cd947054141de0229af00c540564711e828fd40%40%3Ccommits.druid.apache.org%3E)
+- [https://lists.apache.org/thread.html/r1975078e44d96f2a199aa90aa874b57a202eaf7f25f2fde6d1c44942%40%3Ccommits.druid.apache.org%3E](https://lists.apache.org/thread.html/r1975078e44d96f2a199aa90aa874b57a202eaf7f25f2fde6d1c44942%40%3Ccommits.druid.apache.org%3E)
+- [https://lists.apache.org/thread.html/rcafa485d63550657f068775801aeb706b7a07140a8ebbdef822b3bb3%40%3Ccommits.druid.apache.org%3E](https://lists.apache.org/thread.html/rcafa485d63550657f068775801aeb706b7a07140a8ebbdef822b3bb3%40%3Ccommits.druid.apache.org%3E)
+- [https://lists.apache.org/thread.html/rdb223e1b82e3d7d8e4eaddce8dd1ab87252e3935cc41c859f49767b6%40%3Ccommits.druid.apache.org%3E](https://lists.apache.org/thread.html/rdb223e1b82e3d7d8e4eaddce8dd1ab87252e3935cc41c859f49767b6%40%3Ccommits.druid.apache.org%3E)
+- [https://www.oracle.com//security-alerts/cpujul2021.html](https://www.oracle.com//security-alerts/cpujul2021.html)
+- [https://www.oracle.com/security-alerts/cpuapr2022.html](https://www.oracle.com/security-alerts/cpuapr2022.html)
+- [https://www.oracle.com/security-alerts/cpujan2022.html](https://www.oracle.com/security-alerts/cpujan2022.html)
+
+---
+
+### CVE-2020-8555
+
+**描述**: The Kubernetes kube-controller-manager in versions v1.0-1.14, versions prior to v1.15.12, v1.16.9, v1.17.5, and version v1.18.0 are vulnerable to a Server Side Request Forgery (SSRF) that allows certain authorized users to leak up to 500 bytes of arbitrary information from unprotected endpoints within the master's host network (such as link-local or loopback services).
+
+**相关GitHub仓库**:
+
+- [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes)
+  - 语言: Go
+  - Stars: 115932
+  - 描述: Production-Grade Container Scheduling and Management
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/kubernetes/kubernetes/pull/89794](https://github.com/kubernetes/kubernetes/pull/89794)
+
+**相关Commits**:
+- [https://github.com/kubernetes/kubernetes/commit/63ee9b3f4f9b1286b2f4a6813cdeb767661a1a4c](https://github.com/kubernetes/kubernetes/commit/63ee9b3f4f9b1286b2f4a6813cdeb767661a1a4c)
+
+**参考链接**:
+- [http://www.openwall.com/lists/oss-security/2020/06/01/4](http://www.openwall.com/lists/oss-security/2020/06/01/4)
+- [http://www.openwall.com/lists/oss-security/2021/05/04/8](http://www.openwall.com/lists/oss-security/2021/05/04/8)
+- [https://github.com/kubernetes/kubernetes/issues/91542](https://github.com/kubernetes/kubernetes/issues/91542)
+- [https://groups.google.com/d/topic/kubernetes-security-announce/kEK27tqqs30/discussion](https://groups.google.com/d/topic/kubernetes-security-announce/kEK27tqqs30/discussion)
+- [https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/3SOCLOPTSYABTE4CLTSPDIFE6ZZZR4LX/](https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/3SOCLOPTSYABTE4CLTSPDIFE6ZZZR4LX/)
+- [https://security.netapp.com/advisory/ntap-20200724-0005/](https://security.netapp.com/advisory/ntap-20200724-0005/)
+
+---
+
+### CVE-2020-8567
+
+**描述**: Kubernetes Secrets Store CSI Driver Vault Plugin prior to v0.0.6, Azure Plugin prior to v0.0.10, and GCP Plugin prior to v0.2.0 allow an attacker who can create specially-crafted SecretProviderClass objects to write to arbitrary file paths on the host filesystem, including /var/lib/kubelet/pods.
+
+**相关GitHub仓库**:
+
+- [GoogleCloudPlatform/secrets-store-csi-driver-provider-gcp](https://github.com/GoogleCloudPlatform/secrets-store-csi-driver-provider-gcp)
+  - 语言: Go
+  - Stars: 248
+  - 描述: Google Secret Manager provider for the Secret Store CSI Driver.
+  - 许可证: Apache License 2.0
+- [hashicorp/vault-csi-provider](https://github.com/hashicorp/vault-csi-provider)
+  - 语言: Go
+  - Stars: 327
+  - 描述: HashiCorp Vault Provider for Secret Store CSI Driver
+  - 许可证: Other
+- [kubernetes-sigs/secrets-store-csi-driver](https://github.com/kubernetes-sigs/secrets-store-csi-driver)
+  - 语言: Go
+  - Stars: 1401
+  - 描述: Secrets Store CSI driver for Kubernetes secrets - Integrates secrets stores with Kubernetes via a CSI volume.  
+  - 许可证: Apache License 2.0
+- [Azure/secrets-store-csi-driver-provider-azure](https://github.com/Azure/secrets-store-csi-driver-provider-azure)
+  - 语言: Go
+  - Stars: 452
+  - 描述: Azure Key Vault provider for Secret Store CSI driver allows you to get secret contents stored in Azure Key Vault instance and use the Secret Store CSI driver interface to mount them into Kubernetes pods.
+  - 许可证: MIT License
+
+**相关Pull Requests**:
+- [https://github.com/Azure/secrets-store-csi-driver-provider-azure/pull/298](https://github.com/Azure/secrets-store-csi-driver-provider-azure/pull/298)
+- [https://github.com/GoogleCloudPlatform/secrets-store-csi-driver-provider-gcp/pull/74](https://github.com/GoogleCloudPlatform/secrets-store-csi-driver-provider-gcp/pull/74)
+- [https://github.com/hashicorp/vault-csi-provider/pull/50](https://github.com/hashicorp/vault-csi-provider/pull/50)
+
+**相关Commits**:
+- [https://github.com/Azure/secrets-store-csi-driver-provider-azure/commit/ccd5b0a1f41e919620d4a8b488c10e73897e6f18](https://github.com/Azure/secrets-store-csi-driver-provider-azure/commit/ccd5b0a1f41e919620d4a8b488c10e73897e6f18)
+- [https://github.com/GoogleCloudPlatform/secrets-store-csi-driver-provider-gcp/commit/767b8e74279d5e15b961d03034d88faf8f4ba41e](https://github.com/GoogleCloudPlatform/secrets-store-csi-driver-provider-gcp/commit/767b8e74279d5e15b961d03034d88faf8f4ba41e)
+- [https://github.com/hashicorp/vault-csi-provider/commit/079dafdae334b93e1b9217ef7bc53bcee1405835](https://github.com/hashicorp/vault-csi-provider/commit/079dafdae334b93e1b9217ef7bc53bcee1405835)
+- [https://github.com/hashicorp/vault-csi-provider/commit/d75a0539046877443b0be5f625854dc01eadf78a](https://github.com/hashicorp/vault-csi-provider/commit/d75a0539046877443b0be5f625854dc01eadf78a)
+
+**参考链接**:
+- [https://github.com/kubernetes-sigs/secrets-store-csi-driver/issues/384](https://github.com/kubernetes-sigs/secrets-store-csi-driver/issues/384)
+- [https://groups.google.com/g/kubernetes-secrets-store-csi-driver/c/BI2qisiNXHY](https://groups.google.com/g/kubernetes-secrets-store-csi-driver/c/BI2qisiNXHY)
+
+---
+
+### CVE-2020-8568
+
+**描述**: Kubernetes Secrets Store CSI Driver versions v0.0.15 and v0.0.16 allow an attacker who can modify a SecretProviderClassPodStatus/Status resource the ability to write content to the host filesystem and sync file contents to Kubernetes Secrets. This includes paths under var/lib/kubelet/pods that contain other Kubernetes Secrets.
+
+**相关GitHub仓库**:
+
+- [kubernetes-sigs/secrets-store-csi-driver](https://github.com/kubernetes-sigs/secrets-store-csi-driver)
+  - 语言: Go
+  - Stars: 1401
+  - 描述: Secrets Store CSI driver for Kubernetes secrets - Integrates secrets stores with Kubernetes via a CSI volume.  
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/kubernetes-sigs/secrets-store-csi-driver/pull/371](https://github.com/kubernetes-sigs/secrets-store-csi-driver/pull/371)
+
+**相关Commits**:
+- [https://github.com/kubernetes-sigs/secrets-store-csi-driver/commit/c2cbb19e2eef16638fa0523383788a4bc22231fd](https://github.com/kubernetes-sigs/secrets-store-csi-driver/commit/c2cbb19e2eef16638fa0523383788a4bc22231fd)
+
+**参考链接**:
+- [https://github.com/kubernetes-sigs/secrets-store-csi-driver/issues/378](https://github.com/kubernetes-sigs/secrets-store-csi-driver/issues/378)
+- [https://groups.google.com/g/kubernetes-secrets-store-csi-driver/c/Cb9cvymTzl4](https://groups.google.com/g/kubernetes-secrets-store-csi-driver/c/Cb9cvymTzl4)
+
+---
+
+### CVE-2020-8569
+
+**描述**: Kubernetes CSI snapshot-controller prior to v2.1.3 and v3.0.2 could panic when processing a VolumeSnapshot custom resource when: - The VolumeSnapshot referenced a non-existing PersistentVolumeClaim and the VolumeSnapshot did not reference any VolumeSnapshotClass. - The snapshot-controller crashes, is automatically restarted by Kubernetes, and processes the same VolumeSnapshot custom resource after the restart, entering an endless crashloop. Only the volume snapshot feature is affected by this vulnerability. When exploited, users can’t take snapshots of their volumes or delete the snapshots. All other Kubernetes functionality is not affected.
+
+**相关GitHub仓库**:
+
+- [kubernetes-csi/external-snapshotter](https://github.com/kubernetes-csi/external-snapshotter)
+  - 语言: Go
+  - Stars: 558
+  - 描述: Sidecar container that watches Kubernetes Snapshot CRD objects and triggers CreateSnapshot/DeleteSnapshot against a CSI endpoint.
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/kubernetes-csi/external-snapshotter/pull/381](https://github.com/kubernetes-csi/external-snapshotter/pull/381)
+
+**相关Commits**:
+- [https://github.com/kubernetes-csi/external-snapshotter/commit/73f72bd7b6f481f39f1a8a8cfab3f72d3b93d455](https://github.com/kubernetes-csi/external-snapshotter/commit/73f72bd7b6f481f39f1a8a8cfab3f72d3b93d455)
+
+**参考链接**:
+- [https://github.com/kubernetes-csi/external-snapshotter/issues/380](https://github.com/kubernetes-csi/external-snapshotter/issues/380)
+- [https://groups.google.com/g/kubernetes-security-announce/c/1EzCr1qUxxU](https://groups.google.com/g/kubernetes-security-announce/c/1EzCr1qUxxU)
+
+---
+
+### CVE-2020-8945
+
+**描述**: The proglottis Go wrapper before 0.1.1 for the GPGME library has a use-after-free, as demonstrated by use for container image pulls by Docker or CRI-O. This leads to a crash or potential code execution during GPG signature verification.
+
+**相关GitHub仓库**:
+
+- [proglottis/gpgme](https://github.com/proglottis/gpgme)
+  - 语言: Go
+  - Stars: 16
+  - 描述: Go wrapper for the GPGME library
+  - 许可证: BSD 3-Clause "New" or "Revised" License
+- [containers/image](https://github.com/containers/image)
+  - 语言: Go
+  - Stars: 918
+  - 描述: Work with containers' images
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/proglottis/gpgme/pull/23](https://github.com/proglottis/gpgme/pull/23)
+
+**相关Commits**:
+- [https://github.com/containers/image/commit/4c7a23f82ef09127b0ff28366d1cf31316dd6cc1](https://github.com/containers/image/commit/4c7a23f82ef09127b0ff28366d1cf31316dd6cc1)
+
+**参考链接**:
+- [https://access.redhat.com/errata/RHSA-2020:0679](https://access.redhat.com/errata/RHSA-2020:0679)
+- [https://access.redhat.com/errata/RHSA-2020:0689](https://access.redhat.com/errata/RHSA-2020:0689)
+- [https://access.redhat.com/errata/RHSA-2020:0697](https://access.redhat.com/errata/RHSA-2020:0697)
+- [https://bugzilla.redhat.com/show_bug.cgi?id=1795838](https://bugzilla.redhat.com/show_bug.cgi?id=1795838)
+- [https://github.com/containers/image/commit/4c7a23f82ef09127b0ff28366d1cf31316dd6cc1](https://github.com/containers/image/commit/4c7a23f82ef09127b0ff28366d1cf31316dd6cc1)
+- [https://github.com/proglottis/gpgme/compare/v0.1.0...v0.1.1](https://github.com/proglottis/gpgme/compare/v0.1.0...v0.1.1)
+- [https://github.com/proglottis/gpgme/pull/23](https://github.com/proglottis/gpgme/pull/23)
+- [https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/3SOCLOPTSYABTE4CLTSPDIFE6ZZZR4LX/](https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/3SOCLOPTSYABTE4CLTSPDIFE6ZZZR4LX/)
+- [https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/H6P6SSNKN4H6GSEVROHBDXA64PX7EOED/](https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/H6P6SSNKN4H6GSEVROHBDXA64PX7EOED/)
+- [https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/KDBT77KV3U7BESJX3P4S4MPVDGRTAQA2/](https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/KDBT77KV3U7BESJX3P4S4MPVDGRTAQA2/)
+- [https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/WXV7NZELYWRRCXATXU3FYD3G3WJT3WYM/](https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/WXV7NZELYWRRCXATXU3FYD3G3WJT3WYM/)
+
+---
+
+### CVE-2021-21334
+
+**描述**: In containerd (an industry-standard container runtime) before versions 1.3.10 and 1.4.4, containers launched through containerd's CRI implementation (through Kubernetes, crictl, or any other pod/container client that uses the containerd CRI service) that share the same image may receive incorrect environment variables, including values that are defined for other containers. If the affected containers have different security contexts, this may allow sensitive information to be unintentionally shared. If you are not using containerd's CRI implementation (through one of the mechanisms described above), you are not vulnerable to this issue. If you are not launching multiple containers or Kubernetes pods from the same image which have different environment variables, you are not vulnerable to this issue. If you are not launching multiple containers or Kubernetes pods from the same image in rapid succession, you have reduced likelihood of being vulnerable to this issue This vulnerability has been fixed in containerd 1.3.10 and containerd 1.4.4. Users should update to these versions.
+
+**相关GitHub仓库**:
+
+- [containerd/containerd](https://github.com/containerd/containerd)
+  - 语言: Go
+  - Stars: 18842
+  - 描述: An open and reliable container runtime
+  - 许可证: Apache License 2.0
+
+**相关Commits**:
+- [https://github.com/containerd/containerd/commit/05f951a3781f4f2c1911b05e61c160e9c30eaa8e](https://github.com/containerd/containerd/commit/05f951a3781f4f2c1911b05e61c160e9c30eaa8e)
+
+**参考链接**:
+- [https://github.com/containerd/containerd/commit/05f951a3781f4f2c1911b05e61c160e9c30eaa8e](https://github.com/containerd/containerd/commit/05f951a3781f4f2c1911b05e61c160e9c30eaa8e)
+- [https://github.com/containerd/containerd/releases/tag/v1.3.10](https://github.com/containerd/containerd/releases/tag/v1.3.10)
+- [https://github.com/containerd/containerd/releases/tag/v1.4.4](https://github.com/containerd/containerd/releases/tag/v1.4.4)
+- [https://github.com/containerd/containerd/security/advisories/GHSA-6g2q-w5j3-fwh4](https://github.com/containerd/containerd/security/advisories/GHSA-6g2q-w5j3-fwh4)
+- [https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/KUE2Z2ZUWBHRU36ZGBD2YSJCYB6ELPXE/](https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/KUE2Z2ZUWBHRU36ZGBD2YSJCYB6ELPXE/)
+- [https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/QIBPKSX5IOWPM3ZPFB3JVLXWDHSZTTWT/](https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/QIBPKSX5IOWPM3ZPFB3JVLXWDHSZTTWT/)
+- [https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/VTXHA5JOWQRCCUZH7ZQBEYN6KZKJEYSD/](https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/VTXHA5JOWQRCCUZH7ZQBEYN6KZKJEYSD/)
+- [https://security.gentoo.org/glsa/202105-33](https://security.gentoo.org/glsa/202105-33)
+
+---
+
+### CVE-2021-25735
+
+**描述**: A security issue was discovered in kube-apiserver that could allow node updates to bypass a Validating Admission Webhook. Clusters are only affected by this vulnerability if they run a Validating Admission Webhook for Nodes that denies admission based at least partially on the old state of the Node object. Validating Admission Webhook does not observe some previous fields.
+
+**相关GitHub仓库**:
+
+- [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes)
+  - 语言: Go
+  - Stars: 115932
+  - 描述: Production-Grade Container Scheduling and Management
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/kubernetes/kubernetes/pull/99946](https://github.com/kubernetes/kubernetes/pull/99946)
+
+**相关Commits**:
+- [https://github.com/kubernetes/kubernetes/commit/2a0ef026b6b4a6d14660113fcfeab19ed2bd1cfa](https://github.com/kubernetes/kubernetes/commit/2a0ef026b6b4a6d14660113fcfeab19ed2bd1cfa)
+- [https://github.com/kubernetes/kubernetes/commit/5130ea0da398f94139abc844ac1bbc592a4b134e](https://github.com/kubernetes/kubernetes/commit/5130ea0da398f94139abc844ac1bbc592a4b134e)
+- [https://github.com/kubernetes/kubernetes/commit/555eba5651e8d53136164d9e00f93cc6ed222a49](https://github.com/kubernetes/kubernetes/commit/555eba5651e8d53136164d9e00f93cc6ed222a49)
+- [https://github.com/kubernetes/kubernetes/commit/5570a81040ead32b943facbb809a59a5d919287c](https://github.com/kubernetes/kubernetes/commit/5570a81040ead32b943facbb809a59a5d919287c)
+- [https://github.com/kubernetes/kubernetes/commit/bd5b1e2d05ff8615a1177b441bf9dcc530e9b174](https://github.com/kubernetes/kubernetes/commit/bd5b1e2d05ff8615a1177b441bf9dcc530e9b174)
+- [https://github.com/kubernetes/kubernetes/commit/d000f2c8c51b249338424cd8262d45613df96da1](https://github.com/kubernetes/kubernetes/commit/d000f2c8c51b249338424cd8262d45613df96da1)
+- [https://github.com/kubernetes/kubernetes/commit/eb264c05c5e20791b6a074dd695217abf58a82ac](https://github.com/kubernetes/kubernetes/commit/eb264c05c5e20791b6a074dd695217abf58a82ac)
+
+**参考链接**:
+- [https://github.com/kubernetes/kubernetes/issues/100096](https://github.com/kubernetes/kubernetes/issues/100096)
+- [https://groups.google.com/g/kubernetes-security-announce/c/FKAGqT4jx9Y](https://groups.google.com/g/kubernetes-security-announce/c/FKAGqT4jx9Y)
+
+---
+
+### CVE-2021-25737
+
+**描述**: A security issue was discovered in Kubernetes where a user may be able to redirect pod traffic to private networks on a Node. Kubernetes already prevents creation of Endpoint IPs in the localhost or link-local range, but the same validation was not performed on EndpointSlice IPs.
+
+**相关GitHub仓库**:
+
+- [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes)
+  - 语言: Go
+  - Stars: 115932
+  - 描述: Production-Grade Container Scheduling and Management
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/kubernetes/kubernetes/pull/101084](https://github.com/kubernetes/kubernetes/pull/101084)
+
+**相关Commits**:
+- [https://github.com/kubernetes/kubernetes/commit/764b501ac47753cafd5af75060fc33c4c39eb637](https://github.com/kubernetes/kubernetes/commit/764b501ac47753cafd5af75060fc33c4c39eb637)
+
+**参考链接**:
+- [https://github.com/kubernetes/kubernetes/issues/102106](https://github.com/kubernetes/kubernetes/issues/102106)
+- [https://groups.google.com/g/kubernetes-security-announce/c/xAiN3924thY](https://groups.google.com/g/kubernetes-security-announce/c/xAiN3924thY)
+- [https://security.netapp.com/advisory/ntap-20211004-0004/](https://security.netapp.com/advisory/ntap-20211004-0004/)
+
+---
+
+### CVE-2021-25741
+
+**描述**: A security issue was discovered in Kubernetes where a user may be able to create a container with subpath volume mounts to access files & directories outside of the volume, including on the host filesystem.
+
+**相关GitHub仓库**:
+
+- [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes)
+  - 语言: Go
+  - Stars: 115932
+  - 描述: Production-Grade Container Scheduling and Management
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/kubernetes/kubernetes/pull/104253](https://github.com/kubernetes/kubernetes/pull/104253)
+
+**相关Commits**:
+- [https://github.com/kubernetes/kubernetes/commit/08bec6da0fcf418f351f86c113620edc7be1849c](https://github.com/kubernetes/kubernetes/commit/08bec6da0fcf418f351f86c113620edc7be1849c)
+- [https://github.com/kubernetes/kubernetes/commit/296b30f14367a42d43f25ad0774d10be55b49f4d](https://github.com/kubernetes/kubernetes/commit/296b30f14367a42d43f25ad0774d10be55b49f4d)
+- [https://github.com/kubernetes/kubernetes/commit/338f8ba0bf8d4ea5ae13d25065308dd9935b214f](https://github.com/kubernetes/kubernetes/commit/338f8ba0bf8d4ea5ae13d25065308dd9935b214f)
+- [https://github.com/kubernetes/kubernetes/commit/b9b76dba6ee901d330de5dfef39b83e5acb76906](https://github.com/kubernetes/kubernetes/commit/b9b76dba6ee901d330de5dfef39b83e5acb76906)
+
+**参考链接**:
+- [https://github.com/kubernetes/kubernetes/issues/104980](https://github.com/kubernetes/kubernetes/issues/104980)
+- [https://groups.google.com/g/kubernetes-security-announce/c/nyfdhK24H7s](https://groups.google.com/g/kubernetes-security-announce/c/nyfdhK24H7s)
+- [https://security.netapp.com/advisory/ntap-20211008-0006/](https://security.netapp.com/advisory/ntap-20211008-0006/)
+
+---
+
+### CVE-2021-25742
+
+**描述**: A security issue was discovered in ingress-nginx where a user that can create or update ingress objects can use the custom snippets feature to obtain all secrets in the cluster.
+
+**相关GitHub仓库**:
+
+- [kubernetes/ingress-nginx](https://github.com/kubernetes/ingress-nginx)
+  - 语言: Go
+  - Stars: 18663
+  - 描述: Ingress NGINX Controller for Kubernetes
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/kubernetes/ingress-nginx/pull/7666](https://github.com/kubernetes/ingress-nginx/pull/7666)
+- [https://github.com/kubernetes/ingress-nginx/pull/7670](https://github.com/kubernetes/ingress-nginx/pull/7670)
+
+**相关Commits**:
+- [https://github.com/kubernetes/ingress-nginx/commit/5fe464b303711da889809c9328399e2a94befcd2](https://github.com/kubernetes/ingress-nginx/commit/5fe464b303711da889809c9328399e2a94befcd2)
+
+**参考链接**:
+- [https://github.com/kubernetes/ingress-nginx/issues/7837](https://github.com/kubernetes/ingress-nginx/issues/7837)
+- [https://groups.google.com/g/kubernetes-security-announce/c/mT4JJxi9tQY](https://groups.google.com/g/kubernetes-security-announce/c/mT4JJxi9tQY)
+- [https://security.netapp.com/advisory/ntap-20211203-0001/](https://security.netapp.com/advisory/ntap-20211203-0001/)
+
+---
+
+### CVE-2021-25745
+
+**描述**: A security issue was discovered in ingress-nginx where a user that can create or update ingress objects can use the spec.rules\[\].http.paths\[\].path field of an Ingress object (in the networking.k8s.io or extensions API group) to obtain the credentials of the ingress-nginx controller. In the default configuration, that credential has access to all secrets in the cluster.
+
+**相关GitHub仓库**:
+
+- [kubernetes/ingress-nginx](https://github.com/kubernetes/ingress-nginx)
+  - 语言: Go
+  - Stars: 18663
+  - 描述: Ingress NGINX Controller for Kubernetes
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/kubernetes/ingress-nginx/pull/8623](https://github.com/kubernetes/ingress-nginx/pull/8623)
+
+**相关Commits**:
+- [https://github.com/kubernetes/ingress-nginx/commit/3faba285f509e46d04997f7c0f0597efba5ae8c5](https://github.com/kubernetes/ingress-nginx/commit/3faba285f509e46d04997f7c0f0597efba5ae8c5)
+
+**参考链接**:
+- [https://github.com/kubernetes/ingress-nginx/issues/8502](https://github.com/kubernetes/ingress-nginx/issues/8502)
+- [https://groups.google.com/g/kubernetes-security-announce/c/7vQrpDZeBlc](https://groups.google.com/g/kubernetes-security-announce/c/7vQrpDZeBlc)
+- [https://security.netapp.com/advisory/ntap-20220609-0006/](https://security.netapp.com/advisory/ntap-20220609-0006/)
+
+---
+
+### CVE-2021-25746
+
+**描述**: A security issue was discovered in ingress-nginx where a user that can create or update ingress objects can use .metadata.annotations in an Ingress object (in the networking.k8s.io or extensions API group) to obtain the credentials of the ingress-nginx controller. In the default configuration, that credential has access to all secrets in the cluster.
+
+**相关GitHub仓库**:
+
+- [kubernetes/ingress-nginx](https://github.com/kubernetes/ingress-nginx)
+  - 语言: Go
+  - Stars: 18663
+  - 描述: Ingress NGINX Controller for Kubernetes
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/kubernetes/ingress-nginx/pull/8456](https://github.com/kubernetes/ingress-nginx/pull/8456)
+
+**相关Commits**:
+- [https://github.com/kubernetes/ingress-nginx/commit/83107e0af40b99066b6a72faf33d95a969d17b18](https://github.com/kubernetes/ingress-nginx/commit/83107e0af40b99066b6a72faf33d95a969d17b18)
+
+**参考链接**:
+- [https://github.com/kubernetes/ingress-nginx/issues/8503](https://github.com/kubernetes/ingress-nginx/issues/8503)
+- [https://groups.google.com/g/kubernetes-security-announce/c/hv2-SfdqcfQ](https://groups.google.com/g/kubernetes-security-announce/c/hv2-SfdqcfQ)
+- [https://security.netapp.com/advisory/ntap-20220609-0006/](https://security.netapp.com/advisory/ntap-20220609-0006/)
+
+---
+
+### CVE-2021-25748
+
+**描述**: A security issue was discovered in ingress-nginx where a user that can create or update ingress objects can use a newline character to bypass the sanitization of the `spec.rules\[\].http.paths\[\].path` field of an Ingress object (in the `networking.k8s.io` or `extensions` API group) to obtain the credentials of the ingress-nginx controller. In the default configuration, that credential has access to all secrets in the cluster.
+
+**相关GitHub仓库**:
+
+- [kubernetes/ingress-nginx](https://github.com/kubernetes/ingress-nginx)
+  - 语言: Go
+  - Stars: 18663
+  - 描述: Ingress NGINX Controller for Kubernetes
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/kubernetes/ingress-nginx/pull/8623](https://github.com/kubernetes/ingress-nginx/pull/8623)
+
+**相关Commits**:
+- [https://github.com/kubernetes/ingress-nginx/commit/0466312bf2be0f2eca80d120461b1789c9d471fd](https://github.com/kubernetes/ingress-nginx/commit/0466312bf2be0f2eca80d120461b1789c9d471fd)
+- [https://github.com/kubernetes/ingress-nginx/commit/0ea1e7b0924a2805baa42dab6d6449b8f842840f](https://github.com/kubernetes/ingress-nginx/commit/0ea1e7b0924a2805baa42dab6d6449b8f842840f)
+- [https://github.com/kubernetes/ingress-nginx/commit/36a9ef67f688e2201eb38ccad96056c146fb63f2](https://github.com/kubernetes/ingress-nginx/commit/36a9ef67f688e2201eb38ccad96056c146fb63f2)
+- [https://github.com/kubernetes/ingress-nginx/commit/3faba285f509e46d04997f7c0f0597efba5ae8c5](https://github.com/kubernetes/ingress-nginx/commit/3faba285f509e46d04997f7c0f0597efba5ae8c5)
+- [https://github.com/kubernetes/ingress-nginx/commit/88c540f78451d24b69819d54faeb7d3b690591c8](https://github.com/kubernetes/ingress-nginx/commit/88c540f78451d24b69819d54faeb7d3b690591c8)
+- [https://github.com/kubernetes/ingress-nginx/commit/cea265af9d49e0ddeb8e14277310d130f3d0369a](https://github.com/kubernetes/ingress-nginx/commit/cea265af9d49e0ddeb8e14277310d130f3d0369a)
+
+**参考链接**:
+- [https://github.com/kubernetes/ingress-nginx/issues/8686](https://github.com/kubernetes/ingress-nginx/issues/8686)
+- [https://groups.google.com/g/kubernetes-security-announce/c/avaRYa9c7I8](https://groups.google.com/g/kubernetes-security-announce/c/avaRYa9c7I8)
+
+---
+
+### CVE-2021-27099
+
+**描述**: In SPIRE before versions 0.8.5, 0.9.4, 0.10.2, 0.11.3 and 0.12.1, the "aws_iid" Node Attestor improperly normalizes the path provided through the agent ID templating feature, which may allow the issuance of an arbitrary SPIFFE ID within the same trust domain, if the attacker controls the value of an EC2 tag prior to attestation, and the attestor is configured for agent ID templating where the tag value is the last element in the path. This issue has been fixed in SPIRE versions 0.11.3 and 0.12.1
+
+**相关GitHub仓库**:
+
+- [spiffe/spire](https://github.com/spiffe/spire)
+  - 语言: Go
+  - Stars: 1976
+  - 描述: The SPIFFE Runtime Environment
+  - 许可证: Apache License 2.0
+
+**相关Commits**:
+- [https://github.com/spiffe/spire/commit/a1762b93059a7408f85cf3c1d5a23bee45fd0d4f](https://github.com/spiffe/spire/commit/a1762b93059a7408f85cf3c1d5a23bee45fd0d4f)
+
+**参考链接**:
+- [https://github.com/spiffe/spire/security/advisories/GHSA-q7gm-mjrg-44h9](https://github.com/spiffe/spire/security/advisories/GHSA-q7gm-mjrg-44h9)
+
+---
+
+### CVE-2021-28448
+
+**描述**: Visual Studio Code Kubernetes Tools Remote Code Execution Vulnerability
+
+**相关GitHub仓库**:
+
+- [vscode-kubernetes-tools/vscode-kubernetes-tools](https://github.com/vscode-kubernetes-tools/vscode-kubernetes-tools)
+  - 语言: TypeScript
+  - Stars: 719
+  - 描述: Kubernetes extension for Visual Studio Code
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/vscode-kubernetes-tools/vscode-kubernetes-tools/pull/892](https://github.com/vscode-kubernetes-tools/vscode-kubernetes-tools/pull/892)
+
+**相关Commits**:
+- [https://github.com/vscode-kubernetes-tools/vscode-kubernetes-tools/commit/a7b80508bbd25d9cfc0c3fe7d531b583bd64ce1d](https://github.com/vscode-kubernetes-tools/vscode-kubernetes-tools/commit/a7b80508bbd25d9cfc0c3fe7d531b583bd64ce1d)
+- [https://github.com/vscode-kubernetes-tools/vscode-kubernetes-tools/commit/bb82371bf3a23b06aa4d1db0c1f491795d0cbf43](https://github.com/vscode-kubernetes-tools/vscode-kubernetes-tools/commit/bb82371bf3a23b06aa4d1db0c1f491795d0cbf43)
+
+**参考链接**:
+- [https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2021-28448](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2021-28448)
+
+---
+
+### CVE-2021-30465
+
+**描述**: runc before 1.0.0-rc95 allows a Container Filesystem Breakout via Directory Traversal. To exploit the vulnerability, an attacker must be able to create multiple containers with a fairly specific mount configuration. The problem occurs via a symlink-exchange attack that relies on a race condition.
+
+**相关GitHub仓库**:
+
+- [opencontainers/runc](https://github.com/opencontainers/runc)
+  - 语言: Go
+  - Stars: 12467
+  - 描述: CLI tool for spawning and running containers according to the OCI specification
+  - 许可证: Apache License 2.0
+
+**相关Commits**:
+- [https://github.com/opencontainers/runc/commit/0ca91f44f1664da834bc61115a849b56d22f595f](https://github.com/opencontainers/runc/commit/0ca91f44f1664da834bc61115a849b56d22f595f)
+
+**参考链接**:
+- [http://www.openwall.com/lists/oss-security/2021/05/19/2](http://www.openwall.com/lists/oss-security/2021/05/19/2)
+- [https://bugzilla.opensuse.org/show_bug.cgi?id=1185405](https://bugzilla.opensuse.org/show_bug.cgi?id=1185405)
+- [https://github.com/opencontainers/runc/commit/0ca91f44f1664da834bc61115a849b56d22f595f](https://github.com/opencontainers/runc/commit/0ca91f44f1664da834bc61115a849b56d22f595f)
+- [https://github.com/opencontainers/runc/releases](https://github.com/opencontainers/runc/releases)
+- [https://github.com/opencontainers/runc/security/advisories/GHSA-c3xm-pvg7-gh7r](https://github.com/opencontainers/runc/security/advisories/GHSA-c3xm-pvg7-gh7r)
+- [https://lists.debian.org/debian-lts-announce/2023/03/msg00023.html](https://lists.debian.org/debian-lts-announce/2023/03/msg00023.html)
+- [https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/35ZW6NBZSBH5PWIT7JU4HXOXGFVDCOHH/](https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/35ZW6NBZSBH5PWIT7JU4HXOXGFVDCOHH/)
+- [https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/4HOARVIT47RULTTFWAU7XBG4WY6TDDHV/](https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/4HOARVIT47RULTTFWAU7XBG4WY6TDDHV/)
+- [https://security.gentoo.org/glsa/202107-26](https://security.gentoo.org/glsa/202107-26)
+- [https://security.netapp.com/advisory/ntap-20210708-0003/](https://security.netapp.com/advisory/ntap-20210708-0003/)
+
+---
+
+### CVE-2021-32760
+
+**描述**: containerd is a container runtime. A bug was found in containerd versions prior to 1.4.8 and 1.5.4 where pulling and extracting a specially-crafted container image can result in Unix file permission changes for existing files in the host’s filesystem. Changes to file permissions can deny access to the expected owner of the file, widen access to others, or set extended bits like setuid, setgid, and sticky. This bug does not directly allow files to be read, modified, or executed without an additional cooperating process. This bug has been fixed in containerd 1.5.4 and 1.4.8. As a workaround, ensure that users only pull images from trusted sources. Linux security modules (LSMs) like SELinux and AppArmor can limit the files potentially affected by this bug through policies and profiles that prevent containerd from interacting with specific files.
+
+**相关GitHub仓库**:
+
+- [containerd/containerd](https://github.com/containerd/containerd)
+  - 语言: Go
+  - Stars: 18842
+  - 描述: An open and reliable container runtime
+  - 许可证: Apache License 2.0
+
+**相关Commits**:
+- [https://github.com/containerd/containerd/commit/03aa748c11663e87a72fab92b7ab7c88c28bf13e](https://github.com/containerd/containerd/commit/03aa748c11663e87a72fab92b7ab7c88c28bf13e)
+
+**参考链接**:
+- [https://github.com/containerd/containerd/releases/tag/v1.4.8](https://github.com/containerd/containerd/releases/tag/v1.4.8)
+- [https://github.com/containerd/containerd/releases/tag/v1.5.4](https://github.com/containerd/containerd/releases/tag/v1.5.4)
+- [https://github.com/containerd/containerd/security/advisories/GHSA-c72p-9xmj-rx3w](https://github.com/containerd/containerd/security/advisories/GHSA-c72p-9xmj-rx3w)
+- [https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/DDMNDPJJTP3J5GOEDB66F6MGXUTRG3Y3/](https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/DDMNDPJJTP3J5GOEDB66F6MGXUTRG3Y3/)
+- [https://security.gentoo.org/glsa/202401-31](https://security.gentoo.org/glsa/202401-31)
+
+---
+
+### CVE-2021-32783
+
+**描述**: Contour is a Kubernetes ingress controller using Envoy proxy. In Contour before version 1.17.1 a specially crafted ExternalName type Service may be used to access Envoy's admin interface, which Contour normally prevents from access outside the Envoy container. This can be used to shut down Envoy remotely (a denial of service), or to expose the existence of any Secret that Envoy is using for its configuration, including most notably TLS Keypairs. However, it *cannot* be used to get the *content* of those secrets. Since this attack allows access to the administration interface, a variety of administration options are available, such as shutting down the Envoy or draining traffic. In general, the Envoy admin interface cannot easily be used for making changes to the cluster, in-flight requests, or backend services, but it could be used to shut down or drain Envoy, change traffic routing, or to retrieve secret metadata, as mentioned above. The issue will be addressed in Contour v1.18.0 and a cherry-picked patch release, v1.17.1, has been released to cover users who cannot upgrade at this time. For more details refer to the linked GitHub Security Advisory.
+
+**相关GitHub仓库**:
+
+- [projectcontour/contour](https://github.com/projectcontour/contour)
+  - 语言: HTML
+  - Stars: 3811
+  - 描述: Contour is a Kubernetes ingress controller using Envoy proxy.
+  - 许可证: Apache License 2.0
+
+**相关Commits**:
+- [https://github.com/projectcontour/contour/commit/b53a5c4fd927f4ea2c6cf02f1359d8e28bef852e](https://github.com/projectcontour/contour/commit/b53a5c4fd927f4ea2c6cf02f1359d8e28bef852e)
+
+**参考链接**:
+- [https://github.com/projectcontour/contour/commit/b53a5c4fd927f4ea2c6cf02f1359d8e28bef852e](https://github.com/projectcontour/contour/commit/b53a5c4fd927f4ea2c6cf02f1359d8e28bef852e)
+- [https://github.com/projectcontour/contour/releases/tag/v1.17.1](https://github.com/projectcontour/contour/releases/tag/v1.17.1)
+- [https://github.com/projectcontour/contour/security/advisories/GHSA-5ph6-qq5x-7jwc](https://github.com/projectcontour/contour/security/advisories/GHSA-5ph6-qq5x-7jwc)
+
+---
+
+### CVE-2021-37914
+
+**描述**: In Argo Workflows through 3.1.3, if EXPRESSION_TEMPLATES is enabled and untrusted users are allowed to specify input parameters when running workflows, an attacker may be able to disrupt a workflow because expression template output is evaluated.
+
+**相关GitHub仓库**:
+
+- [argoproj/argo-workflows](https://github.com/argoproj/argo-workflows)
+  - 语言: Go
+  - Stars: 15756
+  - 描述: Workflow Engine for Kubernetes
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/argoproj/argo-workflows/pull/6442](https://github.com/argoproj/argo-workflows/pull/6442)
+- [https://github.com/argoproj/argo-workflows/pull/6285](https://github.com/argoproj/argo-workflows/pull/6285)
+
+**参考链接**:
+- [https://github.com/argoproj/argo-workflows/issues/6441](https://github.com/argoproj/argo-workflows/issues/6441)
+- [https://github.com/argoproj/argo-workflows/pull/6442](https://github.com/argoproj/argo-workflows/pull/6442)
+
+---
+
+### CVE-2021-39159
+
+**描述**: BinderHub is a kubernetes-based cloud service that allows users to share reproducible interactive computing environments from code repositories. In affected versions a remote code execution vulnerability has been identified in BinderHub, where providing BinderHub with maliciously crafted input could execute code in the BinderHub context, with the potential to egress credentials of the BinderHub deployment, including JupyterHub API tokens, kubernetes service accounts, and docker registry credentials. This may provide the ability to manipulate images and other user created pods in the deployment, with the potential to escalate to the host depending on the underlying kubernetes configuration. Users are advised to update to version 0.2.0-n653. If users are unable to update they may disable the git repo provider by specifying the `BinderHub.repo_providers` as a workaround.
+
+**相关GitHub仓库**:
+
+- [jupyterhub/binderhub](https://github.com/jupyterhub/binderhub)
+  - 语言: Python
+  - Stars: 2633
+  - 描述: Run your code in the cloud, with technology so advanced, it feels like magic!
+  - 许可证: BSD 3-Clause "New" or "Revised" License
+
+**相关Commits**:
+- [https://github.com/jupyterhub/binderhub/commit/195caac172690456dcdc8cc7a6ca50e05abf8182.patch](https://github.com/jupyterhub/binderhub/commit/195caac172690456dcdc8cc7a6ca50e05abf8182.patch)
+
+**参考链接**:
+- [https://github.com/jupyterhub/binderhub/commit/195caac172690456dcdc8cc7a6ca50e05abf8182.patch](https://github.com/jupyterhub/binderhub/commit/195caac172690456dcdc8cc7a6ca50e05abf8182.patch)
+- [https://github.com/jupyterhub/binderhub/security/advisories/GHSA-9jjr-qqfp-ppwx](https://github.com/jupyterhub/binderhub/security/advisories/GHSA-9jjr-qqfp-ppwx)
+
+---
+
+### CVE-2021-41254
+
+**描述**: kustomize-controller is a Kubernetes operator, specialized in running continuous delivery pipelines for infrastructure and workloads defined with Kubernetes manifests and assembled with Kustomize. Users that can create Kubernetes Secrets, Service Accounts and Flux Kustomization objects, could execute commands inside the kustomize-controller container by embedding a shell script in a Kubernetes Secret. This can be used to run `kubectl` commands under the Service Account of kustomize-controller, thus allowing an authenticated Kubernetes user to gain cluster admin privileges. In affected versions multitenant environments where non-admin users have permissions to create Flux Kustomization objects are affected by this issue. This vulnerability was fixed in kustomize-controller v0.15.0 (included in flux2 v0.18.0) released on 2021-10-08. Starting with v0.15, the kustomize-controller no longer executes shell commands on the container OS and the `kubectl` binary has been removed from the container image. To prevent the creation of Kubernetes Service Accounts with `secrets` in namespaces owned by tenants, a Kubernetes validation webhook such as Gatekeeper OPA or Kyverno can be used.
+
+**相关GitHub仓库**:
+
+- [fluxcd/kustomize-controller](https://github.com/fluxcd/kustomize-controller)
+  - 语言: Go
+  - Stars: 264
+  - 描述: The GitOps Toolkit Kustomize reconciler
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/fluxcd/kustomize-controller/pull/426](https://github.com/fluxcd/kustomize-controller/pull/426)
+
+**相关Commits**:
+- [https://github.com/fluxcd/kustomize-controller/commit/1e01d800c56ca21e0aaef5d8d1cfc4debb7ed228](https://github.com/fluxcd/kustomize-controller/commit/1e01d800c56ca21e0aaef5d8d1cfc4debb7ed228)
+- [https://github.com/fluxcd/kustomize-controller/commit/3a03d235c241e097e0b6c5d293eca1e55e7c3917](https://github.com/fluxcd/kustomize-controller/commit/3a03d235c241e097e0b6c5d293eca1e55e7c3917)
+- [https://github.com/fluxcd/kustomize-controller/commit/468f00e416bd6609338f4ab2f11ad8d19d6849a6](https://github.com/fluxcd/kustomize-controller/commit/468f00e416bd6609338f4ab2f11ad8d19d6849a6)
+- [https://github.com/fluxcd/kustomize-controller/commit/50c71354ab316cf80fc531ff161e946e6eb64447](https://github.com/fluxcd/kustomize-controller/commit/50c71354ab316cf80fc531ff161e946e6eb64447)
+- [https://github.com/fluxcd/kustomize-controller/commit/51a7189087fb3be724bb9184aef9129ac775ac66](https://github.com/fluxcd/kustomize-controller/commit/51a7189087fb3be724bb9184aef9129ac775ac66)
+- [https://github.com/fluxcd/kustomize-controller/commit/6346591f0239d5a1abb1b7d1f57eb25109cf1216](https://github.com/fluxcd/kustomize-controller/commit/6346591f0239d5a1abb1b7d1f57eb25109cf1216)
+- [https://github.com/fluxcd/kustomize-controller/commit/64084ea03b278c9d2daa712054fbe91208365329](https://github.com/fluxcd/kustomize-controller/commit/64084ea03b278c9d2daa712054fbe91208365329)
+- [https://github.com/fluxcd/kustomize-controller/commit/69069c3ab30d2de6150733d853de0b3f887ed9b1](https://github.com/fluxcd/kustomize-controller/commit/69069c3ab30d2de6150733d853de0b3f887ed9b1)
+- [https://github.com/fluxcd/kustomize-controller/commit/79dd86581c2a5e42bd4dbaa39b70c2be58d1e6f9](https://github.com/fluxcd/kustomize-controller/commit/79dd86581c2a5e42bd4dbaa39b70c2be58d1e6f9)
+- [https://github.com/fluxcd/kustomize-controller/commit/7ffe62b8e739450ad55d66e61cbae70d1da32bba](https://github.com/fluxcd/kustomize-controller/commit/7ffe62b8e739450ad55d66e61cbae70d1da32bba)
+- [https://github.com/fluxcd/kustomize-controller/commit/8baead9b2e6b5f5d1075c755dfa6677683812ec7](https://github.com/fluxcd/kustomize-controller/commit/8baead9b2e6b5f5d1075c755dfa6677683812ec7)
+- [https://github.com/fluxcd/kustomize-controller/commit/97bbc59eb6a9046c8e299dd75352fff8f4d8034b](https://github.com/fluxcd/kustomize-controller/commit/97bbc59eb6a9046c8e299dd75352fff8f4d8034b)
+- [https://github.com/fluxcd/kustomize-controller/commit/9c533e4a52e0687c9e02167964bdb20135d240fc](https://github.com/fluxcd/kustomize-controller/commit/9c533e4a52e0687c9e02167964bdb20135d240fc)
+- [https://github.com/fluxcd/kustomize-controller/commit/9c8f284b7fc2ce66c6c21d6281a8156a6e3c24ff](https://github.com/fluxcd/kustomize-controller/commit/9c8f284b7fc2ce66c6c21d6281a8156a6e3c24ff)
+- [https://github.com/fluxcd/kustomize-controller/commit/ad2fe66dbf0745792b5c2d657659aa916a132b32](https://github.com/fluxcd/kustomize-controller/commit/ad2fe66dbf0745792b5c2d657659aa916a132b32)
+- [https://github.com/fluxcd/kustomize-controller/commit/b33e3b3449c12314580c7548ec043934620f5efd](https://github.com/fluxcd/kustomize-controller/commit/b33e3b3449c12314580c7548ec043934620f5efd)
+- [https://github.com/fluxcd/kustomize-controller/commit/b7abdf2b844eb2237a53b7ecb1e0a84aa70f08e0](https://github.com/fluxcd/kustomize-controller/commit/b7abdf2b844eb2237a53b7ecb1e0a84aa70f08e0)
+- [https://github.com/fluxcd/kustomize-controller/commit/d0222867e69342b85c8d69bb272755c439c9bfb4](https://github.com/fluxcd/kustomize-controller/commit/d0222867e69342b85c8d69bb272755c439c9bfb4)
+- [https://github.com/fluxcd/kustomize-controller/commit/dba56a569e66afc3b601185750dc5111002ffecf](https://github.com/fluxcd/kustomize-controller/commit/dba56a569e66afc3b601185750dc5111002ffecf)
+- [https://github.com/fluxcd/kustomize-controller/commit/dd3935ce8ea32df8c784df156dfba4734a99c86a](https://github.com/fluxcd/kustomize-controller/commit/dd3935ce8ea32df8c784df156dfba4734a99c86a)
+- [https://github.com/fluxcd/kustomize-controller/commit/efd1cb4b9ae09ba4f4ef8dc6258761af1b7cb5ce](https://github.com/fluxcd/kustomize-controller/commit/efd1cb4b9ae09ba4f4ef8dc6258761af1b7cb5ce)
+
+**参考链接**:
+- [https://github.com/fluxcd/kustomize-controller/security/advisories/GHSA-35rf-v2jv-gfg7](https://github.com/fluxcd/kustomize-controller/security/advisories/GHSA-35rf-v2jv-gfg7)
+
+---
+
+### CVE-2021-4178
+
+**描述**: A arbitrary code execution flaw was found in the Fabric 8 Kubernetes client affecting versions 5.0.0-beta-1 and above. Due to an improperly configured YAML parsing, this will allow a local and privileged attacker to supply malicious YAML.
+
+
+**相关Pull Requests**:
+- [https://github.com/fabric8io/kubernetes-client/pull/3720](https://github.com/fabric8io/kubernetes-client/pull/3720)
+
+**相关Commits**:
+- [https://github.com/fabric8io/kubernetes-client/commit/e494bae3b070c3292cf6d3a68819cce5962c0246](https://github.com/fabric8io/kubernetes-client/commit/e494bae3b070c3292cf6d3a68819cce5962c0246)
+
+**参考链接**:
+- [https://access.redhat.com/security/cve/CVE-2021-4178](https://access.redhat.com/security/cve/CVE-2021-4178)
+- [https://bugzilla.redhat.com/show_bug.cgi?id=2034388](https://bugzilla.redhat.com/show_bug.cgi?id=2034388)
+- [https://github.com/advisories/GHSA-98g7-rxmf-rrxm](https://github.com/advisories/GHSA-98g7-rxmf-rrxm)
+- [https://github.com/fabric8io/kubernetes-client/issues/3653](https://github.com/fabric8io/kubernetes-client/issues/3653)
+
+---
+
+### CVE-2021-43784
+
+**描述**: runc is a CLI tool for spawning and running containers on Linux according to the OCI specification. In runc, netlink is used internally as a serialization system for specifying the relevant container configuration to the `C` portion of the code (responsible for the based namespace setup of containers). In all versions of runc prior to 1.0.3, the encoder did not handle the possibility of an integer overflow in the 16-bit length field for the byte array attribute type, meaning that a large enough malicious byte array attribute could result in the length overflowing and the attribute contents being parsed as netlink messages for container configuration. This vulnerability requires the attacker to have some control over the configuration of the container and would allow the attacker to bypass the namespace restrictions of the container by simply adding their own netlink payload which disables all namespaces. The main users impacted are those who allow untrusted images with untrusted configurations to run on their machines (such as with shared cloud infrastructure). runc version 1.0.3 contains a fix for this bug. As a workaround, one may try disallowing untrusted namespace paths from your container. It should be noted that untrusted namespace paths would allow the attacker to disable namespace protections entirely even in the absence of this bug.
+
+**相关GitHub仓库**:
+
+- [opencontainers/runc](https://github.com/opencontainers/runc)
+  - 语言: Go
+  - Stars: 12467
+  - 描述: CLI tool for spawning and running containers according to the OCI specification
+  - 许可证: Apache License 2.0
+
+**相关Commits**:
+- [https://github.com/opencontainers/runc/commit/9c444070ec7bb83995dbc0185da68284da71c554](https://github.com/opencontainers/runc/commit/9c444070ec7bb83995dbc0185da68284da71c554)
+- [https://github.com/opencontainers/runc/commit/d72d057ba794164c3cce9451a00b72a78b25e1ae](https://github.com/opencontainers/runc/commit/d72d057ba794164c3cce9451a00b72a78b25e1ae)
+- [https://github.com/opencontainers/runc/commit/f50369af4b571e358f20b139eea52d612eb55eed](https://github.com/opencontainers/runc/commit/f50369af4b571e358f20b139eea52d612eb55eed)
+
+**参考链接**:
+- [https://bugs.chromium.org/p/project-zero/issues/detail?id=2241](https://bugs.chromium.org/p/project-zero/issues/detail?id=2241)
+- [https://github.com/opencontainers/runc/commit/9c444070ec7bb83995dbc0185da68284da71c554](https://github.com/opencontainers/runc/commit/9c444070ec7bb83995dbc0185da68284da71c554)
+- [https://github.com/opencontainers/runc/commit/d72d057ba794164c3cce9451a00b72a78b25e1ae](https://github.com/opencontainers/runc/commit/d72d057ba794164c3cce9451a00b72a78b25e1ae)
+- [https://github.com/opencontainers/runc/commit/f50369af4b571e358f20b139eea52d612eb55eed](https://github.com/opencontainers/runc/commit/f50369af4b571e358f20b139eea52d612eb55eed)
+- [https://github.com/opencontainers/runc/security/advisories/GHSA-v95c-p5hm-xq8f](https://github.com/opencontainers/runc/security/advisories/GHSA-v95c-p5hm-xq8f)
+- [https://lists.debian.org/debian-lts-announce/2021/12/msg00005.html](https://lists.debian.org/debian-lts-announce/2021/12/msg00005.html)
+- [https://lists.debian.org/debian-lts-announce/2024/02/msg00005.html](https://lists.debian.org/debian-lts-announce/2024/02/msg00005.html)
+
+---
+
+### CVE-2022-0532
+
+**描述**: An incorrect sysctls validation vulnerability was found in CRI-O 1.18 and earlier. The sysctls from the list of "safe" sysctls specified for the cluster will be applied to the host if an attacker is able to create a pod with a hostIPC and hostNetwork kernel namespace.
+
+**相关GitHub仓库**:
+
+- [cri-o/cri-o](https://github.com/cri-o/cri-o)
+  - 语言: Go
+  - Stars: 5433
+  - 描述: Open Container Initiative-based implementation of Kubernetes Container Runtime Interface
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/cri-o/cri-o/pull/5610](https://github.com/cri-o/cri-o/pull/5610)
+
+**相关Commits**:
+- [https://github.com/cri-o/cri-o/commit/1667b5a668a13e0a18ac4317fa13fa8a6865e73a](https://github.com/cri-o/cri-o/commit/1667b5a668a13e0a18ac4317fa13fa8a6865e73a)
+- [https://github.com/cri-o/cri-o/commit/728731808062653be1f35b94ba8f9aed82fcf3ba](https://github.com/cri-o/cri-o/commit/728731808062653be1f35b94ba8f9aed82fcf3ba)
+
+**参考链接**:
+- [https://bugzilla.redhat.com/show_bug.cgi?id=2051730](https://bugzilla.redhat.com/show_bug.cgi?id=2051730)
+- [https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/#enabling-unsafe-sysctls](https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/#enabling-unsafe-sysctls)
+
+---
+
+### CVE-2022-0811
+
+**描述**: A flaw was found in CRI-O in the way it set kernel options for a pod. This issue allows anyone with rights to deploy a pod on a Kubernetes cluster that uses the CRI-O runtime to achieve a container escape and arbitrary code execution as root on the cluster node, where the malicious pod was deployed.
+
+**相关GitHub仓库**:
+
+- [cri-o/cri-o](https://github.com/cri-o/cri-o)
+  - 语言: Go
+  - Stars: 5433
+  - 描述: Open Container Initiative-based implementation of Kubernetes Container Runtime Interface
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/cri-o/cri-o/pull/5728](https://github.com/cri-o/cri-o/pull/5728)
+
+**相关Commits**:
+- [https://github.com/cri-o/cri-o/commit/1af1f8af2c7e23525102dffbf0899b69e34ed3d2](https://github.com/cri-o/cri-o/commit/1af1f8af2c7e23525102dffbf0899b69e34ed3d2)
+
+**参考链接**:
+- [https://bugzilla.redhat.com/show_bug.cgi?id=2059475](https://bugzilla.redhat.com/show_bug.cgi?id=2059475)
+- [https://github.com/cri-o/cri-o/security/advisories/GHSA-6x2m-w449-qwx7](https://github.com/cri-o/cri-o/security/advisories/GHSA-6x2m-w449-qwx7)
+
+---
+
+### CVE-2022-1708
+
+**描述**: A vulnerability was found in CRI-O that causes memory or disk space exhaustion on the node for anyone with access to the Kube API. The ExecSync request runs commands in a container and logs the output of the command. This output is then read by CRI-O after command execution, and it is read in a manner where the entire file corresponding to the output of the command is read in. Thus, if the output of the command is large it is possible to exhaust the memory or the disk space of the node when CRI-O reads the output of the command. The highest threat from this vulnerability is system availability.
+
+**相关GitHub仓库**:
+
+- [cri-o/cri-o](https://github.com/cri-o/cri-o)
+  - 语言: Go
+  - Stars: 5433
+  - 描述: Open Container Initiative-based implementation of Kubernetes Container Runtime Interface
+  - 许可证: Apache License 2.0
+
+**相关Commits**:
+- [https://github.com/cri-o/cri-o/commit/f032cf649ecc7e0c46718bd9e7814bfb317cb544](https://github.com/cri-o/cri-o/commit/f032cf649ecc7e0c46718bd9e7814bfb317cb544)
+
+**参考链接**:
+- [https://bugzilla.redhat.com/show_bug.cgi?id=2085361](https://bugzilla.redhat.com/show_bug.cgi?id=2085361)
+- [https://github.com/cri-o/cri-o/commit/f032cf649ecc7e0c46718bd9e7814bfb317cb544](https://github.com/cri-o/cri-o/commit/f032cf649ecc7e0c46718bd9e7814bfb317cb544)
+- [https://github.com/cri-o/cri-o/security/advisories/GHSA-fcm2-6c3h-pg6j](https://github.com/cri-o/cri-o/security/advisories/GHSA-fcm2-6c3h-pg6j)
+
+---
+
+### CVE-2022-1798
+
+**描述**: A path traversal vulnerability in KubeVirt versions up to 0.56 (and 0.55.1) on all platforms allows a user able to configure the kubevirt to read arbitrary files on the host filesystem which are publicly readable or which are readable for UID 107 or GID 107. /proc/self/<> is not accessible.
+
+
+**相关Pull Requests**:
+- [https://github.com/kubevirt/kubevirt/pull/8198](https://github.com/kubevirt/kubevirt/pull/8198)
+- [https://github.com/kubevirt/kubevirt/pull/8268](https://github.com/kubevirt/kubevirt/pull/8268)
+
+**相关Commits**:
+- [https://github.com/kubevirt/kubevirt/commit/0e28639da59d97c9cfcaf28843fe48738f959362](https://github.com/kubevirt/kubevirt/commit/0e28639da59d97c9cfcaf28843fe48738f959362)
+- [https://github.com/kubevirt/kubevirt/commit/0f817a789cdbcb770a401a32b11af5653987d585](https://github.com/kubevirt/kubevirt/commit/0f817a789cdbcb770a401a32b11af5653987d585)
+- [https://github.com/kubevirt/kubevirt/commit/11120f94acbdd0110529b9e046d9881cde66bca2](https://github.com/kubevirt/kubevirt/commit/11120f94acbdd0110529b9e046d9881cde66bca2)
+- [https://github.com/kubevirt/kubevirt/commit/17fa7de73f4e7809aaa9f2313aee6660925eaf03](https://github.com/kubevirt/kubevirt/commit/17fa7de73f4e7809aaa9f2313aee6660925eaf03)
+- [https://github.com/kubevirt/kubevirt/commit/1a8c0367230a907f368f3b7d4d5b1034dcd2f764](https://github.com/kubevirt/kubevirt/commit/1a8c0367230a907f368f3b7d4d5b1034dcd2f764)
+- [https://github.com/kubevirt/kubevirt/commit/21ee498079cfee9cacc646ac91340a3384e60ce2](https://github.com/kubevirt/kubevirt/commit/21ee498079cfee9cacc646ac91340a3384e60ce2)
+- [https://github.com/kubevirt/kubevirt/commit/257354834ad71006026e414330cd06c4354c8bee](https://github.com/kubevirt/kubevirt/commit/257354834ad71006026e414330cd06c4354c8bee)
+- [https://github.com/kubevirt/kubevirt/commit/59d54ee7f23d20ce17e6ec08b47458e78715811b](https://github.com/kubevirt/kubevirt/commit/59d54ee7f23d20ce17e6ec08b47458e78715811b)
+- [https://github.com/kubevirt/kubevirt/commit/5cbc2736c8655c8f500b035fb37b08f54cec9aee](https://github.com/kubevirt/kubevirt/commit/5cbc2736c8655c8f500b035fb37b08f54cec9aee)
+- [https://github.com/kubevirt/kubevirt/commit/5ce26afd3c6ff739d1b50e01bba20786805071ec](https://github.com/kubevirt/kubevirt/commit/5ce26afd3c6ff739d1b50e01bba20786805071ec)
+- [https://github.com/kubevirt/kubevirt/commit/61d6dbe24d2808fa5c55ea0d83096c36729d91f9](https://github.com/kubevirt/kubevirt/commit/61d6dbe24d2808fa5c55ea0d83096c36729d91f9)
+- [https://github.com/kubevirt/kubevirt/commit/76d446f7968eae8b2a4b6d153bdab61f4292a033](https://github.com/kubevirt/kubevirt/commit/76d446f7968eae8b2a4b6d153bdab61f4292a033)
+- [https://github.com/kubevirt/kubevirt/commit/7de70e9a17eb0ce951a9ef05d526752aa2aeb88c](https://github.com/kubevirt/kubevirt/commit/7de70e9a17eb0ce951a9ef05d526752aa2aeb88c)
+- [https://github.com/kubevirt/kubevirt/commit/a1ad0315a840063188cc38b9e429524a6f75ed71](https://github.com/kubevirt/kubevirt/commit/a1ad0315a840063188cc38b9e429524a6f75ed71)
+- [https://github.com/kubevirt/kubevirt/commit/b465bffbf7ea86cbc15dad68118eea0721c6af87](https://github.com/kubevirt/kubevirt/commit/b465bffbf7ea86cbc15dad68118eea0721c6af87)
+- [https://github.com/kubevirt/kubevirt/commit/ba30ed6a883d6801c3c79544d6282e5fd3ab0434](https://github.com/kubevirt/kubevirt/commit/ba30ed6a883d6801c3c79544d6282e5fd3ab0434)
+- [https://github.com/kubevirt/kubevirt/commit/d7e01de4a3e3abc11a0e525f0d1b2eecdeb7138c](https://github.com/kubevirt/kubevirt/commit/d7e01de4a3e3abc11a0e525f0d1b2eecdeb7138c)
+- [https://github.com/kubevirt/kubevirt/commit/ddb060e2ed8d582191eb634b56655b10d109e045](https://github.com/kubevirt/kubevirt/commit/ddb060e2ed8d582191eb634b56655b10d109e045)
+- [https://github.com/kubevirt/kubevirt/commit/f0da2cc5778178ec3de85e66239579fc373ad8d9](https://github.com/kubevirt/kubevirt/commit/f0da2cc5778178ec3de85e66239579fc373ad8d9)
+- [https://github.com/kubevirt/kubevirt/commit/fe187d33947cc1ed72c7c1b064a18e7169a1be25](https://github.com/kubevirt/kubevirt/commit/fe187d33947cc1ed72c7c1b064a18e7169a1be25)
+
+**参考链接**:
+- [https://github.com/kubevirt/kubevirt/security/advisories/GHSA-qv98-3369-g364](https://github.com/kubevirt/kubevirt/security/advisories/GHSA-qv98-3369-g364)
+
+---
+
+### CVE-2022-21701
+
+**描述**: Istio is an open platform to connect, manage, and secure microservices. In versions 1.12.0 and 1.12.1 Istio is vulnerable to a privilege escalation attack. Users who have `CREATE` permission for `gateways.gateway.networking.k8s.io` objects can escalate this privilege to create other resources that they may not have access to, such as `Pod`. This vulnerability impacts only an Alpha level feature, the Kubernetes Gateway API. This is not the same as the Istio Gateway type (gateways.networking.istio.io), which is not vulnerable. Users are advised to upgrade to resolve this issue. Users unable to upgrade should implement any of the following which will prevent this vulnerability: Remove the gateways.gateway.networking.k8s.io CustomResourceDefinition, set PILOT_ENABLE_GATEWAY_API_DEPLOYMENT_CONTROLLER=true environment variable in Istiod, or remove CREATE permissions for gateways.gateway.networking.k8s.io objects from untrusted users.
+
+**相关GitHub仓库**:
+
+- [istio/istio](https://github.com/istio/istio)
+  - 语言: Go
+  - Stars: 36991
+  - 描述: Connect, secure, control, and observe services.
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/istio/istio/pull/36197](https://github.com/istio/istio/pull/36197)
+
+**相关Commits**:
+- [https://github.com/istio/istio/commit/2aa1cbe02c968483f7aa5a32c6f0c0efe484c425](https://github.com/istio/istio/commit/2aa1cbe02c968483f7aa5a32c6f0c0efe484c425)
+
+**参考链接**:
+- [https://github.com/istio/istio/security/advisories/GHSA-mq8f-9446-c28r](https://github.com/istio/istio/security/advisories/GHSA-mq8f-9446-c28r)
+- [https://istio.io/latest/news/releases/1.12.x/announcing-1.12.2/](https://istio.io/latest/news/releases/1.12.x/announcing-1.12.2/)
+
+---
+
+### CVE-2022-23471
+
+**描述**: containerd is an open source container runtime. A bug was found in containerd's CRI implementation where a user can exhaust memory on the host. In the CRI stream server, a goroutine is launched to handle terminal resize events if a TTY is requested. If the user's process fails to launch due to, for example, a faulty command, the goroutine will be stuck waiting to send without a receiver, resulting in a memory leak. Kubernetes and crictl can both be configured to use containerd's CRI implementation and the stream server is used for handling container IO. This bug has been fixed in containerd 1.6.12 and 1.5.16.  Users should update to these versions to resolve the issue. Users unable to upgrade should ensure that only trusted images and commands are used and that only trusted users have permissions to execute commands in running containers. 
+
+**相关GitHub仓库**:
+
+- [containerd/containerd](https://github.com/containerd/containerd)
+  - 语言: Go
+  - Stars: 18842
+  - 描述: An open and reliable container runtime
+  - 许可证: Apache License 2.0
+
+**相关Commits**:
+- [https://github.com/containerd/containerd/commit/a05d175400b1145e5e6a735a6710579d181e7fb0](https://github.com/containerd/containerd/commit/a05d175400b1145e5e6a735a6710579d181e7fb0)
+
+**参考链接**:
+- [https://github.com/containerd/containerd/commit/a05d175400b1145e5e6a735a6710579d181e7fb0](https://github.com/containerd/containerd/commit/a05d175400b1145e5e6a735a6710579d181e7fb0)
+- [https://github.com/containerd/containerd/security/advisories/GHSA-2qjp-425j-52j9](https://github.com/containerd/containerd/security/advisories/GHSA-2qjp-425j-52j9)
+- [https://security.gentoo.org/glsa/202401-31](https://security.gentoo.org/glsa/202401-31)
+
+---
+
+### CVE-2022-23648
+
+**描述**: containerd is a container runtime available as a daemon for Linux and Windows. A bug was found in containerd prior to versions 1.6.1, 1.5.10, and 1.14.12 where containers launched through containerd’s CRI implementation on Linux with a specially-crafted image configuration could gain access to read-only copies of arbitrary files and directories on the host. This may bypass any policy-based enforcement on container setup (including a Kubernetes Pod Security Policy) and expose potentially sensitive information. Kubernetes and crictl can both be configured to use containerd’s CRI implementation. This bug has been fixed in containerd 1.6.1, 1.5.10, and 1.4.12. Users should update to these versions to resolve the issue.
+
+**相关GitHub仓库**:
+
+- [containerd/containerd](https://github.com/containerd/containerd)
+  - 语言: Go
+  - Stars: 18842
+  - 描述: An open and reliable container runtime
+  - 许可证: Apache License 2.0
+
+**相关Commits**:
+- [https://github.com/containerd/containerd/commit/10f428dac7cec44c864e1b830a4623af27a9fc70](https://github.com/containerd/containerd/commit/10f428dac7cec44c864e1b830a4623af27a9fc70)
+- [https://github.com/containerd/containerd/commit/8acbb276477c8353ddb7551b58cb3fdeb0b13caa](https://github.com/containerd/containerd/commit/8acbb276477c8353ddb7551b58cb3fdeb0b13caa)
+
+**参考链接**:
+- [http://packetstormsecurity.com/files/166421/containerd-Image-Volume-Insecure-Handling.html](http://packetstormsecurity.com/files/166421/containerd-Image-Volume-Insecure-Handling.html)
+- [https://github.com/containerd/containerd/commit/10f428dac7cec44c864e1b830a4623af27a9fc70](https://github.com/containerd/containerd/commit/10f428dac7cec44c864e1b830a4623af27a9fc70)
+- [https://github.com/containerd/containerd/releases/tag/v1.4.13](https://github.com/containerd/containerd/releases/tag/v1.4.13)
+- [https://github.com/containerd/containerd/releases/tag/v1.5.10](https://github.com/containerd/containerd/releases/tag/v1.5.10)
+- [https://github.com/containerd/containerd/releases/tag/v1.6.1](https://github.com/containerd/containerd/releases/tag/v1.6.1)
+- [https://github.com/containerd/containerd/security/advisories/GHSA-crp2-qrr5-8pq7](https://github.com/containerd/containerd/security/advisories/GHSA-crp2-qrr5-8pq7)
+- [https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/AUDQUQBZJGBWJPMRVB6QCCCRF7O3O4PA/](https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/AUDQUQBZJGBWJPMRVB6QCCCRF7O3O4PA/)
+- [https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/HFTS2EF3S7HNYSNZSEJZIJHPRU7OPUV3/](https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/HFTS2EF3S7HNYSNZSEJZIJHPRU7OPUV3/)
+- [https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/OCCARJ6FU4MWBTXHZNMS7NELPDBIX2VO/](https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/OCCARJ6FU4MWBTXHZNMS7NELPDBIX2VO/)
+- [https://security.gentoo.org/glsa/202401-31](https://security.gentoo.org/glsa/202401-31)
+- [https://www.debian.org/security/2022/dsa-5091](https://www.debian.org/security/2022/dsa-5091)
+
+---
+
+### CVE-2022-24348
+
+**描述**: Argo CD before 2.1.9 and 2.2.x before 2.2.4 allows directory traversal related to Helm charts because of an error in helmTemplate in repository.go. For example, an attacker may be able to discover credentials stored in a YAML file.
+
+**相关GitHub仓库**:
+
+- [argoproj/argo-cd](https://github.com/argoproj/argo-cd)
+  - 语言: Go
+  - Stars: 19915
+  - 描述: Declarative Continuous Deployment for Kubernetes
+  - 许可证: Apache License 2.0
+
+**相关Commits**:
+- [https://github.com/argoproj/argo-cd/commit/02e61797b3ce407e3d4baa772a0863bba8cd2899](https://github.com/argoproj/argo-cd/commit/02e61797b3ce407e3d4baa772a0863bba8cd2899)
+
+**参考链接**:
+- [https://apiiro.com/blog/malicious-kubernetes-helm-charts-can-be-used-to-steal-sensitive-information-from-argo-cd-deployments/](https://apiiro.com/blog/malicious-kubernetes-helm-charts-can-be-used-to-steal-sensitive-information-from-argo-cd-deployments/)
+- [https://github.com/argoproj/argo-cd/security/advisories/GHSA-63qx-x74g-jcr7](https://github.com/argoproj/argo-cd/security/advisories/GHSA-63qx-x74g-jcr7)
+
+---
+
+### CVE-2022-24731
+
+**描述**: Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes. Argo CD starting with version 1.5.0 but before versions 2.1.11, 2.2.6, and 2.3.0 is vulnerable to a path traversal vulnerability, allowing a malicious user with read/write access to leak sensitive files from Argo CD's repo-server. A malicious Argo CD user who has been granted `create` or `update` access to Applications can leak the contents of any text file on the repo-server. By crafting a malicious Helm chart and using it in an Application, the attacker can retrieve the sensitive file's contents either as part of the generated manifests or in an error message. The attacker would have to know or guess the location of the target file. Sensitive files which could be leaked include files from another Application's source repositories or any secrets which have been mounted as files on the repo-server. This vulnerability is patched in Argo CD versions 2.1.11, 2.2.6, and 2.3.0. The problem can be mitigated by avoiding storing secrets in git, avoiding mounting secrets as files on the repo-server, avoiding decrypting secrets into files on the repo-server, and carefully limiting who can `create` or `update` Applications.
+
+**相关GitHub仓库**:
+
+- [argoproj/argo-cd](https://github.com/argoproj/argo-cd)
+  - 语言: Go
+  - Stars: 19915
+  - 描述: Declarative Continuous Deployment for Kubernetes
+  - 许可证: Apache License 2.0
+
+**相关Commits**:
+- [https://github.com/argoproj/argo-cd/commit/b570ab8b1703eeca12c590e307632d3f66d013ba](https://github.com/argoproj/argo-cd/commit/b570ab8b1703eeca12c590e307632d3f66d013ba)
+
+**参考链接**:
+- [https://github.com/argoproj/argo-cd/security/advisories/GHSA-h6h5-6fmq-rh28](https://github.com/argoproj/argo-cd/security/advisories/GHSA-h6h5-6fmq-rh28)
+
+---
+
+### CVE-2022-24817
+
+**描述**: Flux2 is an open and extensible continuous delivery solution for Kubernetes. Flux2 versions between 0.1.0 and 0.29.0, helm-controller 0.1.0 to v0.19.0, and kustomize-controller 0.1.0 to v0.23.0 are vulnerable to Code Injection via malicious Kubeconfig. In multi-tenancy deployments this can also lead to privilege escalation if the controller's service account has elevated permissions. Workarounds include disabling functionality via Validating Admission webhooks by restricting users from setting the `spec.kubeConfig` field in Flux `Kustomization` and `HelmRelease` objects. Additional mitigations include applying restrictive AppArmor and SELinux profiles on the controller’s pod to limit what binaries can be executed. This vulnerability is fixed in kustomize-controller v0.23.0 and helm-controller v0.19.0, both included in flux2 v0.29.0
+
+**相关GitHub仓库**:
+
+- [fluxcd/flux2](https://github.com/fluxcd/flux2)
+  - 语言: Go
+  - Stars: 7181
+  - 描述: Open and extensible continuous delivery solution for Kubernetes. Powered by GitOps Toolkit.
+  - 许可证: Apache License 2.0
+- [fluxcd/kustomize-controller](https://github.com/fluxcd/kustomize-controller)
+  - 语言: Go
+  - Stars: 264
+  - 描述: The GitOps Toolkit Kustomize reconciler
+  - 许可证: Apache License 2.0
+- [fluxcd/helm-controller](https://github.com/fluxcd/helm-controller)
+  - 语言: Go
+  - Stars: 448
+  - 描述: The GitOps Toolkit Helm reconciler, for declarative Helming
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/fluxcd/kustomize-controller/pull/593](https://github.com/fluxcd/kustomize-controller/pull/593)
+- [https://github.com/fluxcd/helm-controller/pull/455](https://github.com/fluxcd/helm-controller/pull/455)
+
+**相关Commits**:
+- [https://github.com/fluxcd/kustomize-controller/commit/d29032e914c960d0bacad33f46b017e0d632b704](https://github.com/fluxcd/kustomize-controller/commit/d29032e914c960d0bacad33f46b017e0d632b704)
+- [https://github.com/fluxcd/helm-controller/commit/6f4ca28c9a05ed0c13a9d76a356738eca395b7f4](https://github.com/fluxcd/helm-controller/commit/6f4ca28c9a05ed0c13a9d76a356738eca395b7f4)
+
+**参考链接**:
+- [https://github.com/fluxcd/flux2/security/advisories/GHSA-vvmq-fwmg-2gjc](https://github.com/fluxcd/flux2/security/advisories/GHSA-vvmq-fwmg-2gjc)
+
+---
+
+### CVE-2022-24877
+
+**描述**: Flux is an open and extensible continuous delivery solution for Kubernetes. Path Traversal in the kustomize-controller via a malicious `kustomization.yaml` allows an attacker to expose sensitive data from the controller’s pod filesystem and possibly privilege escalation in multi-tenancy deployments. Workarounds include automated tooling in the user's CI/CD pipeline to validate `kustomization.yaml` files conform with specific policies. This vulnerability is fixed in kustomize-controller v0.24.0 and included in flux2 v0.29.0.
+
+**相关GitHub仓库**:
+
+- [fluxcd/flux2](https://github.com/fluxcd/flux2)
+  - 语言: Go
+  - Stars: 7181
+  - 描述: Open and extensible continuous delivery solution for Kubernetes. Powered by GitOps Toolkit.
+  - 许可证: Apache License 2.0
+- [fluxcd/kustomize-controller](https://github.com/fluxcd/kustomize-controller)
+  - 语言: Go
+  - Stars: 264
+  - 描述: The GitOps Toolkit Kustomize reconciler
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/fluxcd/kustomize-controller/pull/620](https://github.com/fluxcd/kustomize-controller/pull/620)
+
+**相关Commits**:
+- [https://github.com/fluxcd/kustomize-controller/commit/f4528fb25d611da94e491346bea056d5c5c3611f](https://github.com/fluxcd/kustomize-controller/commit/f4528fb25d611da94e491346bea056d5c5c3611f)
+
+**参考链接**:
+- [https://github.com/fluxcd/flux2/security/advisories/GHSA-j77r-2fxf-5jrw](https://github.com/fluxcd/flux2/security/advisories/GHSA-j77r-2fxf-5jrw)
+
+---
+
+### CVE-2022-24878
+
+**描述**: Flux is an open and extensible continuous delivery solution for Kubernetes. Path Traversal in the kustomize-controller via a malicious `kustomization.yaml` allows an attacker to cause a Denial of Service at the controller level. Workarounds include automated tooling in the user's CI/CD pipeline to validate `kustomization.yaml` files conform with specific policies. This vulnerability is fixed in kustomize-controller v0.24.0 and included in flux2 v0.29.0. Users are recommended to upgrade.
+
+**相关GitHub仓库**:
+
+- [fluxcd/flux2](https://github.com/fluxcd/flux2)
+  - 语言: Go
+  - Stars: 7181
+  - 描述: Open and extensible continuous delivery solution for Kubernetes. Powered by GitOps Toolkit.
+  - 许可证: Apache License 2.0
+- [fluxcd/kustomize-controller](https://github.com/fluxcd/kustomize-controller)
+  - 语言: Go
+  - Stars: 264
+  - 描述: The GitOps Toolkit Kustomize reconciler
+  - 许可证: Apache License 2.0
+
+**相关Commits**:
+- [https://github.com/fluxcd/kustomize-controller/commit/105ebd9f477093a395b7c6ee65e5b998a92b4dfc](https://github.com/fluxcd/kustomize-controller/commit/105ebd9f477093a395b7c6ee65e5b998a92b4dfc)
+
+**参考链接**:
+- [https://github.com/fluxcd/flux2/security/advisories/GHSA-7pwf-jg34-hxwp](https://github.com/fluxcd/flux2/security/advisories/GHSA-7pwf-jg34-hxwp)
+
+---
+
+### CVE-2022-24904
+
+**描述**: Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes. Argo CD starting with version 0.7.0 and prior to versions 2.1.15m 2.2.9, and 2.3.4 is vulnerable to a symlink following bug allowing a malicious user with repository write access to leak sensitive files from Argo CD's repo-server. A malicious Argo CD user with write access for a repository which is (or may be) used in a directory-type Application may commit a symlink which points to an out-of-bounds file. Sensitive files which could be leaked include manifest files from other Applications' source repositories (potentially decrypted files, if you are using a decryption plugin) or any JSON-formatted secrets which have been mounted as files on the repo-server. A patch for this vulnerability has been released in Argo CD versions 2.3.4, 2.2.9, and 2.1.15. Users of versions 2.3.0 or above who do not have any Jsonnet/directory-type Applications may disable the Jsonnet/directory config management tool as a workaround.
+
+**相关GitHub仓库**:
+
+- [argoproj/argo-cd](https://github.com/argoproj/argo-cd)
+  - 语言: Go
+  - Stars: 19915
+  - 描述: Declarative Continuous Deployment for Kubernetes
+  - 许可证: Apache License 2.0
+
+**相关Commits**:
+- [https://github.com/argoproj/argo-cd/commit/7357cfdb58a560de70a0538c6e3bef6fe39505ea](https://github.com/argoproj/argo-cd/commit/7357cfdb58a560de70a0538c6e3bef6fe39505ea)
+
+**参考链接**:
+- [https://github.com/argoproj/argo-cd/releases/tag/v2.1.15](https://github.com/argoproj/argo-cd/releases/tag/v2.1.15)
+- [https://github.com/argoproj/argo-cd/releases/tag/v2.2.9](https://github.com/argoproj/argo-cd/releases/tag/v2.2.9)
+- [https://github.com/argoproj/argo-cd/releases/tag/v2.3.4](https://github.com/argoproj/argo-cd/releases/tag/v2.3.4)
+- [https://github.com/argoproj/argo-cd/security/advisories/GHSA-6gcg-hp2x-q54h](https://github.com/argoproj/argo-cd/security/advisories/GHSA-6gcg-hp2x-q54h)
+
+---
+
+### CVE-2022-25856
+
+**描述**: The package github.com/argoproj/argo-events/sensors/artifacts before 1.7.1 are vulnerable to Directory Traversal in the (g *GitArtifactReader).Read() API in git.go. This could allow arbitrary file reads if the GitArtifactReader is provided a pathname containing a symbolic link or an implicit directory name such as ...
+
+**相关GitHub仓库**:
+
+- [argoproj/argo-events](https://github.com/argoproj/argo-events)
+  - 语言: Go
+  - Stars: 2503
+  - 描述: Event-driven Automation Framework for Kubernetes
+  - 许可证: Apache License 2.0
+
+**相关Commits**:
+- [https://github.com/argoproj/argo-events/commit/d0f66dbce78bc31923ca057b20fc722aa24ca961](https://github.com/argoproj/argo-events/commit/d0f66dbce78bc31923ca057b20fc722aa24ca961)
+
+**参考链接**:
+- [https://github.com/argoproj/argo-events/commit/d0f66dbce78bc31923ca057b20fc722aa24ca961](https://github.com/argoproj/argo-events/commit/d0f66dbce78bc31923ca057b20fc722aa24ca961)
+- [https://github.com/argoproj/argo-events/issues/1947](https://github.com/argoproj/argo-events/issues/1947)
+- [https://snyk.io/vuln/SNYK-GOLANG-GITHUBCOMARGOPROJARGOEVENTSSENSORSARTIFACTS-2864522](https://snyk.io/vuln/SNYK-GOLANG-GITHUBCOMARGOPROJARGOEVENTSSENSORSARTIFACTS-2864522)
+
+---
+
+### CVE-2022-29164
+
+**描述**: Argo Workflows is an open source container-native workflow engine for orchestrating parallel jobs on Kubernetes. In affected versions an attacker can create a workflow which produces a HTML artifact containing an HTML file that contains a script which uses XHR calls to interact with the Argo Server API. The attacker emails the deep-link to the artifact to their victim. The victim opens the link, the script starts running. As the script has access to the Argo Server API (as the victim), so may read information about the victim’s workflows, or create and delete workflows. Note the attacker must be an insider: they must have access to the same cluster as the victim and must already be able to run their own workflows. The attacker must have an understanding of the victim’s system. We have seen no evidence of this in the wild. We urge all users to upgrade to the fixed versions.
+
+**相关GitHub仓库**:
+
+- [argoproj/argo-workflows](https://github.com/argoproj/argo-workflows)
+  - 语言: Go
+  - Stars: 15756
+  - 描述: Workflow Engine for Kubernetes
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/argoproj/argo-workflows/pull/8585](https://github.com/argoproj/argo-workflows/pull/8585)
+
+**相关Commits**:
+- [https://github.com/argoproj/argo-workflows/commit/87470e1c2bf703a9110e97bb755614ce8757fdcc](https://github.com/argoproj/argo-workflows/commit/87470e1c2bf703a9110e97bb755614ce8757fdcc)
+
+**参考链接**:
+- [https://github.com/argoproj/argo-workflows/commit/87470e1c2bf703a9110e97bb755614ce8757fdcc](https://github.com/argoproj/argo-workflows/commit/87470e1c2bf703a9110e97bb755614ce8757fdcc)
+- [https://github.com/argoproj/argo-workflows/pull/8585](https://github.com/argoproj/argo-workflows/pull/8585)
+- [https://github.com/argoproj/argo-workflows/security/advisories/GHSA-cmv8-6362-r5w9](https://github.com/argoproj/argo-workflows/security/advisories/GHSA-cmv8-6362-r5w9)
+
+---
+
+### CVE-2022-31016
+
+**描述**: Argo CD is a declarative continuous deployment for Kubernetes. Argo CD versions v0.7.0 and later are vulnerable to an uncontrolled memory consumption bug, allowing an authorized malicious user to crash the repo-server service, resulting in a Denial of Service. The attacker must be an authenticated Argo CD user authorized to deploy Applications from a repository which contains (or can be made to contain) a large file. The fix for this vulnerability is available in versions 2.3.5, 2.2.10, 2.1.16, and later. There are no known workarounds. Users are recommended to upgrade.
+
+**相关GitHub仓库**:
+
+- [argoproj/argo-cd](https://github.com/argoproj/argo-cd)
+  - 语言: Go
+  - Stars: 19915
+  - 描述: Declarative Continuous Deployment for Kubernetes
+  - 许可证: Apache License 2.0
+
+**相关Commits**:
+- [https://github.com/argoproj/argo-cd/commit/a92a153a4909c928de6bddbc2ec5599c1824307a](https://github.com/argoproj/argo-cd/commit/a92a153a4909c928de6bddbc2ec5599c1824307a)
+
+**参考链接**:
+- [https://github.com/argoproj/argo-cd/security/advisories/GHSA-jhqp-vf4w-rpwq](https://github.com/argoproj/argo-cd/security/advisories/GHSA-jhqp-vf4w-rpwq)
+
+---
+
+### CVE-2022-31030
+
+**描述**: containerd is an open source container runtime. A bug was found in the containerd's CRI implementation where programs inside a container can cause the containerd daemon to consume memory without bound during invocation of the `ExecSync` API. This can cause containerd to consume all available memory on the computer, denying service to other legitimate workloads. Kubernetes and crictl can both be configured to use containerd's CRI implementation; `ExecSync` may be used when running probes or when executing processes via an "exec" facility. This bug has been fixed in containerd 1.6.6 and 1.5.13. Users should update to these versions to resolve the issue. Users unable to upgrade should ensure that only trusted images and commands are used.
+
+**相关GitHub仓库**:
+
+- [containerd/containerd](https://github.com/containerd/containerd)
+  - 语言: Go
+  - Stars: 18842
+  - 描述: An open and reliable container runtime
+  - 许可证: Apache License 2.0
+
+**相关Commits**:
+- [https://github.com/containerd/containerd/commit/c1bcabb4541930f643aa36a2b38655e131346382](https://github.com/containerd/containerd/commit/c1bcabb4541930f643aa36a2b38655e131346382)
+
+**参考链接**:
+- [http://www.openwall.com/lists/oss-security/2022/06/07/1](http://www.openwall.com/lists/oss-security/2022/06/07/1)
+- [https://github.com/containerd/containerd/commit/c1bcabb4541930f643aa36a2b38655e131346382](https://github.com/containerd/containerd/commit/c1bcabb4541930f643aa36a2b38655e131346382)
+- [https://github.com/containerd/containerd/security/advisories/GHSA-5ffw-gxpp-mxpf](https://github.com/containerd/containerd/security/advisories/GHSA-5ffw-gxpp-mxpf)
+- [https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/REOZCUAPCA7NFDWYBDYX6EYXWLHABKBO/](https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/REOZCUAPCA7NFDWYBDYX6EYXWLHABKBO/)
+- [https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/WSIGDBHAB3I75JBJNGWEPBTJPS2FOVHD/](https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/WSIGDBHAB3I75JBJNGWEPBTJPS2FOVHD/)
+- [https://security.gentoo.org/glsa/202401-31](https://security.gentoo.org/glsa/202401-31)
+- [https://www.debian.org/security/2022/dsa-5162](https://www.debian.org/security/2022/dsa-5162)
+
+---
+
+### CVE-2022-31035
+
+**描述**: Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes. All versions of Argo CD starting with v1.0.0 are vulnerable to a cross-site scripting (XSS) bug allowing a malicious user to inject a `javascript:` link in the UI. When clicked by a victim user, the script will execute with the victim's permissions (up to and including admin). The script would be capable of doing anything which is possible in the UI or via the API, such as creating, modifying, and deleting Kubernetes resources. A patch for this vulnerability has been released in the following Argo CD versions: v2.4.1, v2.3.5, v2.2.10 and v2.1.16. There are no completely-safe workarounds besides upgrading.
+
+**相关GitHub仓库**:
+
+- [argoproj/argo-cd](https://github.com/argoproj/argo-cd)
+  - 语言: Go
+  - Stars: 19915
+  - 描述: Declarative Continuous Deployment for Kubernetes
+  - 许可证: Apache License 2.0
+
+**相关Commits**:
+- [https://github.com/argoproj/argo-cd/commit/8bc3ef690de29c68a36f473908774346a44d4038](https://github.com/argoproj/argo-cd/commit/8bc3ef690de29c68a36f473908774346a44d4038)
+
+**参考链接**:
+- [https://argo-cd.readthedocs.io/en/stable/user-guide/external-url/](https://argo-cd.readthedocs.io/en/stable/user-guide/external-url/)
+- [https://github.com/argoproj/argo-cd/commit/8bc3ef690de29c68a36f473908774346a44d4038](https://github.com/argoproj/argo-cd/commit/8bc3ef690de29c68a36f473908774346a44d4038)
+- [https://github.com/argoproj/argo-cd/security/advisories/GHSA-h4w9-6x78-8vrj](https://github.com/argoproj/argo-cd/security/advisories/GHSA-h4w9-6x78-8vrj)
+
+---
+
+### CVE-2022-31036
+
+**描述**: Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes. All versions of Argo CD starting with v1.3.0 are vulnerable to a symlink following bug allowing a malicious user with repository write access to leak sensitive YAML files from Argo CD's repo-server. A malicious Argo CD user with write access for a repository which is (or may be) used in a Helm-type Application may commit a symlink which points to an out-of-bounds file. If the target file is a valid YAML file, the attacker can read the contents of that file. Sensitive files which could be leaked include manifest files from other Applications' source repositories (potentially decrypted files, if you are using a decryption plugin) or any YAML-formatted secrets which have been mounted as files on the repo-server. Patches for this vulnerability has been released in the following Argo CD versions: v2.4.1, v2.3.5, v2.2.10 and v2.1.16. If you are using a version >=v2.3.0 and do not have any Helm-type Applications you may disable the Helm config management tool as a workaround.
+
+**相关GitHub仓库**:
+
+- [argoproj/argo-cd](https://github.com/argoproj/argo-cd)
+  - 语言: Go
+  - Stars: 19915
+  - 描述: Declarative Continuous Deployment for Kubernetes
+  - 许可证: Apache License 2.0
+
+**相关Commits**:
+- [https://github.com/argoproj/argo-cd/commit/04c305396458508a31d03d44afea07b1c620d7cd](https://github.com/argoproj/argo-cd/commit/04c305396458508a31d03d44afea07b1c620d7cd)
+
+**参考链接**:
+- [https://github.com/argoproj/argo-cd/commit/04c305396458508a31d03d44afea07b1c620d7cd](https://github.com/argoproj/argo-cd/commit/04c305396458508a31d03d44afea07b1c620d7cd)
+- [https://github.com/argoproj/argo-cd/security/advisories/GHSA-q4w5-4gq2-98vm](https://github.com/argoproj/argo-cd/security/advisories/GHSA-q4w5-4gq2-98vm)
+
+---
+
+### CVE-2022-3294
+
+**描述**: Users may have access to secure endpoints in the control plane network. Kubernetes clusters are only affected if an untrusted user can modify Node objects and send proxy requests to them. Kubernetes supports node proxying, which allows clients of kube-apiserver to access endpoints of a Kubelet to establish connections to Pods, retrieve container logs, and more. While Kubernetes already validates the proxying address for Nodes, a bug in kube-apiserver made it possible to bypass this validation. Bypassing this validation could allow authenticated requests destined for Nodes to to the API server's private network.
+
+**相关GitHub仓库**:
+
+- [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes)
+  - 语言: Go
+  - Stars: 115932
+  - 描述: Production-Grade Container Scheduling and Management
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/kubernetes/kubernetes/pull/113681](https://github.com/kubernetes/kubernetes/pull/113681)
+
+**相关Commits**:
+- [https://github.com/kubernetes/kubernetes/commit/2aee9b26f77276dea2d5cd2c1501d5341e74184e](https://github.com/kubernetes/kubernetes/commit/2aee9b26f77276dea2d5cd2c1501d5341e74184e)
+
+**参考链接**:
+- [https://github.com/kubernetes/kubernetes/issues/113757](https://github.com/kubernetes/kubernetes/issues/113757)
+- [https://groups.google.com/g/kubernetes-security-announce/c/VyPOxF7CIbA](https://groups.google.com/g/kubernetes-security-announce/c/VyPOxF7CIbA)
+- [https://security.netapp.com/advisory/ntap-20230505-0007/](https://security.netapp.com/advisory/ntap-20230505-0007/)
+
+---
+
+### CVE-2022-36049
+
+**描述**: Flux2 is a tool for keeping Kubernetes clusters in sync with sources of configuration, and Flux's helm-controller is a Kubernetes operator that allows one to declaratively manage Helm chart releases. Helm controller is tightly integrated with the Helm SDK. A vulnerability found in the Helm SDK that affects flux2 v0.0.17 until v0.32.0 and helm-controller v0.0.4 until v0.23.0 allows for specific data inputs to cause high memory consumption. In some platforms, this could cause the controller to panic and stop processing reconciliations. In a shared cluster multi-tenancy environment, a tenant could create a HelmRelease that makes the controller panic, denying all other tenants from their Helm releases being reconciled. Patches are available in flux2 v0.32.0 and helm-controller v0.23.0.
+
+**相关GitHub仓库**:
+
+- [fluxcd/flux2](https://github.com/fluxcd/flux2)
+  - 语言: Go
+  - Stars: 7181
+  - 描述: Open and extensible continuous delivery solution for Kubernetes. Powered by GitOps Toolkit.
+  - 许可证: Apache License 2.0
+- [fluxcd/helm-controller](https://github.com/fluxcd/helm-controller)
+  - 语言: Go
+  - Stars: 448
+  - 描述: The GitOps Toolkit Helm reconciler, for declarative Helming
+  - 许可证: Apache License 2.0
+- [helm/helm](https://github.com/helm/helm)
+  - 语言: Go
+  - Stars: 28048
+  - 描述: The Kubernetes Package Manager
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/fluxcd/helm-controller/pull/516](https://github.com/fluxcd/helm-controller/pull/516)
+- [https://github.com/fluxcd/helm-controller/pull/520](https://github.com/fluxcd/helm-controller/pull/520)
+
+**相关Commits**:
+- [https://github.com/fluxcd/helm-controller/commit/3cd330cc537216d86021675d9ff701bb3d98f1fb](https://github.com/fluxcd/helm-controller/commit/3cd330cc537216d86021675d9ff701bb3d98f1fb)
+- [https://github.com/fluxcd/helm-controller/commit/d196698980296143432a4d64edc30e0c68b8eff3](https://github.com/fluxcd/helm-controller/commit/d196698980296143432a4d64edc30e0c68b8eff3)
+
+**参考链接**:
+- [https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=44996](https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=44996)
+- [https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=48360](https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=48360)
+- [https://github.com/fluxcd/flux2/security/advisories/GHSA-p2g7-xwvr-rrw3](https://github.com/fluxcd/flux2/security/advisories/GHSA-p2g7-xwvr-rrw3)
+- [https://github.com/helm/helm/security/advisories/GHSA-7hfp-qfw3-5jxh](https://github.com/helm/helm/security/advisories/GHSA-7hfp-qfw3-5jxh)
+
+---
+
+### CVE-2022-36056
+
+**描述**: Cosign is a project under the sigstore organization which aims to make signatures invisible infrastructure. In versions prior to 1.12.0 a number of vulnerabilities have been found in cosign verify-blob, where Cosign would successfully verify an artifact when verification should have failed. First a cosign bundle can be crafted to successfully verify a blob even if the embedded rekorBundle does not reference the given signature. Second, when providing identity flags, the email and issuer of a certificate is not checked when verifying a Rekor bundle, and the GitHub Actions identity is never checked. Third, providing an invalid Rekor bundle without the experimental flag results in a successful verification. And fourth an invalid transparency log entry will result in immediate success for verification. Details and examples of these issues can be seen in the GHSA-8gw7-4j42-w388 advisory linked. Users are advised to upgrade to 1.12.0. There are no known workarounds for these issues.
+
+**相关GitHub仓库**:
+
+- [sigstore/cosign](https://github.com/sigstore/cosign)
+  - 语言: Go
+  - Stars: 5020
+  - 描述: Code signing and transparency for containers and binaries
+  - 许可证: Apache License 2.0
+
+**相关Commits**:
+- [https://github.com/sigstore/cosign/commit/80b79ed8b4d28ccbce3d279fd273606b5cddcc25](https://github.com/sigstore/cosign/commit/80b79ed8b4d28ccbce3d279fd273606b5cddcc25)
+
+**参考链接**:
+- [https://github.com/sigstore/cosign/commit/80b79ed8b4d28ccbce3d279fd273606b5cddcc25](https://github.com/sigstore/cosign/commit/80b79ed8b4d28ccbce3d279fd273606b5cddcc25)
+- [https://github.com/sigstore/cosign/security/advisories/GHSA-8gw7-4j42-w388](https://github.com/sigstore/cosign/security/advisories/GHSA-8gw7-4j42-w388)
+
+---
+
+### CVE-2022-39272
+
+**描述**: Flux is an open and extensible continuous delivery solution for Kubernetes. Versions prior to 0.35.0 are subject to a Denial of Service. Users that have permissions to change Flux’s objects, either through a Flux source or directly within a cluster, can provide invalid data to fields `.spec.interval` or `.spec.timeout` (and structured variations of these fields), causing the entire object type to stop being processed. This issue is patched in version 0.35.0. As a workaround, Admission controllers can be employed to restrict the values that can be used for fields `.spec.interval` and `.spec.timeout`, however upgrading to the latest versions is still the recommended mitigation.
+
+**相关GitHub仓库**:
+
+- [fluxcd/flux2](https://github.com/fluxcd/flux2)
+  - 语言: Go
+  - Stars: 7181
+  - 描述: Open and extensible continuous delivery solution for Kubernetes. Powered by GitOps Toolkit.
+  - 许可证: Apache License 2.0
+- [kubernetes/apimachinery](https://github.com/kubernetes/apimachinery)
+  - 语言: Go
+  - Stars: 879
+  - 描述: N/A
+  - 许可证: Apache License 2.0
+- [fluxcd/source-controller](https://github.com/fluxcd/source-controller)
+  - 语言: Go
+  - Stars: 256
+  - 描述: The GitOps Toolkit source management component 
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/fluxcd/source-controller/pull/903](https://github.com/fluxcd/source-controller/pull/903)
+
+**相关Commits**:
+- [https://github.com/fluxcd/source-controller/commit/27f4ed5a472d1bd5b6bc7a62189f20c115338b3a](https://github.com/fluxcd/source-controller/commit/27f4ed5a472d1bd5b6bc7a62189f20c115338b3a)
+
+**参考链接**:
+- [https://github.com/fluxcd/flux2/security/advisories/GHSA-f4p5-x4vc-mh4v](https://github.com/fluxcd/flux2/security/advisories/GHSA-f4p5-x4vc-mh4v)
+- [https://github.com/kubernetes/apimachinery/issues/131](https://github.com/kubernetes/apimachinery/issues/131)
+
+---
+
+### CVE-2022-40607
+
+**描述**: 
+IBM Spectrum Scale 5.1 could allow users with permissions to create pod, persistent volume and persistent volume claim to access files and directories outside of the volume, including on the host filesystem. IBM X-Force ID: 235740.
+
+
+
+
+**相关Pull Requests**:
+- [https://github.com/IBM/ibm-spectrum-scale-csi/pull/759](https://github.com/IBM/ibm-spectrum-scale-csi/pull/759)
+- [https://github.com/IBM/ibm-spectrum-scale-csi/pull/785](https://github.com/IBM/ibm-spectrum-scale-csi/pull/785)
+
+**相关Commits**:
+- [https://github.com/IBM/ibm-spectrum-scale-csi/commit/83d8311b263de826a889b8aa9a5ecd71ca17f2af](https://github.com/IBM/ibm-spectrum-scale-csi/commit/83d8311b263de826a889b8aa9a5ecd71ca17f2af)
+- [https://github.com/IBM/ibm-spectrum-scale-csi/commit/2fa20b5bdfc9a6183dc18f00387b49041db5a8a6](https://github.com/IBM/ibm-spectrum-scale-csi/commit/2fa20b5bdfc9a6183dc18f00387b49041db5a8a6)
+- [https://github.com/IBM/ibm-spectrum-scale-csi/commit/312c2ae8ebf4636bd87f7cb7bb26eb28dac10593](https://github.com/IBM/ibm-spectrum-scale-csi/commit/312c2ae8ebf4636bd87f7cb7bb26eb28dac10593)
+- [https://github.com/IBM/ibm-spectrum-scale-csi/commit/3f4e369bb29a2d9b54ec054a6617ec068676881f](https://github.com/IBM/ibm-spectrum-scale-csi/commit/3f4e369bb29a2d9b54ec054a6617ec068676881f)
+- [https://github.com/IBM/ibm-spectrum-scale-csi/commit/4e29deb44b48ac7cd9d18a0b54109a96fc0b3d11](https://github.com/IBM/ibm-spectrum-scale-csi/commit/4e29deb44b48ac7cd9d18a0b54109a96fc0b3d11)
+- [https://github.com/IBM/ibm-spectrum-scale-csi/commit/55c5f79add8b3cfcfc452cfc552d6bd4c07ef6d3](https://github.com/IBM/ibm-spectrum-scale-csi/commit/55c5f79add8b3cfcfc452cfc552d6bd4c07ef6d3)
+- [https://github.com/IBM/ibm-spectrum-scale-csi/commit/6da8b0ccf452413cec76fde84248ea83a9f3eb4c](https://github.com/IBM/ibm-spectrum-scale-csi/commit/6da8b0ccf452413cec76fde84248ea83a9f3eb4c)
+- [https://github.com/IBM/ibm-spectrum-scale-csi/commit/8ef76cc0dfa6d909b32310163c32dfe1ce5d2065](https://github.com/IBM/ibm-spectrum-scale-csi/commit/8ef76cc0dfa6d909b32310163c32dfe1ce5d2065)
+- [https://github.com/IBM/ibm-spectrum-scale-csi/commit/9e33dc0b2bddf5fd2542373605476ea12dbbe44c](https://github.com/IBM/ibm-spectrum-scale-csi/commit/9e33dc0b2bddf5fd2542373605476ea12dbbe44c)
+- [https://github.com/IBM/ibm-spectrum-scale-csi/commit/a58b17b27cb762a5d78a66d9d26cd0ab725c2190](https://github.com/IBM/ibm-spectrum-scale-csi/commit/a58b17b27cb762a5d78a66d9d26cd0ab725c2190)
+- [https://github.com/IBM/ibm-spectrum-scale-csi/commit/ad5e6a1700e6efb969711747f047c19b2f9b330f](https://github.com/IBM/ibm-spectrum-scale-csi/commit/ad5e6a1700e6efb969711747f047c19b2f9b330f)
+- [https://github.com/IBM/ibm-spectrum-scale-csi/commit/bfc09eaa4c66294c569cd2dc36bf41864d39bdfb](https://github.com/IBM/ibm-spectrum-scale-csi/commit/bfc09eaa4c66294c569cd2dc36bf41864d39bdfb)
+- [https://github.com/IBM/ibm-spectrum-scale-csi/commit/c8cc1173b489b03c74738ee2f4e53ba5cc65e792](https://github.com/IBM/ibm-spectrum-scale-csi/commit/c8cc1173b489b03c74738ee2f4e53ba5cc65e792)
+- [https://github.com/IBM/ibm-spectrum-scale-csi/commit/d61599550f1b29bdb8972c3ceca77cd93a3c2051](https://github.com/IBM/ibm-spectrum-scale-csi/commit/d61599550f1b29bdb8972c3ceca77cd93a3c2051)
+- [https://github.com/IBM/ibm-spectrum-scale-csi/commit/f676a39925e4d025f1e9915a1b680fd34f2ee03d](https://github.com/IBM/ibm-spectrum-scale-csi/commit/f676a39925e4d025f1e9915a1b680fd34f2ee03d)
+
+**参考链接**:
+- [https://exchange.xforce.ibmcloud.com/vulnerabilities/235740](https://exchange.xforce.ibmcloud.com/vulnerabilities/235740)
+- [https://www.ibm.com/support/pages/node/6848231](https://www.ibm.com/support/pages/node/6848231)
+
+---
+
+### CVE-2022-4318
+
+**描述**: A vulnerability was found in cri-o. This issue allows the addition of arbitrary lines into /etc/passwd by use of a specially crafted environment variable.
+
+**相关GitHub仓库**:
+
+- [cri-o/cri-o](https://github.com/cri-o/cri-o)
+  - 语言: Go
+  - Stars: 5433
+  - 描述: Open Container Initiative-based implementation of Kubernetes Container Runtime Interface
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/cri-o/cri-o/pull/6450](https://github.com/cri-o/cri-o/pull/6450)
+
+**相关Commits**:
+- [https://github.com/cri-o/cri-o/commit/41dca27cb53bca3c9255287f53e241b9d3bfd7de](https://github.com/cri-o/cri-o/commit/41dca27cb53bca3c9255287f53e241b9d3bfd7de)
+
+**参考链接**:
+- [https://access.redhat.com/errata/RHSA-2023:1033](https://access.redhat.com/errata/RHSA-2023:1033)
+- [https://access.redhat.com/errata/RHSA-2023:1503](https://access.redhat.com/errata/RHSA-2023:1503)
+- [https://access.redhat.com/security/cve/CVE-2022-4318](https://access.redhat.com/security/cve/CVE-2022-4318)
+- [https://bugzilla.redhat.com/show_bug.cgi?id=2152703](https://bugzilla.redhat.com/show_bug.cgi?id=2152703)
+
+---
+
+### CVE-2022-46167
+
+**描述**: Capsule is a multi-tenancy and policy-based framework for Kubernetes. Prior to version 0.1.3, a ServiceAccount deployed in a Tenant Namespace, when granted with `PATCH` capabilities on its own Namespace, is able to edit it and remove the Owner Reference, breaking the reconciliation of the Capsule Operator and removing all the enforcement like Pod Security annotations, Network Policies, Limit Range and Resource Quota items. An attacker could detach the Namespace from a Tenant that is forbidding starting privileged Pods using the Pod Security labels by removing the OwnerReference, removing the enforcement labels, and being able to start privileged containers that would be able to start a generic Kubernetes privilege escalation. Patches have been released for version 0.1.3. No known workarounds are available.
+
+
+**相关GitHub仓库**:
+
+- [clastix/capsule](https://github.com/projectcapsule/capsule)
+  - 语言: Go
+  - Stars: 1886
+  - 描述: Multi-tenancy and policy-based framework for Kubernetes.
+  - 许可证: Apache License 2.0
+
+**相关Commits**:
+- [https://github.com/clastix/capsule/commit/1df430e71be8c4778c82eca3459978ad7d0b4b7b](https://github.com/clastix/capsule/commit/1df430e71be8c4778c82eca3459978ad7d0b4b7b)
+- [https://github.com/clastix/capsule/commit/75525ac19254b0c5111e34d7985e2be7bc8b1ac1](https://github.com/clastix/capsule/commit/75525ac19254b0c5111e34d7985e2be7bc8b1ac1)
+
+**参考链接**:
+- [https://github.com/clastix/capsule/commit/1df430e71be8c4778c82eca3459978ad7d0b4b7b](https://github.com/clastix/capsule/commit/1df430e71be8c4778c82eca3459978ad7d0b4b7b)
+- [https://github.com/clastix/capsule/commit/75525ac19254b0c5111e34d7985e2be7bc8b1ac1](https://github.com/clastix/capsule/commit/75525ac19254b0c5111e34d7985e2be7bc8b1ac1)
+- [https://github.com/clastix/capsule/releases/tag/v0.1.3](https://github.com/clastix/capsule/releases/tag/v0.1.3)
+- [https://github.com/clastix/capsule/security/advisories/GHSA-x45c-cvp8-q4fm](https://github.com/clastix/capsule/security/advisories/GHSA-x45c-cvp8-q4fm)
+
+---
+
+### CVE-2022-4886
+
+**描述**: Ingress-nginx `path` sanitization can be bypassed with `log_format` directive.
+
+**相关GitHub仓库**:
+
+- [kubernetes/ingress-nginx](https://github.com/kubernetes/ingress-nginx)
+  - 语言: Go
+  - Stars: 18663
+  - 描述: Ingress NGINX Controller for Kubernetes
+  - 许可证: Apache License 2.0
+
+**相关Commits**:
+- [https://github.com/kubernetes/ingress-nginx/commit/c540b584745ac47b45f859c5db52e6b7a612a9c6](https://github.com/kubernetes/ingress-nginx/commit/c540b584745ac47b45f859c5db52e6b7a612a9c6)
+
+**参考链接**:
+- [http://www.openwall.com/lists/oss-security/2023/10/25/5](http://www.openwall.com/lists/oss-security/2023/10/25/5)
+- [https://github.com/kubernetes/ingress-nginx/issues/10570](https://github.com/kubernetes/ingress-nginx/issues/10570)
+- [https://groups.google.com/g/kubernetes-security-announce/c/ge7u3qCwZLI](https://groups.google.com/g/kubernetes-security-announce/c/ge7u3qCwZLI)
+- [https://security.netapp.com/advisory/ntap-20240307-0013/](https://security.netapp.com/advisory/ntap-20240307-0013/)
+
+---
+
+### CVE-2023-0229
+
+**描述**: A flaw was found in github.com/openshift/apiserver-library-go, used in OpenShift 4.12 and 4.11, that contains an issue that can allow low-privileged users to set the seccomp profile for pods they control to "unconfined." By default, the seccomp profile used in the restricted-v2 Security Context Constraint (SCC) is "runtime/default," allowing users to disable seccomp for pods they can create and modify.
+
+**相关GitHub仓库**:
+
+- [openshift/apiserver-library-go](https://github.com/openshift/apiserver-library-go)
+  - 语言: Go
+  - Stars: 7
+  - 描述: k/k dependent helpers for kube-apiserver and openshift-apiserver
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/openshift/apiserver-library-go/pull/97](https://github.com/openshift/apiserver-library-go/pull/97)
+
+**相关Commits**:
+- [https://github.com/openshift/apiserver-library-go/commit/940134edbac7350f9994320c6ea3c5d889adba68](https://github.com/openshift/apiserver-library-go/commit/940134edbac7350f9994320c6ea3c5d889adba68)
+
+**参考链接**:
+- [https://bugzilla.redhat.com/show_bug.cgi?id=2160349](https://bugzilla.redhat.com/show_bug.cgi?id=2160349)
+
+---
+
+### CVE-2023-1260
+
+**描述**: An authentication bypass vulnerability was discovered in kube-apiserver. This issue could allow a remote, authenticated attacker who has been given permissions "update, patch" the "pods/ephemeralcontainers" subresource beyond what the default is. They would then need to create a new pod or patch one that they already have access to. This might allow evasion of SCC admission restrictions, thereby gaining control of a privileged pod.
+
+**相关GitHub仓库**:
+
+- [openshift/apiserver-library-go](https://github.com/openshift/apiserver-library-go)
+  - 语言: Go
+  - Stars: 7
+  - 描述: k/k dependent helpers for kube-apiserver and openshift-apiserver
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/openshift/apiserver-library-go/pull/108](https://github.com/openshift/apiserver-library-go/pull/108)
+
+**相关Commits**:
+- [https://github.com/openshift/apiserver-library-go/commit/806f5687962951fefb4942064983bf1ed0cd9435](https://github.com/openshift/apiserver-library-go/commit/806f5687962951fefb4942064983bf1ed0cd9435)
+
+**参考链接**:
+- [https://access.redhat.com/errata/RHSA-2023:3976](https://access.redhat.com/errata/RHSA-2023:3976)
+- [https://access.redhat.com/errata/RHSA-2023:4093](https://access.redhat.com/errata/RHSA-2023:4093)
+- [https://access.redhat.com/errata/RHSA-2023:4312](https://access.redhat.com/errata/RHSA-2023:4312)
+- [https://access.redhat.com/errata/RHSA-2023:4898](https://access.redhat.com/errata/RHSA-2023:4898)
+- [https://access.redhat.com/errata/RHSA-2023:5008](https://access.redhat.com/errata/RHSA-2023:5008)
+- [https://access.redhat.com/security/cve/CVE-2023-1260](https://access.redhat.com/security/cve/CVE-2023-1260)
+- [https://bugzilla.redhat.com/show_bug.cgi?id=2176267](https://bugzilla.redhat.com/show_bug.cgi?id=2176267)
+- [https://github.com/advisories/GHSA-92hx-3mh6-hc49](https://github.com/advisories/GHSA-92hx-3mh6-hc49)
+- [https://security.netapp.com/advisory/ntap-20231020-0010/](https://security.netapp.com/advisory/ntap-20231020-0010/)
+
+---
+
+### CVE-2023-25163
+
+**描述**: Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes. All versions of Argo CD starting with v2.6.0-rc1 have an output sanitization bug which leaks repository access credentials in error messages. These error messages are visible to the user, and they are logged. The error message is visible when a user attempts to create or update an Application via the Argo CD API (and therefor the UI or CLI). The user must have `applications, create` or `applications, update` RBAC access to reach the code which may produce the error. The user is not guaranteed to be able to trigger the error message. They may attempt to spam the API with requests to trigger a rate limit error from the upstream repository. If the user has `repositories, update` access, they may edit an existing repository to introduce a URL typo or otherwise force an error message. But if they have that level of access, they are probably intended to have access to the credentials anyway. A patch for this vulnerability has been released in version 2.6.1. Users are advised to upgrade. There are no known workarounds for this vulnerability.
+
+**相关GitHub仓库**:
+
+- [argoproj/argo-cd](https://github.com/argoproj/argo-cd)
+  - 语言: Go
+  - Stars: 19915
+  - 描述: Declarative Continuous Deployment for Kubernetes
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/argoproj/argo-cd/pull/12320](https://github.com/argoproj/argo-cd/pull/12320)
+
+**参考链接**:
+- [https://argo-cd.readthedocs.io/en/stable/operator-manual/rbac/](https://argo-cd.readthedocs.io/en/stable/operator-manual/rbac/)
+- [https://github.com/argoproj/argo-cd/issues/12309](https://github.com/argoproj/argo-cd/issues/12309)
+- [https://github.com/argoproj/argo-cd/pull/12320](https://github.com/argoproj/argo-cd/pull/12320)
+- [https://github.com/argoproj/argo-cd/security/advisories/GHSA-mv6w-j4xc-qpfw](https://github.com/argoproj/argo-cd/security/advisories/GHSA-mv6w-j4xc-qpfw)
+
+---
+
+### CVE-2023-25165
+
+**描述**: Helm is a tool that streamlines installing and managing Kubernetes applications.`getHostByName` is a Helm template function introduced in Helm v3. The function is able to accept a hostname and return an IP address for that hostname. To get the IP address the function performs a DNS lookup. The DNS lookup happens when used with `helm install|upgrade|template` or when the Helm SDK is used to render a chart. Information passed into the chart can be disclosed to the DNS servers used to lookup the IP address. For example, a malicious chart could inject `getHostByName` into a chart in order to disclose values to a malicious DNS server. The issue has been fixed in Helm 3.11.1. Prior to using a chart with Helm verify the `getHostByName` function is not being used in a template to disclose any information you do not want passed to DNS servers.
+
+**相关GitHub仓库**:
+
+- [helm/helm](https://github.com/helm/helm)
+  - 语言: Go
+  - Stars: 28048
+  - 描述: The Kubernetes Package Manager
+  - 许可证: Apache License 2.0
+
+**相关Commits**:
+- [https://github.com/helm/helm/commit/5abcf74227bfe8e5a3dbf105fe62e7b12deb58d2](https://github.com/helm/helm/commit/5abcf74227bfe8e5a3dbf105fe62e7b12deb58d2)
+
+**参考链接**:
+- [https://github.com/helm/helm/commit/5abcf74227bfe8e5a3dbf105fe62e7b12deb58d2](https://github.com/helm/helm/commit/5abcf74227bfe8e5a3dbf105fe62e7b12deb58d2)
+- [https://github.com/helm/helm/security/advisories/GHSA-pwcw-6f5g-gxf8](https://github.com/helm/helm/security/advisories/GHSA-pwcw-6f5g-gxf8)
+
+---
+
+### CVE-2023-2727
+
+**描述**: Users may be able to launch containers using images that are restricted by ImagePolicyWebhook when using ephemeral containers. Kubernetes clusters are only affected if the ImagePolicyWebhook admission plugin is used together with ephemeral containers.
+
+**相关GitHub仓库**:
+
+- [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes)
+  - 语言: Go
+  - Stars: 115932
+  - 描述: Production-Grade Container Scheduling and Management
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/kubernetes/kubernetes/pull/118356](https://github.com/kubernetes/kubernetes/pull/118356)
+
+**相关Commits**:
+- [https://github.com/kubernetes/kubernetes/commit/d6168bb65878192491f6c0c21583404932cdcb82](https://github.com/kubernetes/kubernetes/commit/d6168bb65878192491f6c0c21583404932cdcb82)
+
+**参考链接**:
+- [http://www.openwall.com/lists/oss-security/2023/07/06/2](http://www.openwall.com/lists/oss-security/2023/07/06/2)
+- [https://github.com/kubernetes/kubernetes/issues/118640](https://github.com/kubernetes/kubernetes/issues/118640)
+- [https://groups.google.com/g/kubernetes-security-announce/c/vPWYJ_L84m8](https://groups.google.com/g/kubernetes-security-announce/c/vPWYJ_L84m8)
+- [https://security.netapp.com/advisory/ntap-20230803-0004/](https://security.netapp.com/advisory/ntap-20230803-0004/)
+
+---
+
+### CVE-2023-2728
+
+**描述**: Users may be able to launch containers that bypass the mountable secrets policy enforced by the ServiceAccount admission plugin when using ephemeral containers. The policy ensures pods running with a service account may only reference secrets specified in the service account’s secrets field. Kubernetes clusters are only affected if the ServiceAccount admission plugin and the `kubernetes.io/enforce-mountable-secrets` annotation are used together with ephemeral containers.
+
+**相关GitHub仓库**:
+
+- [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes)
+  - 语言: Go
+  - Stars: 115932
+  - 描述: Production-Grade Container Scheduling and Management
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/kubernetes/kubernetes/pull/118356](https://github.com/kubernetes/kubernetes/pull/118356)
+
+**相关Commits**:
+- [https://github.com/kubernetes/kubernetes/commit/d6168bb65878192491f6c0c21583404932cdcb82](https://github.com/kubernetes/kubernetes/commit/d6168bb65878192491f6c0c21583404932cdcb82)
+
+**参考链接**:
+- [http://www.openwall.com/lists/oss-security/2023/07/06/3](http://www.openwall.com/lists/oss-security/2023/07/06/3)
+- [https://github.com/kubernetes/kubernetes/issues/118640](https://github.com/kubernetes/kubernetes/issues/118640)
+- [https://groups.google.com/g/kubernetes-security-announce/c/vPWYJ_L84m8](https://groups.google.com/g/kubernetes-security-announce/c/vPWYJ_L84m8)
+- [https://security.netapp.com/advisory/ntap-20230803-0004/](https://security.netapp.com/advisory/ntap-20230803-0004/)
+
+---
+
+### CVE-2023-27483
+
+**描述**: crossplane-runtime is a set of go libraries used to build Kubernetes controllers in Crossplane and its related stacks. An out of memory panic vulnerability has been discovered in affected versions. Applications that use the `Paved` type's `SetValue` method with user provided input without proper validation might use excessive amounts of memory and cause an out of memory panic. In the fieldpath package, the Paved.SetValue method sets a value on the Paved object according to the provided path, without any validation. This allows setting values in slices at any provided index, which grows the target array up to the requested index, the index is currently capped at max uint32 (4294967295) given how indexes are parsed,  but that is still an unnecessarily large value. If callers are not validating paths' indexes on their own, which most probably are not going to do, given that the input is parsed directly in the SetValue method, this could allow users to consume arbitrary amounts of memory. Applications that do not use the `Paved` type's `SetValue` method are not affected. This issue has been addressed in versions 0.16.1 and 0.19.2. Users are advised to upgrade. Users unable to upgrade can parse and validate the path before passing it to the `SetValue` method of the `Paved` type, constraining the index size as deemed appropriate.
+
+**相关GitHub仓库**:
+
+- [crossplane/crossplane-runtime](https://github.com/crossplane/crossplane-runtime)
+  - 语言: Go
+  - Stars: 176
+  - 描述: A set of libraries for writing Crossplane controllers.
+  - 许可证: Apache License 2.0
+
+**相关Commits**:
+- [https://github.com/crossplane/crossplane-runtime/commit/53508a9f4374604db140dd8ab2fa52276441e738](https://github.com/crossplane/crossplane-runtime/commit/53508a9f4374604db140dd8ab2fa52276441e738)
+
+**参考链接**:
+- [https://github.com/crossplane/crossplane-runtime/commit/53508a9f4374604db140dd8ab2fa52276441e738](https://github.com/crossplane/crossplane-runtime/commit/53508a9f4374604db140dd8ab2fa52276441e738)
+- [https://github.com/crossplane/crossplane-runtime/security/advisories/GHSA-vfvj-3m3g-m532](https://github.com/crossplane/crossplane-runtime/security/advisories/GHSA-vfvj-3m3g-m532)
+
+---
+
+### CVE-2023-27484
+
+**描述**: crossplane-runtime is a set of go libraries used to build Kubernetes controllers in Crossplane and its related stacks. In affected versions an already highly privileged user able to create or update Compositions can specify an arbitrarily high index in a patch's `ToFieldPath`, which could lead to excessive memory usage once such Composition is selected for a Composite resource. Compositions allow users to specify patches inserting elements into arrays at an arbitrary index. When a Composition is selected for a Composite Resource, patches are evaluated and if a specified index is greater than the current size of the target slice, Crossplane will grow that slice up to the specified index, which could lead to an excessive amount of memory usage and therefore the Pod being OOM-Killed. The index is already capped to the maximum value for a uint32 (4294967295) when parsed, but that is still an unnecessarily large value. This issue has been addressed in versions 1.11.2, 1.10.3, and 1.9.2. Users are advised to upgrade. Users unable to upgrade can restrict write privileges on Compositions to only admin users as a workaround.
+
+**相关GitHub仓库**:
+
+- [crossplane/crossplane](https://github.com/crossplane/crossplane)
+  - 语言: Go
+  - Stars: 10423
+  - 描述: The Cloud Native Control Plane
+  - 许可证: Apache License 2.0
+- [crossplane/crossplane-runtime](https://github.com/crossplane/crossplane-runtime)
+  - 语言: Go
+  - Stars: 176
+  - 描述: A set of libraries for writing Crossplane controllers.
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/crossplane/crossplane-runtime/pull/390](https://github.com/crossplane/crossplane-runtime/pull/390)
+- [https://github.com/crossplane/crossplane-runtime/pull/390/commits](https://github.com/crossplane/crossplane-runtime/pull/390/commits)
+
+**相关Commits**:
+- [https://github.com/crossplane/crossplane-runtime/commit/12c1e9f8ecd731afc4e092967508fa226b80a461](https://github.com/crossplane/crossplane-runtime/commit/12c1e9f8ecd731afc4e092967508fa226b80a461)
+- [https://github.com/crossplane/crossplane-runtime/commit/abf25d727eaacf27bfbbdb9e9c9ea9f0705611de](https://github.com/crossplane/crossplane-runtime/commit/abf25d727eaacf27bfbbdb9e9c9ea9f0705611de)
+
+**参考链接**:
+- [https://github.com/crossplane/crossplane/security/advisories/GHSA-v829-x6hh-cqfq](https://github.com/crossplane/crossplane/security/advisories/GHSA-v829-x6hh-cqfq)
+
+---
+
+### CVE-2023-28114
+
+**描述**: `cilium-cli` is the command line interface to install, manage, and troubleshoot Kubernetes clusters running Cilium. Prior to version 0.13.2,`cilium-cli`, when used to configure cluster mesh functionality, can remove the enforcement of user permissions on the `etcd` store used to mirror local cluster information to remote clusters. Users who have set up cluster meshes using the Cilium Helm chart are not affected by this issue.
+
+Due to an incorrect mount point specification, the settings specified by the `initContainer` that configures `etcd` users and their permissions are overwritten when using `cilium-cli` to configure a cluster mesh. An attacker who has already gained access to a valid key and certificate for an `etcd` cluster compromised in this manner could then modify state in that `etcd` cluster.
+
+This issue is patched in `cilium-cli` 0.13.2. As a workaround, one may use Cilium's Helm charts to create their cluster.
+
+
+**相关Commits**:
+- [https://github.com/cilium/cilium-cli/commit/fb1427025764e1eebc4a7710d902c4f22cae2610](https://github.com/cilium/cilium-cli/commit/fb1427025764e1eebc4a7710d902c4f22cae2610)
+
+**参考链接**:
+- [https://artifacthub.io/packages/helm/cilium/cilium](https://artifacthub.io/packages/helm/cilium/cilium)
+- [https://github.com/cilium/cilium-cli/commit/fb1427025764e1eebc4a7710d902c4f22cae2610](https://github.com/cilium/cilium-cli/commit/fb1427025764e1eebc4a7710d902c4f22cae2610)
+- [https://github.com/cilium/cilium-cli/releases/tag/v0.13.2](https://github.com/cilium/cilium-cli/releases/tag/v0.13.2)
+- [https://github.com/cilium/cilium-cli/security/advisories/GHSA-6f27-3p6c-p5jc](https://github.com/cilium/cilium-cli/security/advisories/GHSA-6f27-3p6c-p5jc)
+
+---
+
+### CVE-2023-28642
+
+**描述**: runc is a CLI tool for spawning and running containers according to the OCI specification. It was found that AppArmor can be bypassed when `/proc` inside the container is symlinked with a specific mount configuration. This issue has been fixed in runc version 1.1.5, by prohibiting symlinked `/proc`. See PR #3785 for details. users are advised to upgrade. Users unable to upgrade should avoid using an untrusted container image.
+
+
+
+**相关GitHub仓库**:
+
+- [opencontainers/runc](https://github.com/opencontainers/runc)
+  - 语言: Go
+  - Stars: 12467
+  - 描述: CLI tool for spawning and running containers according to the OCI specification
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/opencontainers/runc/pull/3785](https://github.com/opencontainers/runc/pull/3785)
+
+**参考链接**:
+- [https://github.com/opencontainers/runc/pull/3785](https://github.com/opencontainers/runc/pull/3785)
+- [https://github.com/opencontainers/runc/security/advisories/GHSA-g2j6-57v7-gm8c](https://github.com/opencontainers/runc/security/advisories/GHSA-g2j6-57v7-gm8c)
+- [https://security.netapp.com/advisory/ntap-20241206-0005/](https://security.netapp.com/advisory/ntap-20241206-0005/)
+
+---
+
+### CVE-2023-34242
+
+**描述**: Cilium is a networking, observability, and security solution with an eBPF-based dataplane. Prior to version 1.13.4, when Gateway API is enabled in Cilium, the absence of a check on the namespace in which a ReferenceGrant is created could result in Cilium unintentionally gaining visibility of secrets (including certificates) and services across namespaces. An attacker on an affected cluster can leverage this issue to use cluster secrets that should not be visible to them, or communicate with services that they should not have access to. Gateway API functionality is disabled by default. This vulnerability is fixed in Cilium release 1.13.4. As a workaround, restrict the creation of `ReferenceGrant` resources to admin users by using Kubernetes RBAC.
+
+**相关GitHub仓库**:
+
+- [cilium/cilium](https://github.com/cilium/cilium)
+  - 语言: Go
+  - Stars: 21885
+  - 描述: eBPF-based Networking, Security, and Observability
+  - 许可证: Apache License 2.0
+
+**相关Commits**:
+- [https://github.com/cilium/cilium/commit/cd826fd3a275ca4841bf8e62f37da9931980cd28](https://github.com/cilium/cilium/commit/cd826fd3a275ca4841bf8e62f37da9931980cd28)
+
+**参考链接**:
+- [https://github.com/cilium/cilium/releases/tag/v1.13.4](https://github.com/cilium/cilium/releases/tag/v1.13.4)
+- [https://github.com/cilium/cilium/security/advisories/GHSA-r7wr-4w5q-55m6](https://github.com/cilium/cilium/security/advisories/GHSA-r7wr-4w5q-55m6)
+
+---
+
+### CVE-2023-3676
+
+**描述**: A security issue was discovered in Kubernetes where a user
+ that can create pods on Windows nodes may be able to escalate to admin 
+privileges on those nodes. Kubernetes clusters are only affected if they
+ include Windows nodes.
+
+**相关GitHub仓库**:
+
+- [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes)
+  - 语言: Go
+  - Stars: 115932
+  - 描述: Production-Grade Container Scheduling and Management
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/kubernetes/kubernetes/pull/120127](https://github.com/kubernetes/kubernetes/pull/120127)
+
+**相关Commits**:
+- [https://github.com/kubernetes/kubernetes/commit/c761c165627a6504bbb9831da09a7b6e3f2d72ee](https://github.com/kubernetes/kubernetes/commit/c761c165627a6504bbb9831da09a7b6e3f2d72ee)
+
+**参考链接**:
+- [https://github.com/kubernetes/kubernetes/issues/119339](https://github.com/kubernetes/kubernetes/issues/119339)
+- [https://groups.google.com/g/kubernetes-security-announce/c/d_fvHZ9a5zc](https://groups.google.com/g/kubernetes-security-announce/c/d_fvHZ9a5zc)
+- [https://security.netapp.com/advisory/ntap-20231130-0007/](https://security.netapp.com/advisory/ntap-20231130-0007/)
+
+---
+
+### CVE-2023-37900
+
+**描述**: Crossplane is a framework for building cloud native control planes without needing to write code. In versions prior to 1.11.5, 1.12.3, and 1.13.0, a high-privileged user could create a Package referencing an arbitrarily large image containing that Crossplane would then parse, possibly resulting in exhausting all the available memory and therefore in the container being OOMKilled. The impact is limited due to the high privileges required to be able to create the Package and the eventually consistency nature of controller. This issue is fixed in versions 1.11.5, 1.12.3, and 1.13.0.
+
+**相关GitHub仓库**:
+
+- [crossplane/crossplane](https://github.com/crossplane/crossplane)
+  - 语言: Go
+  - Stars: 10423
+  - 描述: The Cloud Native Control Plane
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/crossplane/crossplane/pull/4358](https://github.com/crossplane/crossplane/pull/4358)
+
+**相关Commits**:
+- [https://github.com/crossplane/crossplane/commit/e44f73f2a73512671c5f6a25d4ad0ac193394657](https://github.com/crossplane/crossplane/commit/e44f73f2a73512671c5f6a25d4ad0ac193394657)
+
+**参考链接**:
+- [https://github.com/crossplane/crossplane/blob/ac8b24fe739c5d942ea885157148497f196c3dd3/security/ADA-security-audit-23.pdf](https://github.com/crossplane/crossplane/blob/ac8b24fe739c5d942ea885157148497f196c3dd3/security/ADA-security-audit-23.pdf)
+- [https://github.com/crossplane/crossplane/security/advisories/GHSA-68p4-95xf-7gx8](https://github.com/crossplane/crossplane/security/advisories/GHSA-68p4-95xf-7gx8)
+
+---
+
+### CVE-2023-3893
+
+**描述**: A security issue was discovered in Kubernetes where a user that can 
+create pods on Windows nodes running kubernetes-csi-proxy may be able to
+ escalate to admin privileges on those nodes. Kubernetes clusters are 
+only affected if they include Windows nodes running 
+kubernetes-csi-proxy.
+
+**相关GitHub仓库**:
+
+- [kubernetes-csi/csi-proxy](https://github.com/kubernetes-csi/csi-proxy)
+  - 语言: Go
+  - Stars: 60
+  - 描述: CSI Proxy utility to enable CSI Plugins on Windows
+  - 许可证: Apache License 2.0
+- [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes)
+  - 语言: Go
+  - Stars: 115932
+  - 描述: Production-Grade Container Scheduling and Management
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/kubernetes-csi/csi-proxy/pull/306](https://github.com/kubernetes-csi/csi-proxy/pull/306)
+
+**相关Commits**:
+- [https://github.com/kubernetes-csi/csi-proxy/commit/0e83a68159111e4ee510f5aa56d47ba97bda60c7](https://github.com/kubernetes-csi/csi-proxy/commit/0e83a68159111e4ee510f5aa56d47ba97bda60c7)
+- [https://github.com/kubernetes-csi/csi-proxy/commit/2523e6674dedf3de27f84235efec28555da24664](https://github.com/kubernetes-csi/csi-proxy/commit/2523e6674dedf3de27f84235efec28555da24664)
+
+**参考链接**:
+- [https://github.com/kubernetes/kubernetes/issues/119594](https://github.com/kubernetes/kubernetes/issues/119594)
+- [https://groups.google.com/g/kubernetes-security-announce/c/lWksE2BoCyQ](https://groups.google.com/g/kubernetes-security-announce/c/lWksE2BoCyQ)
+- [https://security.netapp.com/advisory/ntap-20231221-0004/](https://security.netapp.com/advisory/ntap-20231221-0004/)
+
+---
+
+### CVE-2023-39347
+
+**描述**: Cilium is a networking, observability, and security solution with an eBPF-based dataplane. An attacker with the ability to update pod labels can cause Cilium to apply incorrect network policies. This issue arises due to the fact that on pod update, Cilium incorrectly uses user-provided pod labels to select the policies which apply to the workload in question. This can affect Cilium network policies that use the namespace, service account or cluster constructs to restrict traffic, Cilium clusterwide network policies that use Cilium namespace labels to select the Pod and Kubernetes network policies. Non-existent construct names can be provided, which bypass all network policies applicable to the construct. For example, providing a pod with a non-existent namespace as the value of the `io.kubernetes.pod.namespace` label results in none of the namespaced CiliumNetworkPolicies applying to the pod in question. This attack requires the attacker to have Kubernetes API Server access, as described in the Cilium Threat Model. This issue has been resolved in: Cilium versions 1.14.2, 1.13.7, and 1.12.14. Users are advised to upgrade. As a workaround an admission webhook can be used to prevent pod label updates to the `k8s:io.kubernetes.pod.namespace` and `io.cilium.k8s.policy.*` keys.
+
+**相关GitHub仓库**:
+
+- [cilium/cilium](https://github.com/cilium/cilium)
+  - 语言: Go
+  - Stars: 21885
+  - 描述: eBPF-based Networking, Security, and Observability
+  - 许可证: Apache License 2.0
+
+**相关Commits**:
+- [https://github.com/cilium/cilium/commit/5e0c80ec3554ca932cf63d7bacf0421cddd5a6d4](https://github.com/cilium/cilium/commit/5e0c80ec3554ca932cf63d7bacf0421cddd5a6d4)
+
+**参考链接**:
+- [https://docs.cilium.io/en/latest/security/threat-model/#kubernetes-api-server-attacker](https://docs.cilium.io/en/latest/security/threat-model/#kubernetes-api-server-attacker)
+- [https://github.com/cilium/cilium/security/advisories/GHSA-gj2r-phwg-6rww](https://github.com/cilium/cilium/security/advisories/GHSA-gj2r-phwg-6rww)
+
+---
+
+### CVE-2023-3955
+
+**描述**: A security issue was discovered in Kubernetes where a user
+ that can create pods on Windows nodes may be able to escalate to admin 
+privileges on those nodes. Kubernetes clusters are only affected if they
+ include Windows nodes.
+
+**相关GitHub仓库**:
+
+- [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes)
+  - 语言: Go
+  - Stars: 115932
+  - 描述: Production-Grade Container Scheduling and Management
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/kubernetes/kubernetes/pull/120128](https://github.com/kubernetes/kubernetes/pull/120128)
+
+**相关Commits**:
+- [https://github.com/kubernetes/kubernetes/commit/2bede058f92bd7cfb424de8d1ad575db460a088e](https://github.com/kubernetes/kubernetes/commit/2bede058f92bd7cfb424de8d1ad575db460a088e)
+
+**参考链接**:
+- [https://github.com/kubernetes/kubernetes/issues/119595](https://github.com/kubernetes/kubernetes/issues/119595)
+- [https://groups.google.com/g/kubernetes-security-announce/c/JrX4bb7d83E](https://groups.google.com/g/kubernetes-security-announce/c/JrX4bb7d83E)
+- [https://security.netapp.com/advisory/ntap-20231221-0002/](https://security.netapp.com/advisory/ntap-20231221-0002/)
+
+---
+
+### CVE-2023-40026
+
+**描述**: Argo CD is a declarative continuous deployment framework for Kubernetes. In Argo CD versions prior to 2.3 (starting at least in v0.1.0, but likely in any version using Helm before 2.3), using a specifically-crafted Helm file could reference external Helm charts handled by the same repo-server to leak values, or files from the referenced Helm Chart. This was possible because Helm paths were predictable. The vulnerability worked by adding a Helm chart that referenced Helm resources from predictable paths. Because the paths of Helm charts were predictable and available on an instance of repo-server, it was possible to reference and then render the values and resources from other existing Helm charts regardless of permissions. While generally, secrets are not stored in these files, it was nevertheless possible to reference any values from these charts. This issue was fixed in Argo CD 2.3 and subsequent versions by randomizing Helm paths. User's still using Argo CD 2.3 or below are advised to update to a supported version. If this is not possible, disabling Helm chart rendering, or using an additional repo-server for each Helm chart would prevent possible exploitation.
+
+**相关GitHub仓库**:
+
+- [argoproj/argo-cd](https://github.com/argoproj/argo-cd)
+  - 语言: Go
+  - Stars: 19915
+  - 描述: Declarative Continuous Deployment for Kubernetes
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/argoproj/argo-cd/pull/8606](https://github.com/argoproj/argo-cd/pull/8606)
+
+**相关Commits**:
+- [https://github.com/argoproj/argo-cd/commit/cc1800b04d5264472c5b0a979b5366a5bb39a4c1](https://github.com/argoproj/argo-cd/commit/cc1800b04d5264472c5b0a979b5366a5bb39a4c1)
+- [https://github.com/argoproj/argo-cd/commit/cdf997bf43f63667e9cff9bd0369e30e6252f50a](https://github.com/argoproj/argo-cd/commit/cdf997bf43f63667e9cff9bd0369e30e6252f50a)
+
+**参考链接**:
+- [https://argo-cd.readthedocs.io/en/stable/operator-manual/installation/#supported-versions](https://argo-cd.readthedocs.io/en/stable/operator-manual/installation/#supported-versions)
+- [https://github.com/argoproj/argo-cd/security/advisories/GHSA-6jqw-jwf5-rp8h](https://github.com/argoproj/argo-cd/security/advisories/GHSA-6jqw-jwf5-rp8h)
+
+---
+
+### CVE-2023-41332
+
+**描述**: Cilium is a networking, observability, and security solution with an eBPF-based dataplane. In Cilium clusters where Cilium's Layer 7 proxy has been disabled, creating workloads with `policy.cilium.io/proxy-visibility` annotations (in Cilium >= v1.13) or `io.cilium.proxy-visibility` annotations (in Cilium <= v1.12) causes the Cilium agent to segfault on the node to which the workload is assigned. Existing traffic on the affected node will continue to flow, but the Cilium agent on the node will not able to process changes to workloads running on the node. This will also prevent workloads from being able to start on the affected node. The denial of service will be limited to the node on which the workload is scheduled, however an attacker may be able to schedule workloads on the node of their choosing, which could lead to targeted attacks. This issue has been resolved in Cilium versions 1.14.2, 1.13.7, and 1.12.14. Users unable to upgrade can avoid this denial of service attack by enabling the Layer 7 proxy.
+
+
+
+**相关GitHub仓库**:
+
+- [cilium/cilium](https://github.com/cilium/cilium)
+  - 语言: Go
+  - Stars: 21885
+  - 描述: eBPF-based Networking, Security, and Observability
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/cilium/cilium/pull/27597](https://github.com/cilium/cilium/pull/27597)
+
+**参考链接**:
+- [https://github.com/cilium/cilium/pull/27597](https://github.com/cilium/cilium/pull/27597)
+- [https://github.com/cilium/cilium/security/advisories/GHSA-24m5-r6hv-ccgp](https://github.com/cilium/cilium/security/advisories/GHSA-24m5-r6hv-ccgp)
+
+---
+
+### CVE-2023-41333
+
+**描述**: Cilium is a networking, observability, and security solution with an eBPF-based dataplane. An attacker with the ability to create or modify CiliumNetworkPolicy objects in a particular namespace is able to affect traffic on an entire Cilium cluster, potentially bypassing policy enforcement in other namespaces. By using a crafted `endpointSelector` that uses the `DoesNotExist` operator on the `reserved:init` label, the attacker can create policies that bypass namespace restrictions and affect the entire Cilium cluster. This includes potentially allowing or denying all traffic. This attack requires API server access, as described in the Kubernetes API Server Attacker section of the Cilium Threat Model. This issue has been resolved in Cilium versions 1.14.2, 1.13.7, and 1.12.14. As a workaround an admission webhook can be used to prevent the use of `endpointSelectors` that use the `DoesNotExist` operator on the `reserved:init` label in CiliumNetworkPolicies.
+
+
+**相关GitHub仓库**:
+
+- [cilium/cilium](https://github.com/cilium/cilium)
+  - 语言: Go
+  - Stars: 21885
+  - 描述: eBPF-based Networking, Security, and Observability
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/cilium/cilium/pull/28007](https://github.com/cilium/cilium/pull/28007)
+
+**参考链接**:
+- [https://docs.cilium.io/en/stable/security/threat-model/#kubernetes-api-server-attacker](https://docs.cilium.io/en/stable/security/threat-model/#kubernetes-api-server-attacker)
+- [https://github.com/cilium/cilium/pull/28007](https://github.com/cilium/cilium/pull/28007)
+- [https://github.com/cilium/cilium/security/advisories/GHSA-4xp2-w642-7mcx](https://github.com/cilium/cilium/security/advisories/GHSA-4xp2-w642-7mcx)
+
+---
+
+### CVE-2023-44392
+
+**描述**: Garden provides automation for Kubernetes development and testing. Prior tov ersions 0.13.17 and 0.12.65, Garden has a dependency on the cryo library, which is vulnerable to code injection due to an insecure implementation of deserialization. Garden stores serialized objects using cryo in the Kubernetes `ConfigMap` resources prefixed with `test-result` and `run-result` to cache Garden test and run results. These `ConfigMaps` are stored either in the `garden-system` namespace or the configured user namespace. When a user invokes the command `garden test` or `garden run` objects stored in the `ConfigMap` are retrieved and deserialized. This can be used by an attacker with access to the Kubernetes cluster to store malicious objects in the `ConfigMap`, which can trigger a remote code execution on the users machine when cryo deserializes the object. In order to exploit this vulnerability, an attacker must have access to the Kubernetes cluster used to deploy garden remote environments. Further, a user must actively invoke either a `garden test` or `garden run` which has previously cached results. The issue has been patched in Garden versions `0.13.17` (Bonsai) and `0.12.65` (Acorn). Only Garden versions prior to these are vulnerable. No known workarounds are available.
+
+**相关GitHub仓库**:
+
+- [garden-io/garden](https://github.com/garden-io/garden)
+  - 语言: TypeScript
+  - Stars: 3510
+  - 描述: Automation for Kubernetes development and testing. Spin up production-like environments for development, testing, and CI on demand. Use the same configuration and workflows at every step of the process. Speed up your builds and test runs via shared result caching
+  - 许可证: Mozilla Public License 2.0
+
+**相关Commits**:
+- [https://github.com/garden-io/garden/commit/3117964da40d3114f129a6131b4ada89eaa4eb8c](https://github.com/garden-io/garden/commit/3117964da40d3114f129a6131b4ada89eaa4eb8c)
+
+**参考链接**:
+- [https://github.com/garden-io/garden/commit/3117964da40d3114f129a6131b4ada89eaa4eb8c](https://github.com/garden-io/garden/commit/3117964da40d3114f129a6131b4ada89eaa4eb8c)
+- [https://github.com/garden-io/garden/security/advisories/GHSA-hm75-6vc9-8rpr](https://github.com/garden-io/garden/security/advisories/GHSA-hm75-6vc9-8rpr)
+
+---
+
+### CVE-2023-45823
+
+**描述**: Artifact Hub is a web-based application that enables finding, installing, and publishing packages and configurations for CNCF projects. During a security audit of Artifact Hub's code base a security researcher identified a bug in which by using symbolic links in certain kinds of repositories loaded into Artifact Hub, it was possible to read internal files. Artifact Hub indexes content from a variety of sources, including git repositories. When processing git based repositories, Artifact Hub clones the repository and, depending on the artifact kind, reads some files from it. During this process, in some cases, no validation was done to check if the file was a symbolic link. This made possible to read arbitrary files in the system, potentially leaking sensitive information. This issue has been resolved in version `1.16.0`. Users are advised to upgrade. There are no known workarounds for this vulnerability.
+
+**相关GitHub仓库**:
+
+- [artifacthub/hub](https://github.com/artifacthub/hub)
+  - 语言: TypeScript
+  - Stars: 1864
+  - 描述: Find, install and publish Cloud Native packages
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/artifacthub/hub/pull/3343](https://github.com/artifacthub/hub/pull/3343)
+
+**相关Commits**:
+- [https://github.com/artifacthub/hub/commit/4a6339b24585f70aadd0d87380552cb8802bd612](https://github.com/artifacthub/hub/commit/4a6339b24585f70aadd0d87380552cb8802bd612)
+
+**参考链接**:
+- [https://artifacthub.io/packages/helm/artifact-hub/artifact-hub?modal=changelog&version=1.16.0](https://artifacthub.io/packages/helm/artifact-hub/artifact-hub?modal=changelog&version=1.16.0)
+- [https://github.com/artifacthub/hub/security/advisories/GHSA-hmq4-c2r4-5q8h](https://github.com/artifacthub/hub/security/advisories/GHSA-hmq4-c2r4-5q8h)
+
+---
+
+### CVE-2023-47105
+
+**描述**: exec.CommandContext in Chaosblade 0.3 through 1.7.3, when server mode is used, allows OS command execution via the cmd parameter without authentication.
+
+**相关GitHub仓库**:
+
+- [chaosblade-io/chaosblade](https://github.com/chaosblade-io/chaosblade)
+  - 语言: Go
+  - Stars: 6140
+  - 描述: An easy to use and powerful chaos engineering experiment toolkit.（阿里巴巴开源的一款简单易用、功能强大的混沌实验注入工具）
+  - 许可证: Apache License 2.0
+
+**相关Commits**:
+- [https://github.com/chaosblade-io/chaosblade/commit/6bc73c31e14ea2b1bfc30f359e1fe952859d9adc](https://github.com/chaosblade-io/chaosblade/commit/6bc73c31e14ea2b1bfc30f359e1fe952859d9adc)
+
+**参考链接**:
+- [https://github.com/chaosblade-io/chaosblade/blob/0a07380c9899febb2b544132783b376b44226cca/exec/os/executor.go#L68](https://github.com/chaosblade-io/chaosblade/blob/0a07380c9899febb2b544132783b376b44226cca/exec/os/executor.go#L68)
+- [https://narrow-oatmeal-0c0.notion.site/ChaosBlade-Remote-Command-Execution-CVE-2023-47105-4f5459046488436caaec2bced6ff26d7](https://narrow-oatmeal-0c0.notion.site/ChaosBlade-Remote-Command-Execution-CVE-2023-47105-4f5459046488436caaec2bced6ff26d7)
+
+---
+
+### CVE-2023-5043
+
+**描述**: Ingress nginx annotation injection causes arbitrary command execution.
+
+**相关GitHub仓库**:
+
+- [kubernetes/ingress-nginx](https://github.com/kubernetes/ingress-nginx)
+  - 语言: Go
+  - Stars: 18663
+  - 描述: Ingress NGINX Controller for Kubernetes
+  - 许可证: Apache License 2.0
+
+**相关Commits**:
+- [https://github.com/kubernetes/ingress-nginx/commit/cbc68bc011c9d369d12ddb06edbbc7ca5976f42c](https://github.com/kubernetes/ingress-nginx/commit/cbc68bc011c9d369d12ddb06edbbc7ca5976f42c)
+
+**参考链接**:
+- [http://www.openwall.com/lists/oss-security/2023/10/25/4](http://www.openwall.com/lists/oss-security/2023/10/25/4)
+- [https://github.com/kubernetes/ingress-nginx/issues/10571](https://github.com/kubernetes/ingress-nginx/issues/10571)
+- [https://groups.google.com/g/kubernetes-security-announce/c/pVsXsOpxYZo](https://groups.google.com/g/kubernetes-security-announce/c/pVsXsOpxYZo)
+- [https://security.netapp.com/advisory/ntap-20240307-0012/](https://security.netapp.com/advisory/ntap-20240307-0012/)
+
+---
+
+### CVE-2023-5044
+
+**描述**: Code injection via nginx.ingress.kubernetes.io/permanent-redirect annotation.
+
+**相关GitHub仓库**:
+
+- [kubernetes/ingress-nginx](https://github.com/kubernetes/ingress-nginx)
+  - 语言: Go
+  - Stars: 18663
+  - 描述: Ingress NGINX Controller for Kubernetes
+  - 许可证: Apache License 2.0
+
+**相关Commits**:
+- [https://github.com/kubernetes/ingress-nginx/commit/cbc68bc011c9d369d12ddb06edbbc7ca5976f42c](https://github.com/kubernetes/ingress-nginx/commit/cbc68bc011c9d369d12ddb06edbbc7ca5976f42c)
+
+**参考链接**:
+- [http://www.openwall.com/lists/oss-security/2023/10/25/3](http://www.openwall.com/lists/oss-security/2023/10/25/3)
+- [https://github.com/kubernetes/ingress-nginx/issues/10572](https://github.com/kubernetes/ingress-nginx/issues/10572)
+- [https://groups.google.com/g/kubernetes-security-announce/c/ukuYYvRNel0](https://groups.google.com/g/kubernetes-security-announce/c/ukuYYvRNel0)
+- [https://security.netapp.com/advisory/ntap-20240307-0012/](https://security.netapp.com/advisory/ntap-20240307-0012/)
+
+---
+
+### CVE-2023-51699
+
+**描述**: Fluid is an open source Kubernetes-native Distributed Dataset Orchestrator and Accelerator for data-intensive applications. An OS command injection vulnerability within the Fluid project's JuicefsRuntime can potentially allow an authenticated user, who has the authority to create or update the K8s CRD Dataset/JuicefsRuntime, to execute arbitrary OS commands within the juicefs related containers. This could lead to unauthorized access, modification or deletion of data. Users who're using versions < 0.9.3 with JuicefsRuntime should upgrade to v0.9.3.
+
+**相关GitHub仓库**:
+
+- [fluid-cloudnative/fluid](https://github.com/fluid-cloudnative/fluid)
+  - 语言: Go
+  - Stars: 1775
+  - 描述: Fluid, elastic data abstraction and acceleration for BigData/AI applications in cloud. (Project under CNCF) 
+  - 许可证: Apache License 2.0
+
+**相关Commits**:
+- [https://github.com/fluid-cloudnative/fluid/commit/e0184cff8790ad000c3e8943392c7f544fad7d66](https://github.com/fluid-cloudnative/fluid/commit/e0184cff8790ad000c3e8943392c7f544fad7d66)
+- [https://github.com/fluid-cloudnative/fluid/commit/02b7cd8b79a26092df95d625664994bda485c722](https://github.com/fluid-cloudnative/fluid/commit/02b7cd8b79a26092df95d625664994bda485c722)
+
+**参考链接**:
+- [https://github.com/fluid-cloudnative/fluid/commit/e0184cff8790ad000c3e8943392c7f544fad7d66](https://github.com/fluid-cloudnative/fluid/commit/e0184cff8790ad000c3e8943392c7f544fad7d66)
+- [https://github.com/fluid-cloudnative/fluid/security/advisories/GHSA-wx8q-4gm9-rj2g](https://github.com/fluid-cloudnative/fluid/security/advisories/GHSA-wx8q-4gm9-rj2g)
+
+---
+
+### CVE-2023-5408
+
+**描述**: A privilege escalation flaw was found in the node restriction admission plugin of the kubernetes api server of OpenShift. A remote attacker who modifies the node role label could steer workloads from the control plane and etcd nodes onto different worker nodes and gain broader access to the cluster.
+
+**相关GitHub仓库**:
+
+- [openshift/kubernetes](https://github.com/openshift/kubernetes)
+  - 语言: Go
+  - Stars: 86
+  - 描述: This is the repo that tracks all patches to the OpenShift distribution of Kubernetes on branches corresponding to OpenShift releases.  See https://github.com/openshift/kubernetes/blob/master/README.openshift.md for more
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/openshift/kubernetes/pull/1736](https://github.com/openshift/kubernetes/pull/1736)
+
+**参考链接**:
+- [https://access.redhat.com/errata/RHSA-2023:5006](https://access.redhat.com/errata/RHSA-2023:5006)
+- [https://access.redhat.com/errata/RHSA-2023:6130](https://access.redhat.com/errata/RHSA-2023:6130)
+- [https://access.redhat.com/errata/RHSA-2023:6842](https://access.redhat.com/errata/RHSA-2023:6842)
+- [https://access.redhat.com/errata/RHSA-2023:7479](https://access.redhat.com/errata/RHSA-2023:7479)
+- [https://access.redhat.com/security/cve/CVE-2023-5408](https://access.redhat.com/security/cve/CVE-2023-5408)
+- [https://bugzilla.redhat.com/show_bug.cgi?id=2242173](https://bugzilla.redhat.com/show_bug.cgi?id=2242173)
+- [https://github.com/openshift/kubernetes/pull/1736](https://github.com/openshift/kubernetes/pull/1736)
+
+---
+
+### CVE-2023-5528
+
+**描述**: A security issue was discovered in Kubernetes where a user that can create pods and persistent volumes on Windows nodes may be able to escalate to admin privileges on those nodes. Kubernetes clusters are only affected if they are using an in-tree storage plugin for Windows nodes.
+
+**相关GitHub仓库**:
+
+- [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes)
+  - 语言: Go
+  - Stars: 115932
+  - 描述: Production-Grade Container Scheduling and Management
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/kubernetes/kubernetes/pull/121881](https://github.com/kubernetes/kubernetes/pull/121881)
+
+**相关Commits**:
+- [https://github.com/kubernetes/kubernetes/commit/2d9128116b6a7fd93126217aa0efd7d9272adacb](https://github.com/kubernetes/kubernetes/commit/2d9128116b6a7fd93126217aa0efd7d9272adacb)
+
+**参考链接**:
+- [https://github.com/kubernetes/kubernetes/issues/121879](https://github.com/kubernetes/kubernetes/issues/121879)
+- [https://groups.google.com/g/kubernetes-security-announce/c/SL_d4NR8pzA](https://groups.google.com/g/kubernetes-security-announce/c/SL_d4NR8pzA)
+- [https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/3JH444PWZBINXLLFV7XLIJIZJHSK6UEZ/](https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/3JH444PWZBINXLLFV7XLIJIZJHSK6UEZ/)
+- [https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/4XZIX727JIKF5RQW7RVVBLWXBCDIBJA7/](https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/4XZIX727JIKF5RQW7RVVBLWXBCDIBJA7/)
+- [https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/7MPGMITSZXUCAVO7Q75675SOLXC2XXU4/](https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/7MPGMITSZXUCAVO7Q75675SOLXC2XXU4/)
+- [https://security.netapp.com/advisory/ntap-20240119-0009/](https://security.netapp.com/advisory/ntap-20240119-0009/)
+
+---
+
+### CVE-2023-6476
+
+**描述**: A flaw was found in CRI-O that involves an experimental annotation leading to a container being unconfined. This may allow a pod to specify and get any amount of memory/cpu, circumventing the kubernetes scheduler and potentially resulting in a denial of service in the node.
+
+**相关GitHub仓库**:
+
+- [cri-o/cri-o](https://github.com/cri-o/cri-o)
+  - 语言: Go
+  - Stars: 5433
+  - 描述: Open Container Initiative-based implementation of Kubernetes Container Runtime Interface
+  - 许可证: Apache License 2.0
+
+**相关Commits**:
+- [https://github.com/cri-o/cri-o/commit/06cf7f6662b813e8cbc031692bac4c7f9ddc37ec](https://github.com/cri-o/cri-o/commit/06cf7f6662b813e8cbc031692bac4c7f9ddc37ec)
+
+**参考链接**:
+- [https://access.redhat.com/errata/RHSA-2024:0195](https://access.redhat.com/errata/RHSA-2024:0195)
+- [https://access.redhat.com/errata/RHSA-2024:0207](https://access.redhat.com/errata/RHSA-2024:0207)
+- [https://access.redhat.com/security/cve/CVE-2023-6476](https://access.redhat.com/security/cve/CVE-2023-6476)
+- [https://bugzilla.redhat.com/show_bug.cgi?id=2253994](https://bugzilla.redhat.com/show_bug.cgi?id=2253994)
+
+---
+
+### CVE-2024-0793
+
+**描述**: A flaw was found in kube-controller-manager. This issue occurs when the initial application of a HPA config YAML lacking a .spec.behavior.scaleUp block causes a denial of service due to KCM pods going into restart churn.
+
+**相关GitHub仓库**:
+
+- [openshift/kubernetes](https://github.com/openshift/kubernetes)
+  - 语言: Go
+  - Stars: 86
+  - 描述: This is the repo that tracks all patches to the OpenShift distribution of Kubernetes on branches corresponding to OpenShift releases.  See https://github.com/openshift/kubernetes/blob/master/README.openshift.md for more
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/openshift/kubernetes/pull/1876](https://github.com/openshift/kubernetes/pull/1876)
+
+**参考链接**:
+- [https://access.redhat.com/errata/RHSA-2024:0741](https://access.redhat.com/errata/RHSA-2024:0741)
+- [https://access.redhat.com/errata/RHSA-2024:1267](https://access.redhat.com/errata/RHSA-2024:1267)
+- [https://access.redhat.com/security/cve/CVE-2024-0793](https://access.redhat.com/security/cve/CVE-2024-0793)
+- [https://bugzilla.redhat.com/show_bug.cgi?id=2214402](https://bugzilla.redhat.com/show_bug.cgi?id=2214402)
+- [https://github.com/openshift/kubernetes/pull/1876](https://github.com/openshift/kubernetes/pull/1876)
+
+---
+
+### CVE-2024-10220
+
+**描述**: The Kubernetes kubelet component allows arbitrary command execution via specially crafted gitRepo volumes.This issue affects kubelet: through 1.28.11, from 1.29.0 through 1.29.6, from 1.30.0 through 1.30.2.
+
+**相关GitHub仓库**:
+
+- [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes)
+  - 语言: Go
+  - Stars: 115932
+  - 描述: Production-Grade Container Scheduling and Management
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/kubernetes/kubernetes/pull/124531](https://github.com/kubernetes/kubernetes/pull/124531)
+
+**相关Commits**:
+- [https://github.com/kubernetes/kubernetes/commit/c7846fd24c16266a3bfd86315171f5b4d5f0c9c9](https://github.com/kubernetes/kubernetes/commit/c7846fd24c16266a3bfd86315171f5b4d5f0c9c9)
+
+**参考链接**:
+- [http://www.openwall.com/lists/oss-security/2024/11/20/1](http://www.openwall.com/lists/oss-security/2024/11/20/1)
+- [https://github.com/kubernetes/kubernetes/issues/128885](https://github.com/kubernetes/kubernetes/issues/128885)
+- [https://groups.google.com/g/kubernetes-security-announce/c/ptNgV5Necko](https://groups.google.com/g/kubernetes-security-announce/c/ptNgV5Necko)
+
+---
+
+### CVE-2024-12401
+
+**描述**: A flaw was found in the cert-manager package. This flaw allows an attacker who can modify PEM data that the cert-manager reads, for example, in a Secret resource, to use large amounts of CPU in the cert-manager controller pod to effectively create a denial-of-service (DoS) vector for the cert-manager in the cluster.
+
+**相关GitHub仓库**:
+
+- [cert-manager/cert-manager](https://github.com/cert-manager/cert-manager)
+  - 语言: Go
+  - Stars: 12908
+  - 描述: Automatically provision and manage TLS certificates in Kubernetes
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/cert-manager/cert-manager/pull/7400](https://github.com/cert-manager/cert-manager/pull/7400)
+- [https://github.com/cert-manager/cert-manager/pull/7401](https://github.com/cert-manager/cert-manager/pull/7401)
+- [https://github.com/cert-manager/cert-manager/pull/7402](https://github.com/cert-manager/cert-manager/pull/7402)
+- [https://github.com/cert-manager/cert-manager/pull/7403](https://github.com/cert-manager/cert-manager/pull/7403)
+
+**参考链接**:
+- [https://access.redhat.com/security/cve/CVE-2024-12401](https://access.redhat.com/security/cve/CVE-2024-12401)
+- [https://bugzilla.redhat.com/show_bug.cgi?id=2327929](https://bugzilla.redhat.com/show_bug.cgi?id=2327929)
+- [https://github.com/cert-manager/cert-manager/pull/7400](https://github.com/cert-manager/cert-manager/pull/7400)
+- [https://github.com/cert-manager/cert-manager/pull/7401](https://github.com/cert-manager/cert-manager/pull/7401)
+- [https://github.com/cert-manager/cert-manager/pull/7402](https://github.com/cert-manager/cert-manager/pull/7402)
+- [https://github.com/cert-manager/cert-manager/pull/7403](https://github.com/cert-manager/cert-manager/pull/7403)
+- [https://github.com/cert-manager/cert-manager/security/advisories/GHSA-r4pg-vg54-wxx4](https://github.com/cert-manager/cert-manager/security/advisories/GHSA-r4pg-vg54-wxx4)
+- [https://go.dev/issue/50116](https://go.dev/issue/50116)
+
+---
+
+### CVE-2024-1725
+
+**描述**: A flaw was found in the kubevirt-csi component of OpenShift Virtualization's Hosted Control Plane (HCP). This issue could allow an authenticated attacker to gain access to the root HCP worker node's volume by creating a custom Persistent Volume that matches the name of a worker node.
+
+**相关GitHub仓库**:
+
+- [kubevirt/csi-driver](https://github.com/kubevirt/csi-driver)
+  - 语言: Go
+  - Stars: 44
+  - 描述: KubeVirt CSI driver
+  - 许可证: Other
+
+**相关Pull Requests**:
+- [https://github.com/kubevirt/csi-driver/pull/103/commits/a61f36c42700f54352919318ed806d1ae2d716f4](https://github.com/kubevirt/csi-driver/pull/103/commits/a61f36c42700f54352919318ed806d1ae2d716f4)
+
+**相关Commits**:
+- [https://github.com/kubevirt/csi-driver/commit/a61f36c42700f54352919318ed806d1ae2d716f4](https://github.com/kubevirt/csi-driver/commit/a61f36c42700f54352919318ed806d1ae2d716f4)
+
+**参考链接**:
+- [https://access.redhat.com/errata/RHSA-2024:1559](https://access.redhat.com/errata/RHSA-2024:1559)
+- [https://access.redhat.com/errata/RHSA-2024:1891](https://access.redhat.com/errata/RHSA-2024:1891)
+- [https://access.redhat.com/errata/RHSA-2024:2047](https://access.redhat.com/errata/RHSA-2024:2047)
+- [https://access.redhat.com/security/cve/CVE-2024-1725](https://access.redhat.com/security/cve/CVE-2024-1725)
+- [https://bugzilla.redhat.com/show_bug.cgi?id=2265398](https://bugzilla.redhat.com/show_bug.cgi?id=2265398)
+
+---
+
+### CVE-2024-1753
+
+**描述**: A flaw was found in Buildah (and subsequently Podman Build) which allows containers to mount arbitrary locations on the host filesystem into build containers. A malicious Containerfile can use a dummy image with a symbolic link to the root filesystem as a mount source and cause the mount operation to mount the host root filesystem inside the RUN step. The commands inside the RUN step will then have read-write access to the host filesystem, allowing for full container escape at build time.
+
+**相关GitHub仓库**:
+
+- [containers/podman](https://github.com/containers/podman)
+  - 语言: Go
+  - Stars: 27342
+  - 描述: Podman: A tool for managing OCI containers and pods.
+  - 许可证: Apache License 2.0
+- [containers/buildah](https://github.com/containers/buildah)
+  - 语言: Go
+  - Stars: 7988
+  - 描述: A tool that facilitates building OCI images.
+  - 许可证: Apache License 2.0
+
+**相关Commits**:
+- [https://github.com/containers/buildah/commit/9de9c20ff368beb84b84fe660773d352519dc1c5](https://github.com/containers/buildah/commit/9de9c20ff368beb84b84fe660773d352519dc1c5)
+
+**参考链接**:
+- [https://access.redhat.com/errata/RHSA-2024:2049](https://access.redhat.com/errata/RHSA-2024:2049)
+- [https://access.redhat.com/errata/RHSA-2024:2055](https://access.redhat.com/errata/RHSA-2024:2055)
+- [https://access.redhat.com/errata/RHSA-2024:2064](https://access.redhat.com/errata/RHSA-2024:2064)
+- [https://access.redhat.com/errata/RHSA-2024:2066](https://access.redhat.com/errata/RHSA-2024:2066)
+- [https://access.redhat.com/errata/RHSA-2024:2077](https://access.redhat.com/errata/RHSA-2024:2077)
+- [https://access.redhat.com/errata/RHSA-2024:2084](https://access.redhat.com/errata/RHSA-2024:2084)
+- [https://access.redhat.com/errata/RHSA-2024:2089](https://access.redhat.com/errata/RHSA-2024:2089)
+- [https://access.redhat.com/errata/RHSA-2024:2090](https://access.redhat.com/errata/RHSA-2024:2090)
+- [https://access.redhat.com/errata/RHSA-2024:2097](https://access.redhat.com/errata/RHSA-2024:2097)
+- [https://access.redhat.com/errata/RHSA-2024:2098](https://access.redhat.com/errata/RHSA-2024:2098)
+- [https://access.redhat.com/errata/RHSA-2024:2548](https://access.redhat.com/errata/RHSA-2024:2548)
+- [https://access.redhat.com/errata/RHSA-2024:2645](https://access.redhat.com/errata/RHSA-2024:2645)
+- [https://access.redhat.com/errata/RHSA-2024:2669](https://access.redhat.com/errata/RHSA-2024:2669)
+- [https://access.redhat.com/errata/RHSA-2024:2672](https://access.redhat.com/errata/RHSA-2024:2672)
+- [https://access.redhat.com/errata/RHSA-2024:2784](https://access.redhat.com/errata/RHSA-2024:2784)
+- [https://access.redhat.com/errata/RHSA-2024:2877](https://access.redhat.com/errata/RHSA-2024:2877)
+- [https://access.redhat.com/errata/RHSA-2024:3254](https://access.redhat.com/errata/RHSA-2024:3254)
+- [https://access.redhat.com/security/cve/CVE-2024-1753](https://access.redhat.com/security/cve/CVE-2024-1753)
+- [https://bugzilla.redhat.com/show_bug.cgi?id=2265513](https://bugzilla.redhat.com/show_bug.cgi?id=2265513)
+- [https://github.com/containers/buildah/security/advisories/GHSA-pmf3-c36m-g5cf](https://github.com/containers/buildah/security/advisories/GHSA-pmf3-c36m-g5cf)
+- [https://github.com/containers/podman/security/advisories/GHSA-874v-pj72-92f3](https://github.com/containers/podman/security/advisories/GHSA-874v-pj72-92f3)
+- [https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/FCRZVUDOFM5CPREQKBEU2VK2QK62PSBP/](https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/FCRZVUDOFM5CPREQKBEU2VK2QK62PSBP/)
+- [https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/KOYMVMQ7RWMDTSKQTBO734BE3WQPI2AJ/](https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/KOYMVMQ7RWMDTSKQTBO734BE3WQPI2AJ/)
+- [https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ZVBSVZGVABPYIHK5HZM472NPGWMI7WXH/](https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ZVBSVZGVABPYIHK5HZM472NPGWMI7WXH/)
+- [https://pkg.go.dev/vuln/GO-2024-2658](https://pkg.go.dev/vuln/GO-2024-2658)
+
+---
+
+### CVE-2024-21626
+
+**描述**: runc is a CLI tool for spawning and running containers on Linux according to the OCI specification. In runc 1.1.11 and earlier, due to an internal file descriptor leak, an attacker could cause a newly-spawned container process (from runc exec) to have a working directory in the host filesystem namespace, allowing for a container escape by giving access to the host filesystem ("attack 2"). The same attack could be used by a malicious image to allow a container process to gain access to the host filesystem through runc run ("attack 1"). Variants of attacks 1 and 2 could be also be used to overwrite semi-arbitrary host binaries, allowing for complete container escapes ("attack 3a" and "attack 3b"). runc 1.1.12 includes patches for this issue. 
+
+**相关GitHub仓库**:
+
+- [opencontainers/runc](https://github.com/opencontainers/runc)
+  - 语言: Go
+  - Stars: 12467
+  - 描述: CLI tool for spawning and running containers according to the OCI specification
+  - 许可证: Apache License 2.0
+
+**相关Commits**:
+- [https://github.com/opencontainers/runc/commit/02120488a4c0fc487d1ed2867e901eeed7ce8ecf](https://github.com/opencontainers/runc/commit/02120488a4c0fc487d1ed2867e901eeed7ce8ecf)
+
+**参考链接**:
+- [http://packetstormsecurity.com/files/176993/runc-1.1.11-File-Descriptor-Leak-Privilege-Escalation.html](http://packetstormsecurity.com/files/176993/runc-1.1.11-File-Descriptor-Leak-Privilege-Escalation.html)
+- [http://www.openwall.com/lists/oss-security/2024/02/01/1](http://www.openwall.com/lists/oss-security/2024/02/01/1)
+- [http://www.openwall.com/lists/oss-security/2024/02/02/3](http://www.openwall.com/lists/oss-security/2024/02/02/3)
+- [https://github.com/opencontainers/runc/commit/02120488a4c0fc487d1ed2867e901eeed7ce8ecf](https://github.com/opencontainers/runc/commit/02120488a4c0fc487d1ed2867e901eeed7ce8ecf)
+- [https://github.com/opencontainers/runc/releases/tag/v1.1.12](https://github.com/opencontainers/runc/releases/tag/v1.1.12)
+- [https://github.com/opencontainers/runc/security/advisories/GHSA-xr7r-f8xq-vfvv](https://github.com/opencontainers/runc/security/advisories/GHSA-xr7r-f8xq-vfvv)
+- [https://lists.debian.org/debian-lts-announce/2024/02/msg00005.html](https://lists.debian.org/debian-lts-announce/2024/02/msg00005.html)
+- [https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/2NLXNE23Q5ESQUAI22Z7A63JX2WMPJ2J/](https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/2NLXNE23Q5ESQUAI22Z7A63JX2WMPJ2J/)
+- [https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/SYMO3BANINS6RGFQFKPRG4FIOJ7GWYTL/](https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/SYMO3BANINS6RGFQFKPRG4FIOJ7GWYTL/)
+- [https://www.vicarius.io/vsociety/posts/leaky-vessels-part-1-cve-2024-21626](https://www.vicarius.io/vsociety/posts/leaky-vessels-part-1-cve-2024-21626)
+
+---
+
+### CVE-2024-28175
+
+**描述**: Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes. Due to the improper URL protocols filtering of links specified in the `link.argocd.argoproj.io` annotations in the application summary component, an attacker can achieve cross-site scripting with elevated permissions. All unpatched versions of Argo CD starting with v1.0.0 are vulnerable to a cross-site scripting (XSS) bug allowing a malicious user to inject a javascript: link in the UI. When clicked by a victim user, the script will execute with the victim's permissions (up to and including admin). This vulnerability allows an attacker to perform arbitrary actions on behalf of the victim via the API, such as creating, modifying, and deleting Kubernetes resources. A patch for this vulnerability has been released in Argo CD versions v2.10.3 v2.9.8, and v2.8.12. There are no completely-safe workarounds besides upgrading. The safest alternative, if upgrading is not possible, would be to create a Kubernetes admission controller to reject any resources with an annotation starting with link.argocd.argoproj.io or reject the resource if the value use an improper URL protocol. This validation will need to be applied in all clusters managed by ArgoCD.
+
+
+
+**相关GitHub仓库**:
+
+- [argoproj/argo-cd](https://github.com/argoproj/argo-cd)
+  - 语言: Go
+  - Stars: 19915
+  - 描述: Declarative Continuous Deployment for Kubernetes
+  - 许可证: Apache License 2.0
+
+**相关Commits**:
+- [https://github.com/argoproj/argo-cd/commit/479b5544b57dc9ef767d49f7003f39602c480b71](https://github.com/argoproj/argo-cd/commit/479b5544b57dc9ef767d49f7003f39602c480b71)
+
+**参考链接**:
+- [https://github.com/argoproj/argo-cd/commit/479b5544b57dc9ef767d49f7003f39602c480b71](https://github.com/argoproj/argo-cd/commit/479b5544b57dc9ef767d49f7003f39602c480b71)
+- [https://github.com/argoproj/argo-cd/security/advisories/GHSA-jwv5-8mqv-g387](https://github.com/argoproj/argo-cd/security/advisories/GHSA-jwv5-8mqv-g387)
+
+---
+
+### CVE-2024-29893
+
+**描述**: Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes. All versions of ArgoCD starting from v2.4 have a bug where the ArgoCD repo-server component is vulnerable to a Denial-of-Service attack vector. Specifically,  it's possible to crash the repo server component through an out of memory error by pointing it to a malicious Helm registry. The loadRepoIndex() function in the ArgoCD's helm package, does not limit the size nor time while fetching the data. It fetches it and creates a byte slice from the retrieved data in one go. If the registry is implemented to push data continuously, the repo server will keep allocating memory until it runs out of it. A patch for this vulnerability has been released in v2.10.3, v2.9.8, and v2.8.12.
+
+**相关GitHub仓库**:
+
+- [argoproj/argo-cd](https://github.com/argoproj/argo-cd)
+  - 语言: Go
+  - Stars: 19915
+  - 描述: Declarative Continuous Deployment for Kubernetes
+  - 许可证: Apache License 2.0
+
+**相关Commits**:
+- [https://github.com/argoproj/argo-cd/commit/14f681e3ee7c38731943b98f92277e88a3db109d](https://github.com/argoproj/argo-cd/commit/14f681e3ee7c38731943b98f92277e88a3db109d)
+- [https://github.com/argoproj/argo-cd/commit/36b8a12a38f8d92d55bffc81deed44389bf6eb59](https://github.com/argoproj/argo-cd/commit/36b8a12a38f8d92d55bffc81deed44389bf6eb59)
+- [https://github.com/argoproj/argo-cd/commit/3e5a878f6e30d935fa149723ea2a2e93748fcddd](https://github.com/argoproj/argo-cd/commit/3e5a878f6e30d935fa149723ea2a2e93748fcddd)
+
+**参考链接**:
+- [https://github.com/argoproj/argo-cd/commit/14f681e3ee7c38731943b98f92277e88a3db109d](https://github.com/argoproj/argo-cd/commit/14f681e3ee7c38731943b98f92277e88a3db109d)
+- [https://github.com/argoproj/argo-cd/commit/36b8a12a38f8d92d55bffc81deed44389bf6eb59](https://github.com/argoproj/argo-cd/commit/36b8a12a38f8d92d55bffc81deed44389bf6eb59)
+- [https://github.com/argoproj/argo-cd/commit/3e5a878f6e30d935fa149723ea2a2e93748fcddd](https://github.com/argoproj/argo-cd/commit/3e5a878f6e30d935fa149723ea2a2e93748fcddd)
+- [https://github.com/argoproj/argo-cd/security/advisories/GHSA-jhwx-mhww-rgc3](https://github.com/argoproj/argo-cd/security/advisories/GHSA-jhwx-mhww-rgc3)
+
+---
+
+### CVE-2024-3154
+
+**描述**: A flaw was found in cri-o, where an arbitrary systemd property can be injected via a Pod annotation. Any user who can create a pod with an arbitrary annotation may perform an arbitrary action on the host system.
+
+**相关GitHub仓库**:
+
+- [opencontainers/runtime-spec](https://github.com/opencontainers/runtime-spec)
+  - 语言: Go
+  - Stars: 3391
+  - 描述: OCI Runtime Specification
+  - 许可证: Apache License 2.0
+- [cri-o/cri-o](https://github.com/cri-o/cri-o)
+  - 语言: Go
+  - Stars: 5433
+  - 描述: Open Container Initiative-based implementation of Kubernetes Container Runtime Interface
+  - 许可证: Apache License 2.0
+- [opencontainers/runc](https://github.com/opencontainers/runc)
+  - 语言: Go
+  - Stars: 12467
+  - 描述: CLI tool for spawning and running containers according to the OCI specification
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/opencontainers/runc/pull/4217](https://github.com/opencontainers/runc/pull/4217)
+
+**相关Commits**:
+- [https://github.com/opencontainers/runc/commit/3db0871f1cf25c7025861ba0d51d25794cb21623](https://github.com/opencontainers/runc/commit/3db0871f1cf25c7025861ba0d51d25794cb21623)
+- [https://github.com/cri-o/cri-o/commit/aab8d724a3d2aa1a3daa742aa8bf42d45cbb612e](https://github.com/cri-o/cri-o/commit/aab8d724a3d2aa1a3daa742aa8bf42d45cbb612e)
+
+**参考链接**:
+- [https://access.redhat.com/errata/RHSA-2024:2669](https://access.redhat.com/errata/RHSA-2024:2669)
+- [https://access.redhat.com/errata/RHSA-2024:2672](https://access.redhat.com/errata/RHSA-2024:2672)
+- [https://access.redhat.com/errata/RHSA-2024:2784](https://access.redhat.com/errata/RHSA-2024:2784)
+- [https://access.redhat.com/errata/RHSA-2024:3496](https://access.redhat.com/errata/RHSA-2024:3496)
+- [https://access.redhat.com/security/cve/CVE-2024-3154](https://access.redhat.com/security/cve/CVE-2024-3154)
+- [https://bugzilla.redhat.com/show_bug.cgi?id=2272532](https://bugzilla.redhat.com/show_bug.cgi?id=2272532)
+- [https://github.com/cri-o/cri-o/security/advisories/GHSA-2cgq-h8xw-2v5j](https://github.com/cri-o/cri-o/security/advisories/GHSA-2cgq-h8xw-2v5j)
+- [https://github.com/opencontainers/runc/pull/4217](https://github.com/opencontainers/runc/pull/4217)
+- [https://github.com/opencontainers/runtime-spec/blob/main/features.md#unsafe-annotations-in-configjson](https://github.com/opencontainers/runtime-spec/blob/main/features.md#unsafe-annotations-in-configjson)
+
+---
+
+### CVE-2024-3177
+
+**描述**: A security issue was discovered in Kubernetes where users may be able to launch containers that bypass the mountable secrets policy enforced by the ServiceAccount admission plugin when using containers, init containers, and ephemeral containers with the envFrom field populated. The policy ensures pods running with a service account may only reference secrets specified in the service account’s secrets field. Kubernetes clusters are only affected if the ServiceAccount admission plugin and the kubernetes.io/enforce-mountable-secrets annotation are used together with containers, init containers, and ephemeral containers with the envFrom field populated.
+
+**相关GitHub仓库**:
+
+- [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes)
+  - 语言: Go
+  - Stars: 115932
+  - 描述: Production-Grade Container Scheduling and Management
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/kubernetes/kubernetes/pull/124322](https://github.com/kubernetes/kubernetes/pull/124322)
+
+**相关Commits**:
+- [https://github.com/kubernetes/kubernetes/commit/128d6cc14624c55e227761cab4897c471b691b4e](https://github.com/kubernetes/kubernetes/commit/128d6cc14624c55e227761cab4897c471b691b4e)
+
+**参考链接**:
+- [http://www.openwall.com/lists/oss-security/2024/04/16/4](http://www.openwall.com/lists/oss-security/2024/04/16/4)
+- [https://github.com/kubernetes/kubernetes/issues/124336](https://github.com/kubernetes/kubernetes/issues/124336)
+- [https://groups.google.com/g/kubernetes-security-announce/c/JxjHf7fkVd8/m/oVCzypyOAQAJ](https://groups.google.com/g/kubernetes-security-announce/c/JxjHf7fkVd8/m/oVCzypyOAQAJ)
+- [https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/QRYFHIQ6XRKRYBI2F5UESH67BJBQXUPT/](https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/QRYFHIQ6XRKRYBI2F5UESH67BJBQXUPT/)
+- [https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/WL54MTLGMTBZZO5PYGEGEBERTMADC4WC/](https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/WL54MTLGMTBZZO5PYGEGEBERTMADC4WC/)
+
+---
+
+### CVE-2024-31990
+
+**描述**: Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes. The API server does not enforce project sourceNamespaces which allows attackers to use the UI to edit resources which should only be mutable via gitops. This vulenrability is fixed in 2.10.7, 2.9.12, and 2.8.16.
+
+
+**相关GitHub仓库**:
+
+- [argoproj/argo-cd](https://github.com/argoproj/argo-cd)
+  - 语言: Go
+  - Stars: 19915
+  - 描述: Declarative Continuous Deployment for Kubernetes
+  - 许可证: Apache License 2.0
+
+**相关Commits**:
+- [https://github.com/argoproj/argo-cd/commit/c514105af739eebedb9dbe89d8a6dd8dfc30bb2c](https://github.com/argoproj/argo-cd/commit/c514105af739eebedb9dbe89d8a6dd8dfc30bb2c)
+- [https://github.com/argoproj/argo-cd/commit/c5a252c4cc260e240e2074794aedb861d07e9ca5](https://github.com/argoproj/argo-cd/commit/c5a252c4cc260e240e2074794aedb861d07e9ca5)
+- [https://github.com/argoproj/argo-cd/commit/e0ff56d89fbd7d066e9c862b30337f6520f13f17](https://github.com/argoproj/argo-cd/commit/e0ff56d89fbd7d066e9c862b30337f6520f13f17)
+
+**参考链接**:
+- [https://github.com/argoproj/argo-cd/commit/c514105af739eebedb9dbe89d8a6dd8dfc30bb2c](https://github.com/argoproj/argo-cd/commit/c514105af739eebedb9dbe89d8a6dd8dfc30bb2c)
+- [https://github.com/argoproj/argo-cd/commit/c5a252c4cc260e240e2074794aedb861d07e9ca5](https://github.com/argoproj/argo-cd/commit/c5a252c4cc260e240e2074794aedb861d07e9ca5)
+- [https://github.com/argoproj/argo-cd/commit/e0ff56d89fbd7d066e9c862b30337f6520f13f17](https://github.com/argoproj/argo-cd/commit/e0ff56d89fbd7d066e9c862b30337f6520f13f17)
+- [https://github.com/argoproj/argo-cd/security/advisories/GHSA-2gvw-w6fj-7m3c](https://github.com/argoproj/argo-cd/security/advisories/GHSA-2gvw-w6fj-7m3c)
+
+---
+
+### CVE-2024-32476
+
+**描述**: Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes. There is a Denial of Service (DoS) vulnerability via OOM using jq in ignoreDifferences. This vulnerability has been patched in version(s) 2.10.7, 2.9.12 and 2.8.16.
+
+**相关GitHub仓库**:
+
+- [argoproj/argo-cd](https://github.com/argoproj/argo-cd)
+  - 语言: Go
+  - Stars: 19915
+  - 描述: Declarative Continuous Deployment for Kubernetes
+  - 许可证: Apache License 2.0
+
+**相关Commits**:
+- [https://github.com/argoproj/argo-cd/commit/7893979a1e78d59cedd0ba790ded24e30bb40657](https://github.com/argoproj/argo-cd/commit/7893979a1e78d59cedd0ba790ded24e30bb40657)
+- [https://github.com/argoproj/argo-cd/commit/9e5cc5a26ff0920a01816231d59fdb5eae032b5a](https://github.com/argoproj/argo-cd/commit/9e5cc5a26ff0920a01816231d59fdb5eae032b5a)
+- [https://github.com/argoproj/argo-cd/commit/e2df7315fb7d96652186bf7435773a27be330cac](https://github.com/argoproj/argo-cd/commit/e2df7315fb7d96652186bf7435773a27be330cac)
+
+**参考链接**:
+- [https://github.com/argoproj/argo-cd/commit/7893979a1e78d59cedd0ba790ded24e30bb40657](https://github.com/argoproj/argo-cd/commit/7893979a1e78d59cedd0ba790ded24e30bb40657)
+- [https://github.com/argoproj/argo-cd/commit/9e5cc5a26ff0920a01816231d59fdb5eae032b5a](https://github.com/argoproj/argo-cd/commit/9e5cc5a26ff0920a01816231d59fdb5eae032b5a)
+- [https://github.com/argoproj/argo-cd/commit/e2df7315fb7d96652186bf7435773a27be330cac](https://github.com/argoproj/argo-cd/commit/e2df7315fb7d96652186bf7435773a27be330cac)
+- [https://github.com/argoproj/argo-cd/security/advisories/GHSA-9m6p-x4h2-6frq](https://github.com/argoproj/argo-cd/security/advisories/GHSA-9m6p-x4h2-6frq)
+
+---
+
+### CVE-2024-39690
+
+**描述**: Capsule is a multi-tenancy and policy-based framework for Kubernetes. In Capsule v0.7.0 and earlier, the tenant-owner can patch any arbitrary namespace that has not been taken over by a tenant (i.e., namespaces without the ownerReference field), thereby gaining control of that namespace.
+
+**相关GitHub仓库**:
+
+- [projectcapsule/capsule](https://github.com/projectcapsule/capsule)
+  - 语言: Go
+  - Stars: 1886
+  - 描述: Multi-tenancy and policy-based framework for Kubernetes.
+  - 许可证: Apache License 2.0
+
+**相关Commits**:
+- [https://github.com/projectcapsule/capsule/commit/d620b0457ddec01616b8eab8512a10611611f584](https://github.com/projectcapsule/capsule/commit/d620b0457ddec01616b8eab8512a10611611f584)
+
+**参考链接**:
+- [https://github.com/projectcapsule/capsule/commit/d620b0457ddec01616b8eab8512a10611611f584](https://github.com/projectcapsule/capsule/commit/d620b0457ddec01616b8eab8512a10611611f584)
+- [https://github.com/projectcapsule/capsule/security/advisories/GHSA-mq69-4j5w-3qwp](https://github.com/projectcapsule/capsule/security/advisories/GHSA-mq69-4j5w-3qwp)
+
+---
+
+### CVE-2024-40635
+
+**描述**: containerd is an open-source container runtime. A bug was found in containerd prior to versions 1.6.38, 1.7.27, and 2.0.4 where containers launched with a User set as a `UID:GID` larger than the maximum 32-bit signed integer can cause an overflow condition where the container ultimately runs as root (UID 0). This could cause unexpected behavior for environments that require containers to run as a non-root user. This bug has been fixed in containerd 1.6.38, 1.7.27, and 2.04. As a workaround, ensure that only trusted images are used and that only trusted users have permissions to import images.
+
+**相关GitHub仓库**:
+
+- [containerd/containerd](https://github.com/containerd/containerd)
+  - 语言: Go
+  - Stars: 18842
+  - 描述: An open and reliable container runtime
+  - 许可证: Apache License 2.0
+
+**相关Commits**:
+- [https://github.com/containerd/containerd/commit/05044ec0a9a75232cad458027ca83437aae3f4da](https://github.com/containerd/containerd/commit/05044ec0a9a75232cad458027ca83437aae3f4da)
+- [https://github.com/containerd/containerd/commit/1a43cb6a1035441f9aca8f5666a9b3ef9e70ab20](https://github.com/containerd/containerd/commit/1a43cb6a1035441f9aca8f5666a9b3ef9e70ab20)
+- [https://github.com/containerd/containerd/commit/cf158e884cfe4812a6c371b59e4ea9bc4c46e51a](https://github.com/containerd/containerd/commit/cf158e884cfe4812a6c371b59e4ea9bc4c46e51a)
+
+**参考链接**:
+- [https://github.com/containerd/containerd/commit/05044ec0a9a75232cad458027ca83437aae3f4da](https://github.com/containerd/containerd/commit/05044ec0a9a75232cad458027ca83437aae3f4da)
+- [https://github.com/containerd/containerd/commit/1a43cb6a1035441f9aca8f5666a9b3ef9e70ab20](https://github.com/containerd/containerd/commit/1a43cb6a1035441f9aca8f5666a9b3ef9e70ab20)
+- [https://github.com/containerd/containerd/commit/cf158e884cfe4812a6c371b59e4ea9bc4c46e51a](https://github.com/containerd/containerd/commit/cf158e884cfe4812a6c371b59e4ea9bc4c46e51a)
+- [https://github.com/containerd/containerd/security/advisories/GHSA-265r-hfxg-fhmg](https://github.com/containerd/containerd/security/advisories/GHSA-265r-hfxg-fhmg)
+- [https://lists.debian.org/debian-lts-announce/2025/05/msg00005.html](https://lists.debian.org/debian-lts-announce/2025/05/msg00005.html)
+
+---
+
+### CVE-2024-43803
+
+**描述**: The Bare Metal Operator (BMO) implements a Kubernetes API for managing bare metal hosts in Metal3. The `BareMetalHost` (BMH) CRD allows the `userData`, `metaData`, and `networkData` for the provisioned host to be specified as links to Kubernetes Secrets. There are fields for both the `Name` and `Namespace` of the Secret, meaning that versions of the baremetal-operator prior to 0.8.0, 0.6.2, and 0.5.2 will read a `Secret` from any namespace. A user with access to create or edit a `BareMetalHost` can thus exfiltrate a `Secret` from another namespace by using it as e.g. the `userData` for provisioning some host (note that this need not be a real host, it could be a VM somewhere).
+
+BMO will only read a key with the name `value` (or `userData`, `metaData`, or `networkData`), so that limits the exposure somewhat. `value` is probably a pretty common key though. Secrets used by _other_ `BareMetalHost`s in different namespaces are always vulnerable. It is probably relatively unusual for anyone other than cluster administrators to have RBAC access to create/edit a `BareMetalHost`. This vulnerability is only meaningful, if the cluster has users other than administrators and users' privileges are limited to their respective namespaces.
+
+The patch prevents BMO from accepting links to Secrets from other namespaces as BMH input. Any BMH configuration is only read from the same namespace only. The problem is patched in BMO releases v0.7.0, v0.6.2 and v0.5.2 and users should upgrade to those versions. Prior upgrading, duplicate the BMC Secrets to the namespace where the corresponding BMH is. After upgrade, remove the old Secrets. As a workaround, an operator can configure BMO RBAC to be namespace scoped for Secrets, instead of cluster scoped, to prevent BMO from accessing Secrets from other namespaces.
+
+**相关GitHub仓库**:
+
+- [metal3-io/baremetal-operator](https://github.com/metal3-io/baremetal-operator)
+  - 语言: Go
+  - Stars: 657
+  - 描述: Bare metal host provisioning integration for Kubernetes
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/metal3-io/baremetal-operator/pull/1929](https://github.com/metal3-io/baremetal-operator/pull/1929)
+- [https://github.com/metal3-io/baremetal-operator/pull/1930](https://github.com/metal3-io/baremetal-operator/pull/1930)
+- [https://github.com/metal3-io/baremetal-operator/pull/1931](https://github.com/metal3-io/baremetal-operator/pull/1931)
+
+**相关Commits**:
+- [https://github.com/metal3-io/baremetal-operator/commit/3af4882e9c5fadc1a7550f53daea21dccd271f74](https://github.com/metal3-io/baremetal-operator/commit/3af4882e9c5fadc1a7550f53daea21dccd271f74)
+- [https://github.com/metal3-io/baremetal-operator/commit/bedae7b997d16f36e772806681569bb8eb4dadbb](https://github.com/metal3-io/baremetal-operator/commit/bedae7b997d16f36e772806681569bb8eb4dadbb)
+- [https://github.com/metal3-io/baremetal-operator/commit/c2b5a557641bc273367635124047d6c958aa15f7](https://github.com/metal3-io/baremetal-operator/commit/c2b5a557641bc273367635124047d6c958aa15f7)
+
+**参考链接**:
+- [https://github.com/metal3-io/baremetal-operator/commit/3af4882e9c5fadc1a7550f53daea21dccd271f74](https://github.com/metal3-io/baremetal-operator/commit/3af4882e9c5fadc1a7550f53daea21dccd271f74)
+- [https://github.com/metal3-io/baremetal-operator/commit/bedae7b997d16f36e772806681569bb8eb4dadbb](https://github.com/metal3-io/baremetal-operator/commit/bedae7b997d16f36e772806681569bb8eb4dadbb)
+- [https://github.com/metal3-io/baremetal-operator/commit/c2b5a557641bc273367635124047d6c958aa15f7](https://github.com/metal3-io/baremetal-operator/commit/c2b5a557641bc273367635124047d6c958aa15f7)
+- [https://github.com/metal3-io/baremetal-operator/pull/1929](https://github.com/metal3-io/baremetal-operator/pull/1929)
+- [https://github.com/metal3-io/baremetal-operator/pull/1930](https://github.com/metal3-io/baremetal-operator/pull/1930)
+- [https://github.com/metal3-io/baremetal-operator/pull/1931](https://github.com/metal3-io/baremetal-operator/pull/1931)
+- [https://github.com/metal3-io/baremetal-operator/security/advisories/GHSA-pqfh-xh7w-7h3p](https://github.com/metal3-io/baremetal-operator/security/advisories/GHSA-pqfh-xh7w-7h3p)
+
+---
+
+### CVE-2024-45310
+
+**描述**: runc is a CLI tool for spawning and running containers according to the OCI specification. runc 1.1.13 and earlier, as well as 1.2.0-rc2 and earlier, can be tricked into creating empty files or directories in arbitrary locations in the host filesystem by sharing a volume between two containers and exploiting a race with `os.MkdirAll`. While this could be used to create empty files, existing files would not be truncated. An attacker must have the ability to start containers using some kind of custom volume configuration. Containers using user namespaces are still affected, but the scope of places an attacker can create inodes can be significantly reduced. Sufficiently strict LSM policies (SELinux/Apparmor) can also in principle block this attack -- we suspect the industry standard SELinux policy may restrict this attack's scope but the exact scope of protection hasn't been analysed. This is exploitable using runc directly as well as through Docker and Kubernetes. The issue is fixed in runc v1.1.14 and v1.2.0-rc3.
+
+Some workarounds are available. Using user namespaces restricts this attack fairly significantly such that the attacker can only create inodes in directories that the remapped root user/group has write access to. Unless the root user is remapped to an actual
+user on the host (such as with rootless containers that don't use `/etc/sub\[ug\]id`), this in practice means that an attacker would only be able to create inodes in world-writable directories. A strict enough SELinux or AppArmor policy could in principle also restrict the scope if a specific label is applied to the runc runtime, though neither the extent to which the standard existing policies block this attack nor what exact policies are needed to sufficiently restrict this attack have been thoroughly tested.
+
+**相关GitHub仓库**:
+
+- [opencontainers/runc](https://github.com/opencontainers/runc)
+  - 语言: Go
+  - Stars: 12467
+  - 描述: CLI tool for spawning and running containers according to the OCI specification
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/opencontainers/runc/pull/4359](https://github.com/opencontainers/runc/pull/4359)
+
+**相关Commits**:
+- [https://github.com/opencontainers/runc/commit/63c2908164f3a1daea455bf5bcd8d363d70328c7](https://github.com/opencontainers/runc/commit/63c2908164f3a1daea455bf5bcd8d363d70328c7)
+- [https://github.com/opencontainers/runc/commit/8781993968fd964ac723ff5f360b6f259e809a3e](https://github.com/opencontainers/runc/commit/8781993968fd964ac723ff5f360b6f259e809a3e)
+- [https://github.com/opencontainers/runc/commit/f0b652ea61ff6750a8fcc69865d45a7abf37accf](https://github.com/opencontainers/runc/commit/f0b652ea61ff6750a8fcc69865d45a7abf37accf)
+
+**参考链接**:
+- [https://github.com/opencontainers/runc/commit/63c2908164f3a1daea455bf5bcd8d363d70328c7](https://github.com/opencontainers/runc/commit/63c2908164f3a1daea455bf5bcd8d363d70328c7)
+- [https://github.com/opencontainers/runc/commit/8781993968fd964ac723ff5f360b6f259e809a3e](https://github.com/opencontainers/runc/commit/8781993968fd964ac723ff5f360b6f259e809a3e)
+- [https://github.com/opencontainers/runc/commit/f0b652ea61ff6750a8fcc69865d45a7abf37accf](https://github.com/opencontainers/runc/commit/f0b652ea61ff6750a8fcc69865d45a7abf37accf)
+- [https://github.com/opencontainers/runc/pull/4359](https://github.com/opencontainers/runc/pull/4359)
+- [https://github.com/opencontainers/runc/security/advisories/GHSA-jfvp-7x6p-h2pv](https://github.com/opencontainers/runc/security/advisories/GHSA-jfvp-7x6p-h2pv)
+- [http://www.openwall.com/lists/oss-security/2024/09/03/1](http://www.openwall.com/lists/oss-security/2024/09/03/1)
+- [https://security.netapp.com/advisory/ntap-20250221-0008/](https://security.netapp.com/advisory/ntap-20250221-0008/)
+
+---
+
+### CVE-2024-45395
+
+**描述**: sigstore-go, a Go library for Sigstore signing and verification, is susceptible to a denial of service attack in versions prior to 0.6.1 when a verifier is provided a maliciously crafted Sigstore Bundle containing large amounts of verifiable data, in the form of signed transparency log entries, RFC 3161 timestamps, and attestation subjects. The verification of these data structures is computationally expensive. This can be used to consume excessive CPU resources, leading to a denial of service attack. TUF's security model labels this type of vulnerability an "Endless data attack," and can lead to verification failing to complete and disrupting services that rely on sigstore-go for verification. This vulnerability is addressed with sigstore-go 0.6.1, which adds hard limits to the number of verifiable data structures that can be processed in a bundle. Verification will fail if a bundle has data that exceeds these limits. The limits are 32 signed transparency log entries, 32 RFC 3161 timestamps, 1024 attestation subjects, and 32 digests per attestation subject. These limits are intended to be high enough to accommodate the vast majority of use cases, while preventing the verification of maliciously crafted bundles that contain large amounts of verifiable data. Users who are vulnerable but unable to quickly upgrade may consider adding manual bundle validation to enforce limits similar to those in the referenced patch prior to calling sigstore-go's verification functions.
+
+**相关GitHub仓库**:
+
+- [sigstore/sigstore-go](https://github.com/sigstore/sigstore-go)
+  - 语言: Go
+  - Stars: 71
+  - 描述: Go library for Sigstore signing and verification
+  - 许可证: Apache License 2.0
+
+**相关Commits**:
+- [https://github.com/sigstore/sigstore-go/commit/01e70e89e58226286d7977b4dba43b6be472b12c](https://github.com/sigstore/sigstore-go/commit/01e70e89e58226286d7977b4dba43b6be472b12c)
+
+**参考链接**:
+- [https://github.com/sigstore/sigstore-go/blob/725e508ed4933e6f5b5206e32af4bbe76f587b54/pkg/verify/signature.go#L183-L193](https://github.com/sigstore/sigstore-go/blob/725e508ed4933e6f5b5206e32af4bbe76f587b54/pkg/verify/signature.go#L183-L193)
+- [https://github.com/sigstore/sigstore-go/blob/725e508ed4933e6f5b5206e32af4bbe76f587b54/pkg/verify/tlog.go#L74-L178](https://github.com/sigstore/sigstore-go/blob/725e508ed4933e6f5b5206e32af4bbe76f587b54/pkg/verify/tlog.go#L74-L178)
+- [https://github.com/sigstore/sigstore-go/blob/725e508ed4933e6f5b5206e32af4bbe76f587b54/pkg/verify/tsa.go#L59-L68](https://github.com/sigstore/sigstore-go/blob/725e508ed4933e6f5b5206e32af4bbe76f587b54/pkg/verify/tsa.go#L59-L68)
+- [https://github.com/sigstore/sigstore-go/commit/01e70e89e58226286d7977b4dba43b6be472b12c](https://github.com/sigstore/sigstore-go/commit/01e70e89e58226286d7977b4dba43b6be472b12c)
+- [https://github.com/sigstore/sigstore-go/security/advisories/GHSA-cq38-jh5f-37mq](https://github.com/sigstore/sigstore-go/security/advisories/GHSA-cq38-jh5f-37mq)
+
+---
+
+### CVE-2024-48921
+
+**描述**: Kyverno is a policy engine designed for Kubernetes. A kyverno ClusterPolicy, ie. "disallow-privileged-containers," can be overridden by the creation of a PolicyException in a random namespace. By design, PolicyExceptions are consumed from any namespace. Administrators may not recognize that this allows users with privileges to non-kyverno namespaces to create exceptions. This vulnerability is fixed in 1.13.0.
+
+**相关GitHub仓库**:
+
+- [kyverno/kyverno](https://github.com/kyverno/kyverno)
+  - 语言: Go
+  - Stars: 6456
+  - 描述: Cloud Native Policy Management
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/kyverno/kyverno/pull/9645](https://github.com/kyverno/kyverno/pull/9645)
+
+**相关Commits**:
+- [https://github.com/kyverno/kyverno/commit/10fad13e806a786bc7ee27dfc790c5ce43b3ba97](https://github.com/kyverno/kyverno/commit/10fad13e806a786bc7ee27dfc790c5ce43b3ba97)
+- [https://github.com/kyverno/kyverno/commit/723e5c628894c12b5c0acc9ea4231188a52a5f03](https://github.com/kyverno/kyverno/commit/723e5c628894c12b5c0acc9ea4231188a52a5f03)
+- [https://github.com/kyverno/kyverno/commit/b0f7d0a97a06bd5598d012bfbaf78638b4cc1cbd](https://github.com/kyverno/kyverno/commit/b0f7d0a97a06bd5598d012bfbaf78638b4cc1cbd)
+- [https://github.com/kyverno/kyverno/commit/e4e42152b2e874882334f0fe1dfe6590fd0fa512](https://github.com/kyverno/kyverno/commit/e4e42152b2e874882334f0fe1dfe6590fd0fa512)
+
+**参考链接**:
+- [https://github.com/kyverno/kyverno/security/advisories/GHSA-qjvc-p88j-j9rm](https://github.com/kyverno/kyverno/security/advisories/GHSA-qjvc-p88j-j9rm)
+
+---
+
+### CVE-2024-5154
+
+**描述**: A flaw was found in cri-o. A malicious container can create a symbolic link to arbitrary files on the host via directory traversal (“../“). This flaw allows the container to read and write to arbitrary files on the host system.
+
+**相关GitHub仓库**:
+
+- [cri-o/cri-o](https://github.com/cri-o/cri-o)
+  - 语言: Go
+  - Stars: 5433
+  - 描述: Open Container Initiative-based implementation of Kubernetes Container Runtime Interface
+  - 许可证: Apache License 2.0
+
+**相关Commits**:
+- [https://github.com/cri-o/cri-o/commit/992e728bcbc05ab667f5fa062656088d245a48ee](https://github.com/cri-o/cri-o/commit/992e728bcbc05ab667f5fa062656088d245a48ee)
+- [https://github.com/cri-o/cri-o/commit/4694ddd27c4c69160b2600499ec324a352b2da03](https://github.com/cri-o/cri-o/commit/4694ddd27c4c69160b2600499ec324a352b2da03)
+
+**参考链接**:
+- [https://access.redhat.com/errata/RHSA-2024:10818](https://access.redhat.com/errata/RHSA-2024:10818)
+- [https://access.redhat.com/errata/RHSA-2024:3676](https://access.redhat.com/errata/RHSA-2024:3676)
+- [https://access.redhat.com/errata/RHSA-2024:3700](https://access.redhat.com/errata/RHSA-2024:3700)
+- [https://access.redhat.com/errata/RHSA-2024:4008](https://access.redhat.com/errata/RHSA-2024:4008)
+- [https://access.redhat.com/errata/RHSA-2024:4486](https://access.redhat.com/errata/RHSA-2024:4486)
+- [https://access.redhat.com/security/cve/CVE-2024-5154](https://access.redhat.com/security/cve/CVE-2024-5154)
+- [https://bugzilla.redhat.com/show_bug.cgi?id=2280190](https://bugzilla.redhat.com/show_bug.cgi?id=2280190)
+- [https://github.com/cri-o/cri-o/security/advisories/GHSA-j9hf-98c3-wrm8](https://github.com/cri-o/cri-o/security/advisories/GHSA-j9hf-98c3-wrm8)
+
+---
+
+### CVE-2024-5651
+
+**描述**: A flaw was found in the Fence Agents Remediation operator. This vulnerability can allow a Remote Code Execution (RCE) primitive by supplying an arbitrary command to execute in the --ssh-path/--telnet-path arguments. A low-privilege user, for example, a user with developer access, can create a specially crafted FenceAgentsRemediation for a fence agent supporting  --ssh-path/--telnet-path arguments to execute arbitrary commands on the operator's pod. This RCE leads to a privilege escalation, first as the service account running the operator, then to another service account with cluster-admin privileges.
+
+**相关GitHub仓库**:
+
+- [medik8s/fence-agents-remediation](https://github.com/medik8s/fence-agents-remediation)
+  - 语言: Go
+  - Stars: 13
+  - 描述: Kubernetes Operator for providing high availability between nodes by automatically remediating them using well-known fence-agents.
+  - 许可证: Apache License 2.0
+
+**相关Commits**:
+- [https://github.com/medik8s/fence-agents-remediation/commit/99cff8aafd60d65c42b4d0197f0c0e7ab7b41a10](https://github.com/medik8s/fence-agents-remediation/commit/99cff8aafd60d65c42b4d0197f0c0e7ab7b41a10)
+
+**参考链接**:
+- [https://access.redhat.com/errata/RHSA-2024:5453](https://access.redhat.com/errata/RHSA-2024:5453)
+- [https://access.redhat.com/security/cve/CVE-2024-5651](https://access.redhat.com/security/cve/CVE-2024-5651)
+- [https://bugzilla.redhat.com/show_bug.cgi?id=2290540](https://bugzilla.redhat.com/show_bug.cgi?id=2290540)
+
+---
+
+### CVE-2024-7646
+
+**描述**: A security issue was discovered in ingress-nginx where an actor with permission to create Ingress objects (in the `networking.k8s.io` or `extensions` API group) can bypass annotation validation to inject arbitrary commands and obtain the credentials of the ingress-nginx controller. In the default configuration, that credential has access to all secrets in the cluster.
+
+**相关GitHub仓库**:
+
+- [kubernetes/ingress-nginx](https://github.com/kubernetes/ingress-nginx)
+  - 语言: Go
+  - Stars: 18663
+  - 描述: Ingress NGINX Controller for Kubernetes
+  - 许可证: Apache License 2.0
+- [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes)
+  - 语言: Go
+  - Stars: 115932
+  - 描述: Production-Grade Container Scheduling and Management
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/kubernetes/ingress-nginx/pull/11719](https://github.com/kubernetes/ingress-nginx/pull/11719)
+- [https://github.com/kubernetes/ingress-nginx/pull/11721](https://github.com/kubernetes/ingress-nginx/pull/11721)
+
+**相关Commits**:
+- [https://github.com/kubernetes/ingress-nginx/commit/9a6cf10a64111db38d7280266650a237e0318028](https://github.com/kubernetes/ingress-nginx/commit/9a6cf10a64111db38d7280266650a237e0318028)
+- [https://github.com/kubernetes/ingress-nginx/commit/2003f8563cf0c093dad83d0cbe83cb2daf29e80b](https://github.com/kubernetes/ingress-nginx/commit/2003f8563cf0c093dad83d0cbe83cb2daf29e80b)
+
+**参考链接**:
+- [https://github.com/kubernetes/ingress-nginx/pull/11719](https://github.com/kubernetes/ingress-nginx/pull/11719)
+- [https://github.com/kubernetes/ingress-nginx/pull/11721](https://github.com/kubernetes/ingress-nginx/pull/11721)
+- [https://github.com/kubernetes/kubernetes/issues/126744](https://github.com/kubernetes/kubernetes/issues/126744)
+- [https://groups.google.com/g/kubernetes-security-announce/c/a1__cKjWkfA](https://groups.google.com/g/kubernetes-security-announce/c/a1__cKjWkfA)
+- [http://www.openwall.com/lists/oss-security/2024/08/16/5](http://www.openwall.com/lists/oss-security/2024/08/16/5)
+
+---
+
+### CVE-2024-9676
+
+**描述**: A vulnerability was found in Podman, Buildah, and CRI-O. A symlink traversal vulnerability in the containers/storage library can cause Podman, Buildah, and CRI-O to hang and result in a denial of service via OOM kill when running a malicious image using an automatically assigned user namespace (`--userns=auto` in Podman and Buildah). The containers/storage library will read /etc/passwd inside the container, but does not properly validate if that file is a symlink, which can be used to cause the library to read an arbitrary file on the host.
+
+**相关GitHub仓库**:
+
+- [containers/storage](https://github.com/containers/storage)
+  - 语言: Go
+  - Stars: 605
+  - 描述: Container Storage Library
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/containers/storage/pull/2134](https://github.com/containers/storage/pull/2134)
+
+**相关Commits**:
+- [https://github.com/containers/storage/commit/491d72e9f2f5c4ba1cb682fd0b042e2d7360f4e8](https://github.com/containers/storage/commit/491d72e9f2f5c4ba1cb682fd0b042e2d7360f4e8)
+
+**参考链接**:
+- [https://access.redhat.com/errata/RHSA-2024:10289](https://access.redhat.com/errata/RHSA-2024:10289)
+- [https://access.redhat.com/errata/RHSA-2024:8418](https://access.redhat.com/errata/RHSA-2024:8418)
+- [https://access.redhat.com/errata/RHSA-2024:8428](https://access.redhat.com/errata/RHSA-2024:8428)
+- [https://access.redhat.com/errata/RHSA-2024:8437](https://access.redhat.com/errata/RHSA-2024:8437)
+- [https://access.redhat.com/errata/RHSA-2024:8686](https://access.redhat.com/errata/RHSA-2024:8686)
+- [https://access.redhat.com/errata/RHSA-2024:8690](https://access.redhat.com/errata/RHSA-2024:8690)
+- [https://access.redhat.com/errata/RHSA-2024:8694](https://access.redhat.com/errata/RHSA-2024:8694)
+- [https://access.redhat.com/errata/RHSA-2024:8700](https://access.redhat.com/errata/RHSA-2024:8700)
+- [https://access.redhat.com/errata/RHSA-2024:8984](https://access.redhat.com/errata/RHSA-2024:8984)
+- [https://access.redhat.com/errata/RHSA-2024:9051](https://access.redhat.com/errata/RHSA-2024:9051)
+- [https://access.redhat.com/errata/RHSA-2024:9454](https://access.redhat.com/errata/RHSA-2024:9454)
+- [https://access.redhat.com/errata/RHSA-2024:9459](https://access.redhat.com/errata/RHSA-2024:9459)
+- [https://access.redhat.com/errata/RHSA-2024:9926](https://access.redhat.com/errata/RHSA-2024:9926)
+- [https://access.redhat.com/errata/RHSA-2025:0876](https://access.redhat.com/errata/RHSA-2025:0876)
+- [https://access.redhat.com/errata/RHSA-2025:2454](https://access.redhat.com/errata/RHSA-2025:2454)
+- [https://access.redhat.com/errata/RHSA-2025:2710](https://access.redhat.com/errata/RHSA-2025:2710)
+- [https://access.redhat.com/errata/RHSA-2025:3301](https://access.redhat.com/errata/RHSA-2025:3301)
+- [https://access.redhat.com/security/cve/CVE-2024-9676](https://access.redhat.com/security/cve/CVE-2024-9676)
+- [https://bugzilla.redhat.com/show_bug.cgi?id=2317467](https://bugzilla.redhat.com/show_bug.cgi?id=2317467)
+- [https://github.com/advisories/GHSA-wq2p-5pc6-wpgf](https://github.com/advisories/GHSA-wq2p-5pc6-wpgf)
+
+---
+
+### CVE-2025-0750
+
+**描述**: A vulnerability was found in CRI-O. A path traversal issue in the log management functions (UnMountPodLogs and LinkContainerLogs) may allow an attacker with permissions to create and delete Pods to unmount arbitrary host paths, leading to node-level denial of service by unmounting critical system directories.
+
+**相关GitHub仓库**:
+
+- [cri-o/cri-o](https://github.com/cri-o/cri-o)
+  - 语言: Go
+  - Stars: 5433
+  - 描述: Open Container Initiative-based implementation of Kubernetes Container Runtime Interface
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/cri-o/cri-o/pull/8968](https://github.com/cri-o/cri-o/pull/8968)
+
+**相关Commits**:
+- [https://github.com/cri-o/cri-o/commit/0b6a04beafb8cd86ed97ce770dbdb66a20f857df](https://github.com/cri-o/cri-o/commit/0b6a04beafb8cd86ed97ce770dbdb66a20f857df)
+- [https://github.com/cri-o/cri-o/commit/910f6e5d64d182217fda1023f440fd933c7c7115](https://github.com/cri-o/cri-o/commit/910f6e5d64d182217fda1023f440fd933c7c7115)
+
+**参考链接**:
+- [https://access.redhat.com/errata/RHSA-2025:1122](https://access.redhat.com/errata/RHSA-2025:1122)
+- [https://access.redhat.com/security/cve/CVE-2025-0750](https://access.redhat.com/security/cve/CVE-2025-0750)
+- [https://bugzilla.redhat.com/show_bug.cgi?id=2339405](https://bugzilla.redhat.com/show_bug.cgi?id=2339405)
+
+---
+
+### CVE-2025-1097
+
+**描述**: A security issue was discovered in  ingress-nginx https://github.com/kubernetes/ingress-nginx  where the `auth-tls-match-cn` Ingress annotation can be used to inject configuration into nginx. This can lead to arbitrary code execution in the context of the ingress-nginx controller, and disclosure of Secrets accessible to the controller. (Note that in the default installation, the controller can access all Secrets cluster-wide.)
+
+**相关GitHub仓库**:
+
+- [kubernetes/ingress-nginx](https://github.com/kubernetes/ingress-nginx)
+  - 语言: Go
+  - Stars: 18663
+  - 描述: Ingress NGINX Controller for Kubernetes
+  - 许可证: Apache License 2.0
+- [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes)
+  - 语言: Go
+  - Stars: 115932
+  - 描述: Production-Grade Container Scheduling and Management
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/kubernetes/ingress-nginx/pull/13068](https://github.com/kubernetes/ingress-nginx/pull/13068)
+
+**相关Commits**:
+- [https://github.com/kubernetes/ingress-nginx/commit/06c992abd8eef9710359a236c443c613d29fdfad](https://github.com/kubernetes/ingress-nginx/commit/06c992abd8eef9710359a236c443c613d29fdfad)
+
+**参考链接**:
+- [https://github.com/kubernetes/kubernetes/issues/131007](https://github.com/kubernetes/kubernetes/issues/131007)
+
+---
+
+### CVE-2025-1098
+
+**描述**: A security issue was discovered in  ingress-nginx https://github.com/kubernetes/ingress-nginx  where the `mirror-target` and `mirror-host` Ingress annotations can be used to inject arbitrary configuration into nginx. This can lead to arbitrary code execution in the context of the ingress-nginx controller, and disclosure of Secrets accessible to the controller. (Note that in the default installation, the controller can access all Secrets cluster-wide.)
+
+**相关GitHub仓库**:
+
+- [kubernetes/ingress-nginx](https://github.com/kubernetes/ingress-nginx)
+  - 语言: Go
+  - Stars: 18663
+  - 描述: Ingress NGINX Controller for Kubernetes
+  - 许可证: Apache License 2.0
+- [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes)
+  - 语言: Go
+  - Stars: 115932
+  - 描述: Production-Grade Container Scheduling and Management
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/kubernetes/ingress-nginx/pull/13068](https://github.com/kubernetes/ingress-nginx/pull/13068)
+
+**相关Commits**:
+- [https://github.com/kubernetes/ingress-nginx/commit/2e9f37380afb7853fa6daa1c3e6659550aadfd90](https://github.com/kubernetes/ingress-nginx/commit/2e9f37380afb7853fa6daa1c3e6659550aadfd90)
+
+**参考链接**:
+- [https://github.com/kubernetes/kubernetes/issues/131008](https://github.com/kubernetes/kubernetes/issues/131008)
+
+---
+
+### CVE-2025-1767
+
+**描述**: This CVE only affects Kubernetes clusters that utilize the in-tree gitRepo volume to clone git repositories from other pods within the same node. Since the in-tree gitRepo volume feature has been deprecated and will not receive security updates upstream, any cluster still using this feature remains vulnerable.
+
+**相关GitHub仓库**:
+
+- [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes)
+  - 语言: Go
+  - Stars: 115932
+  - 描述: Production-Grade Container Scheduling and Management
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/kubernetes/kubernetes/pull/124531](https://github.com/kubernetes/kubernetes/pull/124531)
+- [https://github.com/kubernetes/kubernetes/pull/130786](https://github.com/kubernetes/kubernetes/pull/130786)
+
+**相关Commits**:
+- [https://github.com/kubernetes/kubernetes/commit/c7846fd24c16266a3bfd86315171f5b4d5f0c9c9](https://github.com/kubernetes/kubernetes/commit/c7846fd24c16266a3bfd86315171f5b4d5f0c9c9)
+
+**参考链接**:
+- [http://www.openwall.com/lists/oss-security/2025/03/13/9](http://www.openwall.com/lists/oss-security/2025/03/13/9)
+- [https://github.com/kubernetes/kubernetes/pull/130786](https://github.com/kubernetes/kubernetes/pull/130786)
+- [https://groups.google.com/g/kubernetes-security-announce/c/19irihsKg7s](https://groups.google.com/g/kubernetes-security-announce/c/19irihsKg7s)
+
+---
+
+### CVE-2025-24513
+
+**描述**: A security issue was discovered in  ingress-nginx https://github.com/kubernetes/ingress-nginx  where attacker-provided data are included in a filename by the ingress-nginx Admission Controller feature, resulting in directory traversal within the container. This could result in denial of service, or when combined with other vulnerabilities, limited disclosure of Secret objects from the cluster.
+
+**相关GitHub仓库**:
+
+- [kubernetes/ingress-nginx](https://github.com/kubernetes/ingress-nginx)
+  - 语言: Go
+  - Stars: 18663
+  - 描述: Ingress NGINX Controller for Kubernetes
+  - 许可证: Apache License 2.0
+- [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes)
+  - 语言: Go
+  - Stars: 115932
+  - 描述: Production-Grade Container Scheduling and Management
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/kubernetes/ingress-nginx/pull/13068](https://github.com/kubernetes/ingress-nginx/pull/13068)
+
+**相关Commits**:
+- [https://github.com/kubernetes/ingress-nginx/commit/cbc159094f6d1b1bf8cf1761eb119138d1f95df1](https://github.com/kubernetes/ingress-nginx/commit/cbc159094f6d1b1bf8cf1761eb119138d1f95df1)
+
+**参考链接**:
+- [https://github.com/kubernetes/kubernetes/issues/131005](https://github.com/kubernetes/kubernetes/issues/131005)
+
+---
+
+### CVE-2025-24514
+
+**描述**: A security issue was discovered in  ingress-nginx https://github.com/kubernetes/ingress-nginx  where the `auth-url` Ingress annotation can be used to inject configuration into nginx. This can lead to arbitrary code execution in the context of the ingress-nginx controller, and disclosure of Secrets accessible to the controller. (Note that in the default installation, the controller can access all Secrets cluster-wide.)
+
+**相关GitHub仓库**:
+
+- [kubernetes/ingress-nginx](https://github.com/kubernetes/ingress-nginx)
+  - 语言: Go
+  - Stars: 18663
+  - 描述: Ingress NGINX Controller for Kubernetes
+  - 许可证: Apache License 2.0
+- [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes)
+  - 语言: Go
+  - Stars: 115932
+  - 描述: Production-Grade Container Scheduling and Management
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/kubernetes/ingress-nginx/pull/13068](https://github.com/kubernetes/ingress-nginx/pull/13068)
+
+**相关Commits**:
+- [https://github.com/kubernetes/ingress-nginx/commit/ab470eb920924d62a197ebddd8a4cc3031a77ddf](https://github.com/kubernetes/ingress-nginx/commit/ab470eb920924d62a197ebddd8a4cc3031a77ddf)
+
+**参考链接**:
+- [https://github.com/kubernetes/kubernetes/issues/131006](https://github.com/kubernetes/kubernetes/issues/131006)
+
+---
+
+### CVE-2025-25294
+
+**描述**: Envoy Gateway is an open source project for managing Envoy Proxy as a standalone or Kubernetes-based application gateway. In all Envoy Gateway versions prior to 1.2.7 and 1.3.1 a default Envoy Proxy access log configuration is used. This format is vulnerable to log injection attacks. If the attacker uses a specially crafted user-agent which performs json injection, then he could add and overwrite fields to the access log. This vulnerability is fixed in 1.3.1 and 1.2.7. One can overwrite the old text based default format with JSON formatter by modifying the "EnvoyProxy.spec.telemetry.accessLog" setting.
+
+**相关GitHub仓库**:
+
+- [envoyproxy/gateway](https://github.com/envoyproxy/gateway)
+  - 语言: Go
+  - Stars: 1970
+  - 描述: Manages Envoy Proxy as a Standalone or Kubernetes-based Application Gateway
+  - 许可证: Apache License 2.0
+
+**相关Commits**:
+- [https://github.com/envoyproxy/gateway/commit/8f48f5199cf1bbb9a8ac0695c5171bfef6c9198a](https://github.com/envoyproxy/gateway/commit/8f48f5199cf1bbb9a8ac0695c5171bfef6c9198a)
+
+**参考链接**:
+- [https://github.com/envoyproxy/gateway/commit/8f48f5199cf1bbb9a8ac0695c5171bfef6c9198a](https://github.com/envoyproxy/gateway/commit/8f48f5199cf1bbb9a8ac0695c5171bfef6c9198a)
+- [https://github.com/envoyproxy/gateway/security/advisories/GHSA-mf24-chxh-hmvj](https://github.com/envoyproxy/gateway/security/advisories/GHSA-mf24-chxh-hmvj)
+
+---
+
+### CVE-2025-29781
+
+**描述**: The Bare Metal Operator (BMO) implements a Kubernetes API for managing bare metal hosts in Metal3. Baremetal Operator enables users to load Secret from arbitrary namespaces upon deployment of the namespace scoped Custom Resource `BMCEventSubscription`. Prior to versions 0.8.1 and 0.9.1, an adversary Kubernetes account with only namespace level roles (e.g. a tenant controlling a namespace) may create a `BMCEventSubscription` in his authorized namespace and then load Secrets from his unauthorized namespaces to his authorized namespace via the Baremetal Operator, causing Secret Leakage. The patch makes BMO refuse to read Secrets from other namespace than where the corresponding BMH resource is. The patch does not change the `BMCEventSubscription` API in BMO, but stricter validation will fail the request at admission time. It will also prevent the controller reading such Secrets, in case the BMCES CR has already been deployed. The issue exists for all versions of BMO, and is patched in BMO releases v0.9.1 and v0.8.1. Prior upgrading to patched BMO version, duplicate any existing Secret pointed to by `BMCEventSubscription`'s `httpHeadersRef` to the same namespace where the corresponding BMH exists. After upgrade, remove the old Secrets. As a workaround, the operator can configure BMO RBAC to be namespace scoped, instead of cluster scoped, to prevent BMO from accessing Secrets from other namespaces, and/or use `WATCH_NAMESPACE` configuration option to limit BMO to single namespace.
+
+**相关GitHub仓库**:
+
+- [metal3-io/baremetal-operator](https://github.com/metal3-io/baremetal-operator)
+  - 语言: Go
+  - Stars: 657
+  - 描述: Bare metal host provisioning integration for Kubernetes
+  - 许可证: Apache License 2.0
+- [metal3-io/metal3-docs](https://github.com/metal3-io/metal3-docs)
+  - 语言: Makefile
+  - Stars: 308
+  - 描述: Architecture documentation that describes the components being built under Metal³.
+  - 许可证: Apache License 2.0
+
+**相关Pull Requests**:
+- [https://github.com/metal3-io/baremetal-operator/pull/2321](https://github.com/metal3-io/baremetal-operator/pull/2321)
+- [https://github.com/metal3-io/baremetal-operator/pull/2322](https://github.com/metal3-io/baremetal-operator/pull/2322)
+
+**相关Commits**:
+- [https://github.com/metal3-io/baremetal-operator/commit/19f8443b1fe182f76dd81b43122e8dd102f8b94c](https://github.com/metal3-io/baremetal-operator/commit/19f8443b1fe182f76dd81b43122e8dd102f8b94c)
+
+**参考链接**:
+- [https://github.com/metal3-io/baremetal-operator/commit/19f8443b1fe182f76dd81b43122e8dd102f8b94c](https://github.com/metal3-io/baremetal-operator/commit/19f8443b1fe182f76dd81b43122e8dd102f8b94c)
+- [https://github.com/metal3-io/baremetal-operator/pull/2321](https://github.com/metal3-io/baremetal-operator/pull/2321)
+- [https://github.com/metal3-io/baremetal-operator/pull/2322](https://github.com/metal3-io/baremetal-operator/pull/2322)
+- [https://github.com/metal3-io/baremetal-operator/security/advisories/GHSA-c98h-7hp9-v9hq](https://github.com/metal3-io/baremetal-operator/security/advisories/GHSA-c98h-7hp9-v9hq)
+- [https://github.com/metal3-io/metal3-docs/blob/main/design/baremetal-operator/bmc-events.md](https://github.com/metal3-io/metal3-docs/blob/main/design/baremetal-operator/bmc-events.md)
+
+---
+
+### CVE-2025-32431
+
+**描述**: Traefik (pronounced traffic) is an HTTP reverse proxy and load balancer. In versions prior to 2.11.24, 3.3.6, and 3.4.0-rc2. There is a potential vulnerability in Traefik managing the requests using a PathPrefix, Path or PathRegex matcher. When Traefik is configured to route the requests to a backend using a matcher based on the path, if the URL contains a /../ in its path, it’s possible to target a backend, exposed using another router, by-passing the middlewares chain. This issue has been patched in versions 2.11.24, 3.3.6, and 3.4.0-rc2. A workaround involves adding a `PathRegexp` rule to the matcher to prevent matching a route with a `/../` in the path.
+
+**相关GitHub仓库**:
+
+- [traefik/traefik](https://github.com/traefik/traefik)
+  - 语言: Go
+  - Stars: 55285
+  - 描述: The Cloud Native Application Proxy
+  - 许可证: MIT License
+
+**相关Pull Requests**:
+- [https://github.com/traefik/traefik/pull/11684](https://github.com/traefik/traefik/pull/11684)
+
+**参考链接**:
+- [https://github.com/traefik/traefik/pull/11684](https://github.com/traefik/traefik/pull/11684)
+- [https://github.com/traefik/traefik/releases/tag/v2.11.24](https://github.com/traefik/traefik/releases/tag/v2.11.24)
+- [https://github.com/traefik/traefik/releases/tag/v3.3.6](https://github.com/traefik/traefik/releases/tag/v3.3.6)
+- [https://github.com/traefik/traefik/releases/tag/v3.4.0-rc2](https://github.com/traefik/traefik/releases/tag/v3.4.0-rc2)
+- [https://github.com/traefik/traefik/security/advisories/GHSA-6p68-w45g-48j7](https://github.com/traefik/traefik/security/advisories/GHSA-6p68-w45g-48j7)
+
+---
+
+### CVE-2025-32445
+
+**描述**: Argo Events is an event-driven workflow automation framework for Kubernetes. A user with permission to create/modify EventSource and Sensor custom resources can gain privileged access to the host system and cluster, even without having direct administrative privileges. The EventSource and Sensor CRs allow the corresponding orchestrated pod to be customized with spec.template and spec.template.container (with type k8s.io/api/core/v1.Container), thus, any specification under container such as command, args, securityContext , volumeMount can be specified, and applied to the EventSource or Sensor pod. With these, a user would be able to gain privileged access to the cluster host, if he/she specified the EventSource/Sensor CR with some particular properties under template. This vulnerability is fixed in v1.9.6.
+
+**相关GitHub仓库**:
+
+- [argoproj/argo-events](https://github.com/argoproj/argo-events)
+  - 语言: Go
+  - Stars: 2503
+  - 描述: Event-driven Automation Framework for Kubernetes
+  - 许可证: Apache License 2.0
+
+**相关Commits**:
+- [https://github.com/argoproj/argo-events/commit/18412293a699f559848b00e6e459c9ce2de0d3e2](https://github.com/argoproj/argo-events/commit/18412293a699f559848b00e6e459c9ce2de0d3e2)
+
+**参考链接**:
+- [https://github.com/argoproj/argo-events/commit/18412293a699f559848b00e6e459c9ce2de0d3e2](https://github.com/argoproj/argo-events/commit/18412293a699f559848b00e6e459c9ce2de0d3e2)
+- [https://github.com/argoproj/argo-events/security/advisories/GHSA-hmp7-x699-cvhq](https://github.com/argoproj/argo-events/security/advisories/GHSA-hmp7-x699-cvhq)
+
+---
+
